@@ -75,6 +75,13 @@ on six MSKCC tasks and indicate exposure to a containing institutional corpus,
 not proven patient or slide overlap. No classification rule changed after the
 transport freeze.
 
+Caleb Yitna Ref independently reviewed the stratified 60-row transport sample
+while blinded to the development classifications. Agreement was 58/60 (96.7%;
+unweighted Cohen's kappa, 0.948): 20/20 for D0, 26/28 for D1, and 12/12 for D2.
+No sampled D1 relationship was upgraded to D2-D4. The two disagreements were
+tRes50 D0-versus-D1 decisions; applying the frozen requirement for an explicit
+version-specific exclusion retained D1 after adjudication.
+
 A PanCancer40M feasibility demonstration recovered 6,093 TCGA training-slide
 identifiers for one pretraining corpus. It was not tied to a benchmark
 evaluation manifest and did not test overlap.

@@ -24,6 +24,10 @@
 - Complete 242-row external benchmark audit with 100% canonical mapping
 - Cross-benchmark comparison; no transport rule changes or conflicts
 - Frozen 60-row blinded external-review packet
+- Completed 60-row blinded external-transport review with row-level evidence,
+  original decisions, adjudications, and dated reviewer attestation
+- External-review agreement analysis: 58/60 (96.7%), kappa 0.948, per-class
+  confusion matrix, and zero D1-to-D2-D4 upgrades
 
 ## Validation interpretation to retain
 
@@ -46,8 +50,6 @@
   type requirements.
 - Supply title page, manuscript, figures, tables/supplement, data availability,
   funding statement, conflict-of-interest form, and any required cover letter.
-- Complete the 60-row external-transport packet with a genuinely blinded second
-  reviewer before claiming independent agreement for that extension.
 
 ## Optional high-value extension
 

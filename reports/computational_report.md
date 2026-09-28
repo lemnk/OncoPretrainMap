@@ -114,8 +114,10 @@ explicit benchmark nonoverlap statement. The D2 rows were Virchow and Virchow2
 on six MSKCC tasks; the models used an MSKCC pretraining corpus, but exact
 evaluation identifiers were unavailable. D2 therefore does not establish shared
 patients or slides. The remaining relationships were D1, not documented
-independent. A deterministic 60-row blinded-review packet was generated; a
-second-reviewer transport agreement estimate remains pending and is not claimed.
+independent. A deterministic 60-row blinded-review packet was generated.
+Caleb Yitna Ref completed the review without AI. Agreement was 58/60 (96.7%;
+unweighted Cohen's kappa, 0.948), with 20/20 D0, 26/28 D1, 12/12 D2, and no
+D1-to-D2-D4 upgrades.
 
 ## Validation state
 
@@ -156,8 +158,9 @@ Row-level records are retained in
 1. D4 testing requires public evaluation case/slide identifiers not found in the
    available benchmark materials.
 2. A permanent DOI should follow validation and release freeze.
-3. The 60-row external-transport packet is ready for blinded second review; no
-   external-transport agreement claim should be made until it is returned.
+3. The 60-row external-transport review is complete. The two tRes50
+   disagreements were adjudicated under the frozen D0 requirement, and the
+   original reviewer decisions remain in the completed workbook.
 
 These limitations do not invalidate the registry or blinded human review, but
 they prevent claiming exact slide-level overlap or performance effects.

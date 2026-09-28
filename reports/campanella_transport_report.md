@@ -41,9 +41,12 @@ D1 was 76.9% versus 80.2%. The important result is not equality of percentages;
 it is successful representation of a different benchmark ecosystem without a
 methodological rule change.
 
-## Remaining validation dependency
+## Independent blinded review
 
-A deterministic 60-row packet was generated for blinded human review. Until a
-genuinely independent reviewer returns it, no external-transport agreement or
-reliability statistic will be reported. This does not change the completed
-computational transport result.
+A deterministic 60-row packet contained 20 D0, 28 D1, and all 12 D2
+relationships. Caleb Yitna Ref independently reviewed every row while blinded
+to the transport classifications and reported no AI use. Agreement was 58/60
+(96.7%; unweighted Cohen's kappa, 0.948): 20/20 for D0, 26/28 for D1, and 12/12
+for D2. No D1 relationship was upgraded to D2-D4. The two tRes50 disagreements
+were adjudicated as D1 under the frozen requirement for an explicit
+version-specific exclusion.

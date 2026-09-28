@@ -69,8 +69,12 @@ definition or precedence rule was not.
 
 A deterministic 60-row review packet contains 20 D0, 28 D1, and all 12 D2
 relationships. The reviewer packet omits the development class and evidence
-grade. No external-transport agreement statistic is reported unless an
-independent blinded reviewer returns completed classifications.
+grade. Caleb Yitna Ref independently reviewed all 60 relationships while
+blinded to the transport classifications and reported no AI use. Exact and
+per-class agreement, unweighted Cohen's kappa, the full confusion matrix, and
+D1-to-D2-D4 upgrades were calculated from the original decisions. Disagreements
+were adjudicated after unblinding under the frozen definitions; no third
+adjudicator was used.
 
 ## Supplementary Table Index
 
@@ -91,7 +95,8 @@ independent blinded reviewer returns completed classifications.
 | S13 | `release/v1_pre_review/` and `release/v2_post_review/` | Frozen pre-review and regenerated post-verification tables |
 | S14 | `data/derived/campanella_transport_audit.csv` | Complete 242-row independent benchmark transport audit |
 | S15 | `reports/cross_benchmark_exposure_comparison.csv` | Cross-benchmark D0-D4 comparison |
-| S16 | `data/validation/campanella_transport_blinded_review_packet.csv` | Frozen 60-row blinded-review packet; reviewer fields pending |
+| S16 | `data/validation/campanella_transport_blinded_review_packet.csv` | Frozen blank 60-row blinded-review packet |
+| S17 | `data/validation/campanella_caleb_blinded_review_completed.xlsx` | Completed blinded human review, comparison, adjudication, and attestation |
 
 ## Supplementary Results
 
@@ -148,3 +153,10 @@ row met D3 or D4. Compared with the Bareja et al development application, the
 external benchmark had a larger D0 fraction, a smaller D2 fraction, and no D3
 rows. These distributions describe benchmark-specific disclosure and lineage,
 not contamination prevalence.
+
+The independent blinded reviewer agreed on 58/60 sampled transport
+relationships (96.7%; unweighted Cohen's kappa, 0.948). Per-class agreement was
+20/20 for D0, 26/28 for D1, and 12/12 for D2. Both disagreements were D1
+development rows classified D0 by the reviewer for tRes50. Final adjudication
+retained D1 because the frozen D0 definition required an explicit
+version-specific exclusion. No sampled D1 relationship was upgraded to D2-D4.

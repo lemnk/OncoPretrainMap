@@ -28,7 +28,9 @@ development classifications; no sampled D1 pair was upgraded. We then froze the
 rules and applied them unchanged to an independently published 11-model,
 22-task clinical benchmark. All 242 relationships mapped successfully: 44
 (18.2%) were D0, 186 (76.9%) D1, and 12 (5.0%) D2; none were D3 or D4. No rule
-change or conflict was required.
+change or conflict was required. A blinded human review of 60 stratified
+relationships achieved 58/60 agreement (96.7%; kappa, 0.948), with no D1
+relationship upgraded to D2-D4.
 
 **Relevance:** OncoPretrainMap separates documented exposure from uncertainty
 and prevents unresolved provenance from being reported as independent
@@ -200,6 +202,14 @@ of D1 pairs upgraded to D2 or D3. The pre-review files were
 frozen as v1; all outputs were regenerated after review as v2 while retaining
 both releases.
 
+For the external transport, a deterministic review sample included 20 D0, 28
+D1, and all 12 D2 relationships. Caleb Yitna Ref independently reviewed all 60
+relationships while blinded to the transport classifications and reported no
+AI use. We calculated exact and per-class agreement, unweighted Cohen's kappa,
+a full confusion matrix, and D1-to-D2-D4 upgrades. Disagreements were resolved
+after unblinding by applying the frozen definitions; no third adjudicator was
+used. Original decisions and final adjudications were retained.
+
 OpenAI Codex (GPT-5.6 Sol; OpenAI; accessed September 27-28, 2026) assisted with
 software development and automated retrieval and processing of public metadata.
 The sole author checked all 52 source assertions, model-version mappings, and
@@ -255,6 +265,12 @@ institutional slide corpus without exact evaluation identifiers. No conflict or
 previously unrepresentable lineage situation was encountered, and no exposure
 definition, evidence grade, or precedence rule changed after the transport
 protocol was frozen.
+
+The blinded reviewer agreed on 58/60 relationships (96.7%; unweighted Cohen's
+kappa, 0.948): 20/20 D0, 26/28 D1, and 12/12 D2. The two disagreements were
+tRes50 rows that the reviewer classified D0 from ImageNet/cross-domain
+provenance. Final adjudication retained D1 because no explicit version-specific
+exclusion was documented. No sampled D1 relationship was upgraded to D2-D4.
 
 The distribution differed from the development application: the external
 benchmark had more documented disjointness (18.2% vs 4.0%), less containing-
@@ -342,7 +358,9 @@ miss undisclosed derivatives. The recovered training-slide manifest could not
 be matched to benchmark evaluation slides because the latter identifiers were
 unavailable. The 80-pair blinded review achieved 100% agreement, but its
 stratified design oversampled D0, D2, and D3 relative to the registry and did
-not establish diagnostic accuracy against an external gold standard. Finally,
+not establish diagnostic accuracy against an external gold standard. The
+60-row transport review likewise used a stratified sample; its 96.7% agreement
+does not estimate registry-wide diagnostic accuracy. Finally,
 the fixed-effects performance analysis was post-protocol, noncausal,
 underpowered, and uninformative.
 
@@ -399,9 +417,10 @@ administration.
 
 ## Acknowledgments
 
-The author thanks Caleb Yitna Ref for reviewing the 80 sampled model–dataset
-relationships. Caleb Yitna Ref did not develop the registry rules and is not
-responsible for the analyses or conclusions.
+The author thanks Caleb Yitna Ref for independently reviewing the 80 sampled
+registry relationships and the 60 sampled external-transport relationships.
+Caleb Yitna Ref did not develop the registry rules and is not responsible for
+the analyses or conclusions.
 
 ## Figure Legends
 

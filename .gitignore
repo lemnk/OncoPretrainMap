@@ -3,6 +3,7 @@ data/cache/
 data/raw/
 reports/tmp/
 __pycache__/
+.tmp_artifact/
 *.py[cod]
 .pytest_cache/
 .venv/
