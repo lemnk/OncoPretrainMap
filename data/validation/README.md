@@ -25,6 +25,17 @@ Allowed evidence-strength values are exactly:
 Caleb Yitna Ref reviewed all 80 pairs and recorded the decision, evidence
 strength, source URLs, explanation, identity, date, and blinding status. The
 review agreed with all 80 development classifications: 11 D0, 23 D1, 23 D2, and
-23 D3. The workbook displayed the development classifications and therefore
-records `initially_blinded` as `No`. The result is human verification of every
-sampled record, not an unbiased blinded inter-rater reliability estimate.
+23 D3. Caleb was blinded to the development classifications during his initial
+review and reported no AI use. The integrated workbook retains both original
+decision columns after review; their later side-by-side display does not describe
+what the reviewer saw during initial classification.
+
+## Campanella external-transport review packet
+
+`campanella_transport_blinded_review_packet.csv` contains a deterministic
+60-relationship sample from the separately frozen Campanella transport
+analysis. It omits the development class and evidence grade. A reviewer must
+inspect the linked primary records without AI, complete every blank reviewer
+field, and return the file before the separate key is opened. The reviewer must
+enter `No` in `reviewer_used_ai` to certify that requirement. No external-
+transport agreement statistic is reported while these fields remain blank.

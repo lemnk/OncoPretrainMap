@@ -11,13 +11,19 @@
 - Conservative secondary performance analysis
 - Executable checker
 - Automated tests and cryptographic manifest
-- Three publication figures in PNG and vector PDF
+- Four publication figures in PNG and vector PDF
 - Computational report
 - Full manuscript draft, figure legends, declarations, and AI-use statement
+- JCO CCI Resource Report abstract headings; 235 words (275-word limit)
+- Main text: 2,933 words (3,000-word limit)
 - Completed 80-pair human-verification workbook with row-level evidence
 - Class-specific confusion matrix and D1-upgrade analysis
 - Model-stratified headline results and CPTAC cross-check
 - Frozen pre-review v1 and regenerated post-verification v2 artifacts
+- Prespecified Campanella et al external transport protocol
+- Complete 242-row external benchmark audit with 100% canonical mapping
+- Cross-benchmark comparison; no transport rule changes or conflicts
+- Frozen 60-row blinded external-review packet
 
 ## Validation interpretation to retain
 
@@ -28,10 +34,11 @@
   pooled statistic as if the sample were representative of the full registry.
 - The D1-upgrade bound applies to 23 sampled D1 pairs and should not be projected
   directly to the full registry.
+- External transport results are 44 D0, 186 D1, and 12 D2; D2 does not prove
+  shared patients or slides.
 
 ## Required before journal upload
 
-- Create a public GitHub repository and replace the repository placeholder.
 - Mint a versioned Zenodo DOI after the final release freeze.
 - Confirm Jackson State University is the author's correct affiliation for this
   work and follow its authorship/publication policies.
@@ -39,6 +46,8 @@
   type requirements.
 - Supply title page, manuscript, figures, tables/supplement, data availability,
   funding statement, conflict-of-interest form, and any required cover letter.
+- Complete the 60-row external-transport packet with a genuinely blinded second
+  reviewer before claiming independent agreement for that extension.
 
 ## Optional high-value extension
 

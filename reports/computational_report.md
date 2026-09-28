@@ -4,7 +4,8 @@
 
 **Protocol:** v1, frozen 2026-09-27
 
-**Status:** complete development analysis and 80-pair human verification
+**Status:** complete development analysis, 80-pair human verification, and
+independent benchmark transport analysis
 
 ## Outcome
 
@@ -12,6 +13,10 @@ The metadata pipeline ran successfully from the pinned Bareja et al benchmark so
 through registry derivation, benchmark linkage, descriptive analysis, figures,
 validation-sample generation, tests, and file hashing. It did not train or run
 foundation models and did not download whole-slide images or model weights.
+
+The already-frozen framework was then applied to the independently published
+Campanella et al clinical benchmark without modifying D0-D4, the evidence
+grades, precedence, or the missing-evidence rule.
 
 ## Inputs and outputs
 
@@ -24,6 +29,9 @@ foundation models and did not download whole-slide images or model weights.
 | Dataset/corpus records | 49 |
 | Evaluation datasets | 28 |
 | Model–dataset pairs | 896 |
+| External-transport encoders | 11 |
+| External-transport clinical tasks | 22 |
+| External-transport model–task rows | 242 |
 
 The benchmark repository was pinned at commit
 `076ffcef84b7c3359a9ceaeb16e423e567fcd27a`. Every core model has at least one
@@ -81,6 +89,34 @@ supplementary sensitivity analysis. With 32 model clusters, 41 task clusters,
 TCGA-concentrated exposure, and heterogeneous D1 states, it was underpowered and
 uninformative. No positive, negative, or null performance conclusion is drawn.
 
+## Independent benchmark transport
+
+The transport protocol was frozen against OncoPretrainMap commit
+`734b170839b1d97f79b3e58dba8d8b3f3943d70b` before detailed extraction. The
+Campanella et al source tables and official repository commit
+`fbdf07f932d7302fd7bcb4a1e6b78bfb9d4a71f9` defined 242 distinct combinations
+of 11 encoders and 22 clinical tasks. The publisher source-data ZIP had SHA-256
+`0b1309f282352d15e3c13835539499a1fdb23febecf76c2148be8735b8dd14aa`.
+
+All 242 rows mapped to canonical identifiers, no conflict was recorded, and no
+rule change was required.
+
+| Exposure class | Rows | Percent |
+|---|---:|---:|
+| D0 documented disjoint | 44 | 18.2% |
+| D1 unresolved/insufficient disclosure | 186 | 76.9% |
+| D2 containing institutional corpus | 12 | 5.0% |
+| D3 exact named dataset | 0 | 0% |
+| D4 exact identifier overlap | 0 | 0% |
+
+The D0 rows were SP22M and SP85M across all 22 tasks, supported by the paper's
+explicit benchmark nonoverlap statement. The D2 rows were Virchow and Virchow2
+on six MSKCC tasks; the models used an MSKCC pretraining corpus, but exact
+evaluation identifiers were unavailable. D2 therefore does not establish shared
+patients or slides. The remaining relationships were D1, not documented
+independent. A deterministic 60-row blinded-review packet was generated; a
+second-reviewer transport agreement estimate remains pending and is not claimed.
+
 ## Validation state
 
 The deterministic 80-pair reviewer file used SHA-256 seed text
@@ -104,12 +140,12 @@ exposure estimate. The registry classifications were unchanged; v2 added the
 benchmark-resolution sensitivity field.
 Row-level records are retained in
 `data/validation/caleb_review_completed.xlsx` (SHA-256
-`cbf85e3e19e001e79f6b1c9025c9342d69efe9d863af8b691a01b60f76f0b396`).
+`80a84201019f2fa6d65123daf1a88d4b54f4a2169940a29e24fb1f5d160ea66e`).
 
 ## Reproducibility verification
 
-- Automated tests passed.
-- Three PNG and three vector PDF figures were generated.
+- Twenty-two automated tests passed.
+- Four PNG and four vector PDF figures were generated.
 - Analytical artifacts were SHA-256 hashed after the last complete run.
 - Raw benchmark input hashes and the publisher PanCancer40M hash are retained.
 - `run_pipeline.ps1` regenerates derived tables, analysis, validation sample,
@@ -120,6 +156,8 @@ Row-level records are retained in
 1. D4 testing requires public evaluation case/slide identifiers not found in the
    available benchmark materials.
 2. A permanent DOI should follow validation and release freeze.
+3. The 60-row external-transport packet is ready for blinded second review; no
+   external-transport agreement claim should be made until it is returned.
 
 These limitations do not invalidate the registry or blinded human review, but
 they prevent claiming exact slide-level overlap or performance effects.

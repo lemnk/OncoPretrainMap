@@ -1,0 +1,3 @@
+benchmark,models,tasks,model_task_rows,D0_documented_disjoint,D1_no_detected_evidence_or_insufficient_disclosure,D2_parent_repository_exposure,D3_exact_dataset_exposure,D4_exact_case_slide_or_patch_overlap
+Bareja et al. development application,32,41,1312,52,1052,204,4,0
+Campanella et al. external transport,11,22,242,44,186,12,0,0

@@ -1,5 +1,6 @@
 data/source/
 data/cache/
+data/raw/
 reports/tmp/
 __pycache__/
 *.py[cod]

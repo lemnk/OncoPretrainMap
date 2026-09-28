@@ -24,6 +24,10 @@ demonstrated.
   GTEx, TCIA, and explicitly named derived subsets.
 - Primary unit: model version × evaluation dataset version.
 
+The frozen framework was subsequently transported, without a rule change, to
+the independent 2025 clinical benchmark of Campanella et al: 11 encoders, 22
+clinical tasks, and 242 model–task relationships.
+
 ## Evidence model
 
 Exposure scope and evidence strength are recorded separately.
@@ -45,6 +49,14 @@ Evidence strength:
 
 The checker never converts `D1` into a claim of independence.
 
+## Access and licensing
+
+The public repository is https://github.com/lemnk/OncoPretrainMap. Software is
+released under the MIT License. Original curated metadata, derived tables,
+protocols, documentation, and figures are released under CC BY 4.0. Third-party
+source materials retain their original licenses and are fetched from the cited
+authoritative locations when redistribution is inappropriate.
+
 ## Status
 
 The protocol-frozen development release covers all 32 benchmark model labels,
@@ -55,6 +67,13 @@ D2 rows, four exact named-dataset D3 rows, 52 documented-disjoint D0 rows, and
 72.4% were D1, 21.6% D2, 0.4% D3, and 5.5% D0. All 369 rows for nine general-
 purpose comparators were D1. These are disclosure classifications, not
 contamination prevalence estimates.
+
+In the prespecified external transport analysis, all 242 Campanella et al
+relationships mapped successfully. Forty-four (18.2%) were D0, 186 (76.9%) D1,
+and 12 (5.0%) D2; none were D3 or D4. The 12 D2 rows were Virchow and Virchow2
+on six MSKCC tasks and indicate exposure to a containing institutional corpus,
+not proven patient or slide overlap. No classification rule changed after the
+transport freeze.
 
 A PanCancer40M feasibility demonstration recovered 6,093 TCGA training-slide
 identifiers for one pretraining corpus. It was not tied to a benchmark

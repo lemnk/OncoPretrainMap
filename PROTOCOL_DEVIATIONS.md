@@ -1,5 +1,16 @@
 # Protocol Deviations
 
+## Independently frozen post-v2 transport extension
+
+On 2026-09-28, after completion of the v2 development application, an authorized
+external benchmark transport analysis was added. The D0-D4 rules and supporting
+methodology were frozen at commit
+`734b170839b1d97f79b3e58dba8d8b3f3943d70b` before detailed extraction of the
+Campanella et al benchmark. The extension is not treated as part of the original
+v1 protocol or as clinical validation. It is reported as a separately frozen
+transport test of the provenance framework. No rule change was required after
+opening the external benchmark.
+
 ## 2026-09-28 — Timing and documentation of duplicate extraction
 
 Protocol v1 planned a prespecified held-out subset for blinded independent

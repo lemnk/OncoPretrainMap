@@ -1,0 +1,22 @@
+{
+  "benchmark_id": "campanella_2025_clinical",
+  "model_task_rows": 242,
+  "models": 11,
+  "tasks": 22,
+  "canonical_mapping_success_count": 242,
+  "canonical_mapping_success_proportion": 1.0,
+  "exposure_scope_counts": {
+    "D0_documented_disjoint": 44,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 186,
+    "D2_parent_repository_exposure": 12
+  },
+  "evaluation_institution_counts": {
+    "MSHS": 154,
+    "MSKCC": 66,
+    "SUH": 22
+  },
+  "rule_changes_after_freeze": 0,
+  "conflicts": 0,
+  "second_reviewer_status": "Pending; deterministic blinded packet generated. No reliability estimate is reported.",
+  "interpretation": "The frozen framework represented all relationships without a rule change. D1 is unresolved and is not evidence of independence. D2 on MSKCC tasks is institution-level containing-corpus exposure, not proof of shared patients or slides."
+}

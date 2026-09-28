@@ -1,0 +1,14 @@
+{
+  "benchmark_id": "campanella_2025_clinical",
+  "citation": "Campanella G, et al. A clinical benchmark of public self-supervised pathology foundation models. Nature Communications. 2025;16:3640.",
+  "doi": "10.1038/s41467-025-58796-1",
+  "pmcid": "PMC12003829",
+  "article_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003829/",
+  "supplementary_archive_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12003829/supplementaryFiles",
+  "source_data_filename": "41467_2025_58796_MOESM4_ESM.zip",
+  "source_data_sha256": "0b1309f282352d15e3c13835539499a1fdb23febecf76c2148be8735b8dd14aa",
+  "official_repository": "https://github.com/sinai-computational-pathology/SSL_tile_benchmarks",
+  "repository_commit": "fbdf07f932d7302fd7bcb4a1e6b78bfb9d4a71f9",
+  "rule_freeze_commit": "734b170839b1d97f79b3e58dba8d8b3f3943d70b",
+  "protocol": "SECOND_BENCHMARK_TRANSPORT_PROTOCOL.md"
+}

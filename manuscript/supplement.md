@@ -55,6 +55,23 @@ pipeline regenerated v2 tables after verification. No registry classification
 changed; v2 added a benchmark-resolution field that treats TCGA and CPTAC task
 rows as repository-level exposure without exact evaluation-subset identifiers.
 
+## Supplementary Method 4: Independent benchmark transport
+
+The framework was frozen at commit
+`734b170839b1d97f79b3e58dba8d8b3f3943d70b` before detailed extraction of the
+Campanella et al source tables. Its official repository was pinned at
+`fbdf07f932d7302fd7bcb4a1e6b78bfb9d4a71f9`, and the publisher source-data ZIP
+was verified by SHA-256. Distinct encoder–task pairs in Figures 1 and 2 defined
+the external universe. The same D0-D4 definitions, A-D evidence grades,
+precedence, conflict handling, and missing-evidence rule were applied. Adding
+benchmark-specific model and task aliases was permitted; changing an exposure
+definition or precedence rule was not.
+
+A deterministic 60-row review packet contains 20 D0, 28 D1, and all 12 D2
+relationships. The reviewer packet omits the development class and evidence
+grade. No external-transport agreement statistic is reported unless an
+independent blinded reviewer returns completed classifications.
+
 ## Supplementary Table Index
 
 | Table | File | Description |
@@ -72,6 +89,9 @@ rows as repository-level exposure without exact evaluation-subset identifiers.
 | S11 | `reports/human_verification_confusion_matrix.csv` | Per-class confusion matrix and agreement |
 | S12 | `reports/exposure_by_model_stratum.csv` | Registry and benchmark exposure classes stratified by model type |
 | S13 | `release/v1_pre_review/` and `release/v2_post_review/` | Frozen pre-review and regenerated post-verification tables |
+| S14 | `data/derived/campanella_transport_audit.csv` | Complete 242-row independent benchmark transport audit |
+| S15 | `reports/cross_benchmark_exposure_comparison.csv` | Cross-benchmark D0-D4 comparison |
+| S16 | `data/validation/campanella_transport_blinded_review_packet.csv` | Frozen 60-row blinded-review packet; reviewer fields pending |
 
 ## Supplementary Results
 
@@ -119,3 +139,12 @@ The PanCancer40M extraction recovered 6,093 TCGA training-slide identifiers for
 one model corpus. No benchmark evaluation manifest was available for comparison.
 This result demonstrates identifier recovery only; it is not an overlap test or
 evidence of D4 exposure.
+
+## Supplementary external-transport results
+
+The frozen framework mapped all 242 Campanella et al relationships without a
+rule change. Forty-four (18.2%) were D0, 186 (76.9%) D1, and 12 (5.0%) D2; no
+row met D3 or D4. Compared with the Bareja et al development application, the
+external benchmark had a larger D0 fraction, a smaller D2 fraction, and no D3
+rows. These distributions describe benchmark-specific disclosure and lineage,
+not contamination prevalence.

@@ -23,7 +23,7 @@ COLORS = {
 SHORT = {
     "D0_documented_disjoint": "D0 documented disjoint",
     "D1_no_detected_evidence_or_insufficient_disclosure": "D1 unresolved",
-    "D2_parent_repository_exposure": "D2 repository-level",
+    "D2_parent_repository_exposure": "D2 containing corpus",
     "D3_exact_dataset_exposure": "D3 exact dataset",
 }
 
@@ -114,12 +114,34 @@ def exposure_heatmap() -> None:
     save(fig, "figure2_registry_heatmap")
 
 
+def cross_benchmark_transport() -> None:
+    frame = pd.read_csv(REPORTS / "cross_benchmark_exposure_comparison.csv")
+    scopes = [scope for scope in COLORS if scope in frame.columns]
+    totals = frame[scopes].sum(axis=1)
+    fig, ax = plt.subplots(figsize=(8.4, 3.8))
+    left = np.zeros(len(frame))
+    for scope in scopes:
+        values = frame[scope] / totals
+        ax.barh(frame["benchmark"], values, left=left, color=COLORS[scope], label=SHORT[scope])
+        left += values.to_numpy()
+    ax.set_xlabel("Proportion of model–task relationships")
+    ax.set_xlim(0, 1)
+    ax.xaxis.set_major_formatter(lambda value, _: f"{value:.0%}")
+    ax.legend(frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.02), ncol=2)
+    ax.spines[["top", "right", "left"]].set_visible(False)
+    ax.grid(axis="x", color="#E6E8EB", linewidth=0.8)
+    ax.set_axisbelow(True)
+    fig.tight_layout()
+    save(fig, "figure3_cross_benchmark_transport")
+
+
 def main() -> None:
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 10})
     exposure_by_group()
     coefficient_forest()
     exposure_heatmap()
-    print(f"Wrote six figure files to {FIGURES}")
+    cross_benchmark_transport()
+    print(f"Wrote eight figure files to {FIGURES}")
 
 
 if __name__ == "__main__":

@@ -9,42 +9,36 @@ Street, Jackson, MS 39217, USA; naolzed6@gmail.com
 
 ## Abstract
 
-**Purpose:** Cancer pathology foundation models are often pretrained on large
-public repositories that also supply downstream benchmarks. Dataset names alone
-cannot distinguish documented disjointness, repository-level exposure, and
-exact case reuse. We developed OncoPretrainMap, a versioned provenance registry
-and checker for evaluating pretraining–benchmark exposure claims.
+**Background and Scope:** Pathology foundation models are often developed from
+repositories that also supply downstream benchmarks. Dataset names alone cannot
+distinguish documented disjointness, containing-corpus exposure, and exact case
+reuse. We developed OncoPretrainMap, an auditable provenance registry and
+checker for model–benchmark exposure claims.
 
-**Methods:** We froze the 32-model, 41-task universe of a 2026 published
-computational-pathology benchmark at a pinned repository commit. For each model
-or checkpoint, we extracted pretraining and model-development datasets from
-primary papers, supplements, official model cards,
-and developer repositories. A dataset-lineage graph linked parent repositories
-to named cohorts and derivatives. Model–dataset pairs were classified as D0,
-documented disjoint; D1, no detected evidence or insufficient disclosure; D2,
-parent-repository exposure; D3, exact named-dataset exposure; or D4, exact
-case/slide/patch overlap. Exposure scope and evidence strength were stored
-separately. We mapped the registry to 1,312 published model–task results and
-applied a benchmark-resolution sensitivity rule: TCGA and CPTAC exposure was
-classified as repository-level unless exact evaluation-subset identifiers were
-available.
+**Solution:** Versioned primary-source assertions and dataset-lineage edges are
+converted into five conservative classes: D0, documented disjoint; D1,
+unresolved or insufficiently disclosed; D2, containing-repository exposure; D3,
+exact named-dataset exposure; and D4, exact case/slide/patch overlap. Evidence
+strength is stored separately, and missing evidence never implies independence.
 
-**Results:** The development registry contains 49 dataset/corpus records, 52
-primary-source assertions covering all 32 models, and 896 model–dataset pairs.
-Eleven pairs were D0, 806 D1, 51 D2, and 28 D3; none met D4 criteria. All 1,312
-benchmark rows resolved to canonical identifiers. Under the benchmark-resolution
-rule, 204 were D2, four D3, 52 D0, and 1,052 D1. Among 943 rows for 23 pathology-
-specific models, 204 (21.6%) were D2, four (0.4%) D3, 52 (5.5%) D0, and 683
-(72.4%) D1; all 369 rows for nine general-purpose comparators were D1.
-Caleb Yitna Ref reviewed the evidence for all 80 sampled relationships and
-agreed with every classification within each sampled class. None of 23 sampled
-D1 pairs was upgraded to D2 or D3.
+**Evaluation:** In a 32-model, 41-task development benchmark, all 1,312 results
+mapped to canonical identifiers; 52 (4.0%) were D0, 1,052 (80.2%) D1, 204
+(15.5%) D2, and four (0.3%) D3. A blinded reviewer reproduced all 80 sampled
+development classifications; no sampled D1 pair was upgraded. We then froze the
+rules and applied them unchanged to an independently published 11-model,
+22-task clinical benchmark. All 242 relationships mapped successfully: 44
+(18.2%) were D0, 186 (76.9%) D1, and 12 (5.0%) D2; none were D3 or D4. No rule
+change or conflict was required.
 
-**Conclusion:** Public cancer-pathology benchmark independence often cannot be
-established from current disclosures. OncoPretrainMap converts heterogeneous
-provenance statements into conservative, executable evidence classes without
-treating missing evidence as independence. A blinded second reviewer reproduced
-all 80 sampled classifications.
+**Relevance:** OncoPretrainMap separates documented exposure from uncertainty
+and prevents unresolved provenance from being reported as independent
+generalization. Different class distributions across two benchmarks show why a
+single exposure percentage should not be generalized field-wide.
+
+**How to Access/Use:** Source code, row-level evidence, frozen protocols, tests,
+and the command-line checker are available at
+https://github.com/lemnk/OncoPretrainMap; a versioned archive DOI will accompany
+the final release.
 
 ## Introduction
 
@@ -75,7 +69,9 @@ OncoPretrainMap as an auditable registry of model-development exposure. The reso
 scope of possible overlap from the strength of the supporting evidence, traces
 dataset lineage, retains source versions, and produces restrained, executable
 answers to model–dataset queries. We demonstrate its use by auditing every
-reported result in the 32-model benchmark reported by Bareja et al.[2]
+reported result in the 32-model benchmark reported by Bareja et al and then
+transporting the frozen framework to the independently developed clinical
+benchmark reported by Campanella et al.[2,3]
 
 ## Methods
 
@@ -111,12 +107,9 @@ was propagated only when the evaluated model explicitly reused a specified
 checkpoint. Conflicting exposure and disjointness assertions were retained and
 flagged rather than silently resolved.
 
-The sole author also matched the 32 benchmark model labels to the released
-model or checkpoint named in the pinned benchmark repository and recorded the
-corresponding paper, model-card revision, or repository commit. UNI and TITAN
-were checked against their primary descriptions and official versioned
-documentation, and GPFM exposure assertions were checked against its primary
-article and supplement.[8-12]
+The author matched all 32 benchmark labels to released checkpoints and
+versioned documentation. UNI, TITAN, and GPFM assertions were additionally
+checked against their primary descriptions and official records.[8-12]
 
 ### Dataset normalization and lineage
 
@@ -166,6 +159,25 @@ the exact evaluation subset or slide identifiers. A model's explicit TCGA or
 CPTAC assertion remained D3 in the registry but was D2 in the benchmark-
 resolution sensitivity analysis. D3 in that analysis was reserved for an exact
 named external evaluation dataset. D4 still required shared identifiers.
+
+### Independent benchmark transport
+
+After completing the v2 development application, we froze the definitions,
+evidence hierarchy, lineage rules, precedence rules, and missing-evidence rule
+at Git commit `734b170839b1d97f79b3e58dba8d8b3f3943d70b`. Before extracting detailed
+external rows, we prespecified Campanella et al as the transport benchmark and
+pinned its official repository at commit
+`fbdf07f932d7302fd7bcb4a1e6b78bfb9d4a71f9`.[3] The publisher source-data
+archive was verified by SHA-256 hash.
+
+The external universe comprised every distinct encoder-by-task combination in
+the version-of-record source tables: 11 encoders and 22 clinical tasks from
+three health systems. We resolved models, tasks, institutions, and cohorts and
+applied D0-D4 unchanged. The paper's explicit nonoverlap statement for SP22M and
+SP85M supported D0. Its inability to exclude overlap between MSKCC-trained
+Virchow models and MSKCC tasks supported D2 because exact identifiers were
+unavailable. Other relationships remained D1. Prespecified outcomes were
+mapping success, class counts, conflicts, and rule changes.[3]
 
 A post-protocol exploratory analysis of published AUROC and AUPRC used model and
 task fixed effects with two-way clustered standard errors. It is reported only
@@ -230,6 +242,27 @@ rows from 23 pathology-specific models, 683 (72.4%) were D1, 204 (21.6%) D2,
 four (0.4%) D3, and 52 (5.5%) D0. All 369 rows from nine general-purpose models were D1. These
 strata, rather than the pooled percentage alone, define the disclosure gap.
 
+### Independent clinical-benchmark transport
+
+All 242 model–task relationships in the Campanella et al benchmark resolved to
+canonical model and task identifiers (100% mapping success). The frozen rules
+classified 44 relationships (18.2%) as D0, 186 (76.9%) as D1, and 12 (5.0%) as
+D2; none met D3 or D4 criteria (Figure 3). The 44 D0 relationships were SP22M
+and SP85M across the 22 tasks, reflecting the benchmark paper's explicit
+nonoverlap statement. The 12 D2 relationships were Virchow and Virchow2 across
+the six MSKCC tasks, reflecting documented exposure to a containing
+institutional slide corpus without exact evaluation identifiers. No conflict or
+previously unrepresentable lineage situation was encountered, and no exposure
+definition, evidence grade, or precedence rule changed after the transport
+protocol was frozen.
+
+The distribution differed from the development application: the external
+benchmark had more documented disjointness (18.2% vs 4.0%), less containing-
+repository exposure (5.0% vs 15.5%), and no exact named-dataset exposure. D1
+remained the largest class in both benchmarks (76.9% and 80.2%, respectively).
+These percentages describe the two benchmark ecosystems and are not prevalence
+estimates for pathology foundation models generally.
+
 ### Training-manifest feasibility demonstration
 
 The PanCancer40M archive digest matched the publisher-reported hash. Streaming
@@ -248,9 +281,9 @@ effect was drawn (Supplementary Figure S1).
 
 ### Reproducibility checks
 
-Nineteen automated tests passed. The complete workflow regenerated the exposure
+Twenty-two automated tests passed. The complete workflow regenerated the exposure
 matrix, benchmark audit, stratified summaries, descriptive models, frozen
-review sample, three figures in raster and vector formats, and a SHA-256
+review samples, four figures in raster and vector formats, and a SHA-256
 artifact manifest. The command-line
 checker returns the exposure class, evidence strength, constrained independence
 statement, and supporting sources for a requested model–dataset pair.
@@ -280,6 +313,12 @@ general-purpose comparators. This finding supports routine provenance auditing
 while also showing why a binary contamination label would exceed the available
 evidence.
 
+The independent transport analysis tested whether the framework was specific
+to its development benchmark. The unchanged rules represented every Campanella
+et al relationship, including institution-level pretraining paired with private
+clinical tasks. Different class distributions argue against a field-wide pooled
+exposure estimate and support the narrower claim of framework portability.
+
 The registry was designed to audit provenance, not to estimate a performance
 penalty or advantage from overlap. The post-protocol regression could not answer
 that question: D1 may contain both exposed and unexposed models, exposure was
@@ -296,8 +335,9 @@ provenance claims updateable: a new manifest can upgrade a pair from D2 or D3 to
 D4, while an explicit exclusion can support D0 for a particular checkpoint.
 
 Several limitations remain. Source disclosure is heterogeneous and may be
-incomplete. The 32-model universe is tied to one frozen benchmark rather than
-all pathology foundation models. Dataset lineage is necessarily curated and can
+incomplete. The 32-model development universe is not representative of all
+pathology foundation models, although the unchanged framework was also applied
+to an independent 11-model clinical benchmark. Dataset lineage is necessarily curated and can
 miss undisclosed derivatives. The recovered training-slide manifest could not
 be matched to benchmark evaluation slides because the latter identifiers were
 unavailable. The 80-pair blinded review achieved 100% agreement, but its
@@ -316,9 +356,10 @@ explicitly whether those identifiers were excluded from pretraining.
 
 OncoPretrainMap provides a conservative and reproducible method for auditing
 pretraining–evaluation exposure in cancer pathology foundation models. Applied
-to 1,312 benchmark results, it identified 204 containing-repository
-relationships and four exact named-dataset relationships, but a still larger
-zone where independence could not be established. The
+to 1,554 relationships across two independently developed benchmarks, it
+distinguished documented disjointness, containing-corpus exposure, exact
+named-dataset exposure, and a still larger zone where independence could not be
+established. The
 resource's central contribution is not a claim that exposure inflated
 performance; it is an auditable boundary between what public evidence does and
 does not support.
@@ -326,10 +367,12 @@ does not support.
 ## Data and Code Availability
 
 A row-level human-verification workbook is available in the OncoPretrainMap
-repository with the source code, curated tables, derived results, tests, and
-figures. A public repository URL and permanent archive DOI will be inserted
-after the final release freeze. All underlying evidence sources are publicly
-linked at row level. The 135-MB publisher archive used to derive the
+repository (https://github.com/lemnk/OncoPretrainMap) with the source code,
+curated tables, derived results, tests, and figures. Software is licensed under
+MIT; original metadata and documentation are licensed under CC BY 4.0. A
+permanent archive DOI will be inserted after the final release freeze. All
+underlying evidence sources are publicly linked at row level. The 135-MB
+publisher archive used to derive the
 PanCancer40M identifier manifest is excluded from version control; its URL and
 hash are retained for reproducible acquisition.
 
@@ -372,6 +415,13 @@ repository-level exposure (D2), or exact named evaluation-dataset exposure
 classifications for each core model/checkpoint and evaluation dataset. Gray D1
 cells indicate unresolved or insufficiently disclosed relationships, not
 documented independence.
+
+**Figure 3. Frozen-framework transport across two independent benchmarks.**
+Bars compare benchmark-resolution D0-D3 proportions in the Bareja et al
+development application and Campanella et al external transport analysis. The
+framework was frozen before detailed extraction of the external benchmark.
+Differences describe these benchmark ecosystems and are not field-wide
+prevalence estimates.
 
 **Supplementary Figure S1. Exploratory associations between registry exposure
 class and reported performance.** Points and 95% confidence intervals are from
