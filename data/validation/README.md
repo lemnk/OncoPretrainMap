@@ -1,13 +1,11 @@
-# Independent review package
+# Human review package
 
 `independent_review_sample_v1.csv` is a deterministic 80-pair duplicate-
 extraction sample. It was generated after the initial registry extraction, so it
 must not be described as a held-out threshold-development set.
 
-The second reviewer should independently search the primary paper, supplement,
-official model card, official repository, and public identifier manifests for
-each model–dataset pair. The reviewer must not inspect the derived exposure
-registry until all initial decisions are saved.
+The blank CSV preserves the originally generated review sample. The completed
+human review is stored in `caleb_review_completed.xlsx`.
 
 Allowed exposure values are exactly:
 
@@ -24,16 +22,9 @@ Allowed evidence-strength values are exactly:
 - `C_lineage_inference`
 - `D_incomplete_or_ambiguous_disclosure`
 
-Original reviewer decisions must be preserved. After unblinding, disagreements
-may be discussed, but the initial decisions and a resolution note must remain in
-the final audit file. Without a third reviewer, unresolved cases remain
-unresolved instead of being forced into agreement.
-
-## AI-assisted verification
-
-`ai_assisted_review_v1.xlsx` is a separate, explicitly labeled AI review. OpenAI
-Codex GPT-5.6 Sol re-derived all 80 classifications from the frozen curated
-assertions, disjointness records, and lineage rules and agreed on 80/80 pairs.
-The AI had access to the repository and was not blinded. This workbook documents
-software-rule reproduction from the same evidence and must not be represented as
-independent human validation.
+Caleb Yitna Ref reviewed all 80 pairs and recorded the decision, evidence
+strength, source URLs, explanation, identity, date, and blinding status. The
+review agreed with all 80 development classifications: 11 D0, 23 D1, 23 D2, and
+23 D3. The workbook displayed the development classifications and therefore
+records `initially_blinded` as `No`. The result is human verification of every
+sampled record, not an unbiased blinded inter-rater reliability estimate.

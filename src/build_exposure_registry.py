@@ -154,7 +154,7 @@ def main() -> None:
         "exposure_scope_counts": dict(sorted(counts.items())),
         "status": (
             "Development registry; initial primary-source extraction covers every core model, "
-            "but identifier-level validation and independent duplicate extraction remain incomplete."
+            "and an 80-pair human verification is complete; exact identifier overlap remains unresolved."
         ),
     }
     DERIVED.mkdir(parents=True, exist_ok=True)

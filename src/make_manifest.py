@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import hashlib
+import os
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+EXCLUDED_PARTS = {"__pycache__", "node_modules", ".pytest_cache", "tmp"}
 INCLUDE = [
     "README.md",
     "FEASIBILITY_AUDIT.md",
@@ -42,10 +44,9 @@ def main() -> None:
         if path.is_file():
             files.add(path)
         elif path.is_dir():
-            files.update(
-                item for item in path.rglob("*")
-                if item.is_file() and "__pycache__" not in item.parts
-            )
+            for directory, subdirectories, filenames in os.walk(path):
+                subdirectories[:] = [name for name in subdirectories if name not in EXCLUDED_PARTS]
+                files.update(Path(directory) / filename for filename in filenames)
     lines = [f"{digest(path)}  {path.relative_to(ROOT).as_posix()}" for path in sorted(files)]
     (ROOT / "MANIFEST.sha256").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Wrote {len(lines)} hashes")

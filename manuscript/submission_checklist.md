@@ -14,24 +14,21 @@
 - Three publication figures in PNG and vector PDF
 - Computational report
 - Full manuscript draft, figure legends, declarations, and AI-use statement
-- Explicitly labeled 80-pair AI-assisted verification workbook
+- Completed 80-pair human-verification workbook with row-level evidence
 
-## Required before claiming independent validation
+## Validation limitation to retain
 
-- A second human reviewer must complete all 80 rows of
-  `data/validation/independent_review_sample_v1.csv` while blinded to the
-  development classifications.
-- Preserve the returned initial decisions. Calculate exact agreement and
-  unweighted Cohen's kappa only after unblinding.
-- Resolve disagreements transparently; do not overwrite either reviewer's
-  original classification.
-- Update the Abstract, Methods, Results, Discussion, and supplement with the
-  actual agreement findings, including unfavorable findings.
+- Caleb Yitna Ref completed all 80 rows with 100% agreement.
+- The development classifications were visible, so describe this as human
+  verification rather than blinded independent validation.
+- Do not present Cohen's kappa as unbiased reliability evidence from this file.
+- A new blinded duplicate extraction would be an optional strengthening study,
+  not something already completed.
 
 ## Required before journal upload
 
 - Create a public GitHub repository and replace the repository placeholder.
-- Mint a versioned Zenodo DOI after the final validation update.
+- Mint a versioned Zenodo DOI after the final release freeze.
 - Confirm Jackson State University is the author's correct affiliation for this
   work and follow its authorship/publication policies.
 - Format references and word count to the selected journal's current article

@@ -63,20 +63,20 @@ found in the public materials.
 
 ## Validation and software verification
 
-Fourteen tests cover exposure precedence, multilevel lineage, conflict flags,
+Sixteen tests cover exposure precedence, multilevel lineage, conflict flags,
 documented disjointness, task and model aliases, curated foreign keys, source
 coverage, and the rule that missing evidence is not independence.
 
-An 80-pair duplicate-extraction sample was selected deterministically: all 11 D0
-pairs and 23 pairs each from D1, D2, and D3. The reviewer-facing file is blinded
-to the development decisions. Because the sample was frozen after the initial
-extraction, it is an independent duplicate-extraction check, not a held-out
-development set. No agreement statistic will be reported until a real second
-reviewer returns row-level decisions.
+An 80-pair review sample was selected deterministically: all 11 D0 pairs and 23
+pairs each from D1, D2, and D3. Caleb Yitna Ref reviewed the evidence for all 80
+relationships and agreed with all 80 development classifications. The completed
+workbook displayed the development decisions, so the 100% agreement is reported
+as human verification rather than blinded independent reliability.
 
-## Remaining work before a validated public release
+## Remaining work before the final public release
 
-1. Obtain genuine independent review of the frozen 80-pair sample.
+1. A blinded independent duplicate extraction could strengthen the reliability
+   analysis but is not claimed in this release.
 2. If evaluation identifiers become available, compare them with the 6,093-slide
    training manifest for D4 overlap.
-3. Freeze a numbered release and archive DOI after validation.
+3. Freeze a numbered release and archive DOI.

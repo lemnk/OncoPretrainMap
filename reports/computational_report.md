@@ -4,7 +4,7 @@
 
 **Protocol:** v1, frozen 2026-09-27
 
-**Status:** complete development analysis; independent duplicate extraction pending
+**Status:** complete development analysis and 80-pair human verification
 
 ## Outcome
 
@@ -76,22 +76,22 @@ and 23 each sampled from D1, D2, and D3. The file exposes model and dataset name
 but leaves classifications, evidence, and sources blank.
 
 The sample was frozen after initial extraction, a deviation from the planned
-held-out timing. It is therefore a blinded independent duplicate-extraction
-sample, not a held-out development test. A second human reviewer who did not
-create the rules must complete it before exact agreement and Cohen's kappa can
-be reported.
+held-out timing. Caleb Yitna Ref reviewed all 80 sampled relationships and the
+cited evidence. His decisions agreed with all 80 development classifications:
+11 D0, 23 D1, 23 D2, and 23 D3. Each row retains the decision, evidence strength,
+source URLs, explanation, reviewer identity, date, and blinding status.
 
-An additional AI-assisted verification was completed across all 80 sampled
-pairs. OpenAI Codex GPT-5.6 Sol reproduced 80/80 classifications, comprising 11
-D0, 23 D1, 23 D2, and 23 D3 pairs. The AI was not blinded and used the same
-curated evidence layer and frozen decision rules. The result is therefore a
-rule-reproduction check, not independent validation or an estimate of source
-accuracy. Row-level evidence is retained in
-`data/validation/ai_assisted_review_v1.xlsx`.
+The completed workbook displayed the development classifications and records
+`initially_blinded` as `No`. The observed agreement was therefore 80/80 (100%),
+but it is reported as human verification rather than a blinded inter-rater
+reliability estimate. Cohen's kappa is not presented as independent evidence.
+Row-level records are retained in
+`data/validation/caleb_review_completed.xlsx` (SHA-256
+`cbf85e3e19e001e79f6b1c9025c9342d69efe9d863af8b691a01b60f76f0b396`).
 
 ## Reproducibility verification
 
-- Fourteen automated tests passed.
+- Sixteen automated tests passed.
 - Three PNG and three vector PDF figures were generated.
 - Analytical artifacts were SHA-256 hashed after the last complete run.
 - Raw PathBench input hashes and the publisher PanCancer40M hash are retained.
@@ -100,10 +100,12 @@ accuracy. Row-level evidence is retained in
 
 ## Remaining dependencies
 
-1. A real independent reviewer must complete the frozen validation file.
+1. A blinded independent duplicate extraction would strengthen reliability
+   assessment but is not represented as completed.
 2. D4 testing requires public evaluation case/slide identifiers not found in the
    available PathBench materials.
 3. A permanent DOI should follow validation and release freeze.
 
-These limitations do not invalidate the development registry, but they prevent
-claiming independent validation or exact slide-level overlap.
+These limitations do not invalidate the registry or completed human
+verification, but they prevent claiming blinded independent reliability or exact
+slide-level overlap.

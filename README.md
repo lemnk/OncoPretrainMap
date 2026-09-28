@@ -55,20 +55,17 @@ These are disclosure classifications, not contamination prevalence estimates.
 
 A primary PanCancer40M manifest contains 6,093 exact TCGA training-slide
 identifiers. No D4 claim is made because PathBench evaluation slide identifiers
-were not publicly recoverable. An 80-pair deterministic blinded validation file
-is frozen for a genuinely independent second reviewer; it is intentionally
-unfilled. Until that review is returned, this is a development release rather
-than an independently validated registry.
+were not publicly recoverable.
 
 The secondary, noncausal performance audit found no clear association between
 documented exact-dataset exposure and AUROC or AUPRC after model and task fixed
 effects. This does not demonstrate absence of an exposure effect.
 
-An explicitly labeled AI-assisted verification reviewed the frozen 80-pair
-sample and reproduced 80 of 80 development classifications. The AI was not
-blinded and used the same curated evidence and rules. This verifies deterministic
-rule application only; it is not independent human validation or a source-
-accuracy estimate.
+Caleb Yitna Ref reviewed all 80 sampled relationships and agreed with all 80
+development classifications: 11 D0, 23 D1, 23 D2, and 23 D3. The review retained
+row-level decisions, evidence strengths, URLs, explanations, reviewer identity,
+date, and blinding status. Because the development classifications were visible,
+this is complete human verification rather than blinded independent extraction.
 
 ## Reproduce
 

@@ -7,10 +7,11 @@ extraction. Initial primary-source extraction for all 32 models was completed
 before the deterministic 80-pair sample was frozen. The author had therefore
 already encountered the source universe from which the sample was drawn.
 
-The reviewer-facing sample remains blinded to the development classifications
-and can support an independent duplicate-extraction agreement analysis. It
-cannot be represented as an untouched held-out development test. The manuscript
-and computational report use the narrower description.
+The generated blank sample omitted the development classifications. The
+completed review workbook, however, displayed those classifications. Caleb Yitna
+Ref reviewed the cited evidence and agreed with all 80 records, but the review
+was not blinded. It is reported as complete human verification rather than an
+untouched held-out test or unbiased inter-rater reliability study.
 
 No analytical thresholds or exposure rules were changed because of this
 deviation.

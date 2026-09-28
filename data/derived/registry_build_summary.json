@@ -13,5 +13,5 @@
     "D2_parent_repository_exposure": 51,
     "D3_exact_dataset_exposure": 28
   },
-  "status": "Development registry; initial primary-source extraction covers every core model, but identifier-level validation and independent duplicate extraction remain incomplete."
+  "status": "Development registry; initial primary-source extraction covers every core model, and an 80-pair human verification is complete; exact identifier overlap remains unresolved."
 }

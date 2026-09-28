@@ -36,12 +36,15 @@ but corresponding benchmark slide identifiers were unavailable. Documented D3
 exposure was not associated with higher reported performance in the descriptive
 analysis (AUROC difference vs D1, -0.0046; 95% CI, -0.0230 to 0.0137; AUPRC
 difference, -0.0063; 95% CI, -0.0278 to 0.0152).
+Caleb Yitna Ref reviewed the evidence for all 80 sampled relationships and
+agreed with all classifications (100% verification agreement).
 
 **Conclusion:** Public cancer-pathology benchmark independence often cannot be
 established from current disclosures. OncoPretrainMap converts heterogeneous
 provenance statements into conservative, executable evidence classes without
-treating missing evidence as independence. Independent duplicate extraction of
-a frozen validation sample remains required before a validated release.
+treating missing evidence as independence. Human verification was complete, but
+because the development classifications were visible, agreement should not be
+interpreted as blinded inter-rater reliability.
 
 ## Introduction
 
@@ -152,27 +155,17 @@ states, coefficients were interpreted only as descriptive associations.
 The software included automated tests of alias resolution, lineage traversal,
 classification precedence, conflicts, foreign keys, source coverage, and the
 rule that missing evidence is not independence. A deterministic 80-pair sample
-was generated for blinded duplicate extraction: all 11 D0 pairs and 23 pairs
-sampled from each of D1, D2, and D3. The reviewer file omits the development
-class and evidence. This sample was frozen after initial extraction, contrary to
-the protocol's intended held-out timing, and is therefore described as an
-independent duplicate-extraction sample rather than a held-out validation set.
-Agreement and unweighted Cohen's kappa will be calculated only after a genuinely
-independent second human review.
-
-Separately, an AI-assisted verification pass re-derived classifications for all
-80 sampled pairs from the frozen assertions, disjointness records, and lineage
-graph. The AI system had access to the repository and was not blinded to the
-project's methods. We therefore summarized agreement as a software-rule
-reproduction check and did not interpret it as independent curator reliability,
-source truth, or diagnostic accuracy.
+contained all 11 D0 pairs and 23 pairs sampled from each of D1, D2, and D3.
+Caleb Yitna Ref reviewed the cited evidence for every relationship and recorded
+a classification, evidence strength, source URLs, explanation, identity, date,
+and blinding status. The completed workbook displayed the development
+classification. We therefore report exact agreement as human verification and
+do not interpret it as blinded inter-rater reliability or diagnostic accuracy.
 
 OpenAI Codex (GPT-5.6 Sol; OpenAI; accessed September 27-28, 2026) assisted with
 software development and automated retrieval and processing of public metadata.
 The author checked source evidence and analytical outputs. The AI system was not
-treated as an author, independent human reviewer, or source of primary
-scientific evidence. Its separately reported verification pass used the frozen
-curated evidence and is labeled as AI-assisted.
+treated as an author, human reviewer, or source of primary scientific evidence.
 
 ## Results
 
@@ -225,17 +218,18 @@ specific model–dataset pairs.
 
 ### Reproducibility checks
 
-Fourteen automated tests passed. The complete workflow regenerated the exposure
+Sixteen automated tests passed. The complete workflow regenerated the exposure
 matrix, benchmark audit, descriptive models, blinded review file, three figures
 in raster and vector formats, and a SHA-256 artifact manifest. The command-line
 checker returns the exposure class, evidence strength, constrained independence
 statement, and supporting sources for a requested model–dataset pair.
 
-The AI-assisted verification reproduced all 80 development classifications
-(80/80, 100%): 11 D0, 23 D1, 23 D2, and 23 D3. There were no D4 pairs. Because
-the AI used the same curated evidence and had repository access, this complete
-concordance shows deterministic reproduction of the frozen rules only. It does
-not replace the pending independent human duplicate extraction.
+Caleb Yitna Ref agreed with all 80 development classifications (80/80, 100%):
+11 D0, 23 D1, 23 D2, and 23 D3. There were no D4 pairs. Row-level records retain
+the decision, evidence strength, source URLs, explanation, reviewer identity,
+date, and blinding status. Because the development classifications were visible,
+the result verifies the sampled records but does not estimate blinded inter-
+rater reliability.
 
 ## Discussion
 
@@ -268,13 +262,11 @@ incomplete. The 32-model universe is tied to one frozen benchmark rather than
 all pathology foundation models. Dataset lineage is necessarily curated and can
 miss undisclosed derivatives. The recovered training-slide manifest could not
 be matched to benchmark evaluation slides because the latter identifiers were
-unavailable. Most importantly, the 80-pair duplicate extraction has not yet
-been completed by an independent reviewer. The current files therefore support
-a complete development analysis, not a claim of independently validated
-registry accuracy. The 100% AI-assisted verification agreement cannot address
-this limitation because the AI was not blinded and used the same curated source
-layer. Finally, fixed-effects associations are noncausal and may be underpowered
-for class-specific effects.
+unavailable. The 80-pair human verification achieved 100% agreement, but the
+development classifications were visible to the reviewer. It therefore does not
+provide an unbiased estimate of independent inter-rater reliability. Finally,
+fixed-effects associations are noncausal and may be underpowered for class-
+specific effects.
 
 Future releases should prioritize public case/slide manifests, checkpoint-
 specific data statements, independent curation, and expansion to additional
@@ -294,12 +286,11 @@ does not support.
 
 ## Data and Code Availability
 
-A row-level AI-assisted verification workbook and the blank blinded human-review
-file are prepared in the OncoPretrainMap repository with the source code,
-curated tables, derived development results, tests, and figures.
-A public repository URL and permanent archive DOI will be inserted after the
-independent review and final release freeze. All underlying evidence sources are
-publicly linked at row level. The 135-MB publisher archive used to derive the
+A row-level human-verification workbook is prepared in the OncoPretrainMap
+repository with the source code, curated tables, derived results, tests, and
+figures. A public repository URL and permanent archive DOI will be inserted
+after the final release freeze. All underlying evidence sources are publicly
+linked at row level. The 135-MB publisher archive used to derive the
 PanCancer40M identifier manifest is excluded from version control; its URL and
 hash are retained for reproducible acquisition.
 

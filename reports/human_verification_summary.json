@@ -1,0 +1,20 @@
+{
+  "reviewer": "Caleb Yitna Ref",
+  "review_date": "2026-09-28",
+  "sampled_relationships": 80,
+  "exact_agreement_count": 80,
+  "exact_agreement_proportion": 1.0,
+  "disagreements": 0,
+  "reviewer_class_counts": {
+    "D0_documented_disjoint": 11,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 23,
+    "D2_parent_repository_exposure": 23,
+    "D3_exact_dataset_exposure": 23,
+    "D4_exact_case_slide_or_patch_overlap": 0
+  },
+  "complete_row_records": 80,
+  "initially_blinded": false,
+  "interpretation": "Complete human verification with access to the development classifications; not an unbiased blinded inter-rater reliability estimate or gold-standard accuracy estimate.",
+  "workbook": "data/validation/caleb_review_completed.xlsx",
+  "workbook_sha256": "cbf85e3e19e001e79f6b1c9025c9342d69efe9d863af8b691a01b60f76f0b396"
+}
