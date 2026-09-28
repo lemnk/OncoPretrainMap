@@ -15,6 +15,9 @@
 - Computational report
 - Full manuscript draft, figure legends, declarations, and AI-use statement
 - Completed 80-pair human-verification workbook with row-level evidence
+- Class-specific confusion matrix and D1-upgrade analysis
+- Model-stratified headline results and CPTAC cross-check
+- Frozen pre-review v1 and regenerated post-verification v2 artifacts
 
 ## Validation limitation to retain
 
@@ -38,7 +41,7 @@
 
 ## Optional high-value extension
 
-If PathBench releases evaluation case or slide identifiers, compare them with
+If the Bareja et al benchmark releases evaluation case or slide identifiers, compare them with
 the 6,093 PanCancer40M training-slide identifiers and report D4 results. Their
 absence is currently a documented data-availability limitation, not a pipeline
 failure.

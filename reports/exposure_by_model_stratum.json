@@ -1,0 +1,56 @@
+{
+  "model_counts": {
+    "General-purpose": 9,
+    "Pathology-specific": 23
+  },
+  "registry": {
+    "Pathology-specific": {
+      "total": 644,
+      "class_counts": {
+        "D0_documented_disjoint": 11,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 554,
+        "D2_parent_repository_exposure": 51,
+        "D3_exact_dataset_exposure": 28
+      },
+      "d1_percent": 86.0
+    },
+    "General-purpose": {
+      "total": 252,
+      "class_counts": {
+        "D0_documented_disjoint": 0,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 252,
+        "D2_parent_repository_exposure": 0,
+        "D3_exact_dataset_exposure": 0
+      },
+      "d1_percent": 100.0
+    }
+  },
+  "benchmark_audit": {
+    "Pathology-specific": {
+      "total": 943,
+      "class_counts": {
+        "D0_documented_disjoint": 52,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 683,
+        "D3_exact_dataset_exposure": 208
+      },
+      "d1_percent": 72.4
+    },
+    "General-purpose": {
+      "total": 369,
+      "class_counts": {
+        "D0_documented_disjoint": 0,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 369,
+        "D3_exact_dataset_exposure": 0
+      },
+      "d1_percent": 100.0
+    }
+  },
+  "cptac_cross_check": {
+    "d3_rows": 14,
+    "models": {
+      "gpfm": 7,
+      "phikon_v2": 7
+    },
+    "expected_models_present": true
+  }
+}

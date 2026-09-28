@@ -15,8 +15,8 @@ demonstrated.
 
 ## Initial scope
 
-- Core model universe: the 32 model versions evaluated by the 2026 PathBench
-  study.
+- Core model universe: the 32 model versions evaluated in the 2026 benchmark by
+  Bareja et al.
 - Expansion universe: pathology foundation models released by the frozen search
   date that have a paper, technical report, or public model card.
 - Evaluation datasets: TCGA, CPTAC, PAIP, CAMELYON16/17, PCam, PANDA, BACH,
@@ -47,14 +47,16 @@ The checker never converts `D1` into a claim of independence.
 
 ## Status
 
-The protocol-frozen development release covers all 32 PathBench model labels,
+The protocol-frozen development release covers all 32 benchmark model labels,
 28 evaluation datasets, 52 primary-source assertions, and 896 model–dataset
 pairs. In the 1,312-row published benchmark audit, 208 rows have documented
 named-dataset exposure, 52 are documented disjoint, and 1,052 remain unresolved.
 These are disclosure classifications, not contamination prevalence estimates.
+Among the 943 rows for 23 pathology-specific models, 72.4% were D1, 22.1% D3,
+and 5.5% D0. All 369 rows for nine general-purpose comparators were D1.
 
 A primary PanCancer40M manifest contains 6,093 exact TCGA training-slide
-identifiers. No D4 claim is made because PathBench evaluation slide identifiers
+identifiers. No D4 claim is made because benchmark evaluation slide identifiers
 were not publicly recoverable.
 
 The secondary, noncausal performance audit found no clear association between
@@ -66,6 +68,9 @@ development classifications: 11 D0, 23 D1, 23 D2, and 23 D3. The review retained
 row-level decisions, evidence strengths, URLs, explanations, reviewer identity,
 date, and blinding status. Because the development classifications were visible,
 this is complete human verification rather than blinded independent extraction.
+No sampled D1 pair was upgraded to D2 or D3 (0/23); because the review was not
+blinded, this is not an unbiased estimate of missed exposure. Frozen pre-review
+v1 and regenerated post-verification v2 classifications were identical.
 
 ## Reproduce
 

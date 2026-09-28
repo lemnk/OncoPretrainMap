@@ -26,6 +26,7 @@ INCLUDE = [
     "tests",
     "reports",
     "manuscript",
+    "release",
 ]
 
 

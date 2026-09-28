@@ -1,4 +1,4 @@
-"""Create a frozen discovery seed from the PathBench public repository."""
+"""Create a frozen discovery seed from the Bareja et al public repository."""
 
 from __future__ import annotations
 
@@ -53,7 +53,7 @@ def main() -> None:
     readme = SOURCE / "README.md"
     results_path = SOURCE / "data" / "benchmarking_updated_ncomm.csv"
     if not readme.exists() or not results_path.exists():
-        raise FileNotFoundError("Clone the frozen PathBench repository into data/source first.")
+        raise FileNotFoundError("Clone the frozen benchmark repository into data/source first.")
 
     model_rows = parse_markdown_table(readme)
     models: list[dict[str, object]] = []
@@ -135,4 +135,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

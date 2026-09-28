@@ -1,0 +1,6 @@
+development_class/reviewer_class,D0_documented_disjoint,D1_no_detected_evidence_or_insufficient_disclosure,D2_parent_repository_exposure,D3_exact_dataset_exposure,D4_exact_case_slide_or_patch_overlap,per_class_agreement
+D0_documented_disjoint,11,0,0,0,0,1.0
+D1_no_detected_evidence_or_insufficient_disclosure,0,23,0,0,0,1.0
+D2_parent_repository_exposure,0,0,23,0,0,1.0
+D3_exact_dataset_exposure,0,0,0,23,0,1.0
+D4_exact_case_slide_or_patch_overlap,0,0,0,0,0,NA

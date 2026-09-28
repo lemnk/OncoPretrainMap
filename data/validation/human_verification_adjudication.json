@@ -1,0 +1,32 @@
+{
+  "reviewer": "Caleb Yitna Ref",
+  "review_date": "2026-09-28",
+  "reviewer_used_ai": false,
+  "sampled_relationships": 80,
+  "initially_blinded": false,
+  "development_class_counts": {
+    "D0_documented_disjoint": 11,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 23,
+    "D2_parent_repository_exposure": 23,
+    "D3_exact_dataset_exposure": 23,
+    "D4_exact_case_slide_or_patch_overlap": 0
+  },
+  "reviewer_class_counts": {
+    "D0_documented_disjoint": 11,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 23,
+    "D2_parent_repository_exposure": 23,
+    "D3_exact_dataset_exposure": 23,
+    "D4_exact_case_slide_or_patch_overlap": 0
+  },
+  "confusion_matrix": {
+    "D0_documented_disjoint": {"D0_documented_disjoint": 11},
+    "D1_no_detected_evidence_or_insufficient_disclosure": {"D1_no_detected_evidence_or_insufficient_disclosure": 23},
+    "D2_parent_repository_exposure": {"D2_parent_repository_exposure": 23},
+    "D3_exact_dataset_exposure": {"D3_exact_dataset_exposure": 23},
+    "D4_exact_case_slide_or_patch_overlap": {}
+  },
+  "d1_upgraded_to_d2_or_d3": 0,
+  "workbook": "data/validation/caleb_review_completed.xlsx",
+  "workbook_sha256": "cbf85e3e19e001e79f6b1c9025c9342d69efe9d863af8b691a01b60f76f0b396",
+  "review_design_note": "The workbook displayed the development classification. This was complete human verification, not blinded independent duplicate extraction."
+}

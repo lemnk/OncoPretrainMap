@@ -1,4 +1,4 @@
-"""Descriptive, noncausal analysis of PathBench performance by exposure class."""
+"""Descriptive, noncausal analysis of benchmark performance by exposure class."""
 
 from __future__ import annotations
 

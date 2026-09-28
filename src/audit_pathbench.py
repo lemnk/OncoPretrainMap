@@ -1,4 +1,4 @@
-"""Annotate the published PathBench result matrix with current exposure evidence."""
+"""Annotate the published Bareja et al result matrix with exposure evidence."""
 
 from __future__ import annotations
 
@@ -58,7 +58,7 @@ def main() -> None:
     }
     unknown_labels = sorted({row["model_label"] for row in matrix} - set(aliases))
     if unknown_labels:
-        raise ValueError(f"Unmapped PathBench model labels: {unknown_labels}")
+        raise ValueError(f"Unmapped benchmark model labels: {unknown_labels}")
 
     annotated: list[dict[str, object]] = []
     for row in matrix:

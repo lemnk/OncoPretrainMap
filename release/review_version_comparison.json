@@ -1,0 +1,11 @@
+{
+  "v1_pre_review": {
+    "model_dataset_exposure.csv": "2e1c17ad1869f1f543361a411114d4c95795cf54e7f6ac5052187b6c11150246",
+    "benchmark_exposure_audit.csv": "731b1293402e96ee40711f78060f3bd5a4ecc5a17f1c5b6a2695ff62a7056481"
+  },
+  "v2_post_review": {
+    "model_dataset_exposure.csv": "2e1c17ad1869f1f543361a411114d4c95795cf54e7f6ac5052187b6c11150246",
+    "benchmark_exposure_audit.csv": "731b1293402e96ee40711f78060f3bd5a4ecc5a17f1c5b6a2695ff62a7056481"
+  },
+  "classifications_changed_after_review": false
+}

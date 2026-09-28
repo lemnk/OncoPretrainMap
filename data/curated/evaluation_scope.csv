@@ -1,11 +1,11 @@
 evaluation_dataset_id,priority,reason
-tcga,core,PathBench in-domain repository benchmark
+tcga,core,Bareja et al in-domain repository benchmark
 tcga_brca,core,common breast cancer benchmark
 tcga_luad,core,common lung cancer benchmark
 tcga_lusc,core,common lung cancer benchmark
 tcga_coad,core,common colorectal benchmark
 tcga_read,core,common colorectal benchmark
-cptac,core,PathBench non-TCGA repository benchmark
+cptac,core,Bareja et al non-TCGA repository benchmark
 camelyon16,core,common metastasis benchmark
 camelyon17,core,common metastasis benchmark
 pcam,core,CAMELYON-derived patch benchmark
@@ -19,10 +19,10 @@ mhist,core,colorectal polyp benchmark
 sicapv2,core,prostate grading benchmark
 unitopatho,core,colorectal polyp benchmark
 lc25000,core,lung and colorectal histology benchmark
-nlst,core,PathBench out-of-domain lung grade and stage tasks
-dhmc_lung,core,PathBench out-of-domain lung histology task
-stanford_gbm,core,PathBench out-of-domain MGMT and necrosis tasks
-stanford_lung,core,PathBench out-of-domain lung histology and stage tasks
+nlst,core,Bareja et al out-of-domain lung grade and stage tasks
+dhmc_lung,core,Bareja et al out-of-domain lung histology task
+stanford_gbm,core,Bareja et al out-of-domain MGMT and necrosis tasks
+stanford_lung,core,Bareja et al out-of-domain lung histology and stage tasks
 hest,core,histology-spatial transcriptomics benchmark
 gtex,supplemental,normal tissue evaluation source
 tcia,supplemental,parent imaging repository

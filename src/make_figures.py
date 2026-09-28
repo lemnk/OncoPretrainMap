@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -30,7 +31,17 @@ SHORT = {
 def save(fig: plt.Figure, stem: str) -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIGURES / f"{stem}.png", dpi=300, bbox_inches="tight")
-    fig.savefig(FIGURES / f"{stem}.pdf", bbox_inches="tight")
+    frozen_time = datetime(2026, 9, 28, tzinfo=timezone.utc)
+    fig.savefig(
+        FIGURES / f"{stem}.pdf",
+        bbox_inches="tight",
+        metadata={
+            "Creator": "OncoPretrainMap",
+            "Producer": "Matplotlib",
+            "CreationDate": frozen_time,
+            "ModDate": frozen_time,
+        },
+    )
     plt.close(fig)
 
 

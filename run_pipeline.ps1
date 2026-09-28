@@ -10,8 +10,11 @@ function Invoke-CheckedPython {
 Invoke-CheckedPython src\seed_from_pathbench.py
 Invoke-CheckedPython src\build_exposure_registry.py
 Invoke-CheckedPython src\audit_pathbench.py
+Invoke-CheckedPython src\analyze_registry_strata.py
 Invoke-CheckedPython src\analyze_performance_by_exposure.py
 Invoke-CheckedPython src\create_validation_sample.py
+Invoke-CheckedPython src\summarize_human_verification.py
+Invoke-CheckedPython src\freeze_review_versions.py
 Invoke-CheckedPython src\make_figures.py
 Invoke-CheckedPython -m pytest -q
 Invoke-CheckedPython src\make_manifest.py

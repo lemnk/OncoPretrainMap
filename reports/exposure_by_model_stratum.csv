@@ -1,0 +1,15 @@
+table,model_stratum,exposure_scope,count,percent_within_stratum
+registry,Pathology-specific,D0_documented_disjoint,11,1.7
+registry,Pathology-specific,D1_no_detected_evidence_or_insufficient_disclosure,554,86.0
+registry,Pathology-specific,D2_parent_repository_exposure,51,7.9
+registry,Pathology-specific,D3_exact_dataset_exposure,28,4.3
+registry,General-purpose,D0_documented_disjoint,0,0.0
+registry,General-purpose,D1_no_detected_evidence_or_insufficient_disclosure,252,100.0
+registry,General-purpose,D2_parent_repository_exposure,0,0.0
+registry,General-purpose,D3_exact_dataset_exposure,0,0.0
+benchmark_audit,Pathology-specific,D0_documented_disjoint,52,5.5
+benchmark_audit,Pathology-specific,D1_no_detected_evidence_or_insufficient_disclosure,683,72.4
+benchmark_audit,Pathology-specific,D3_exact_dataset_exposure,208,22.1
+benchmark_audit,General-purpose,D0_documented_disjoint,0,0.0
+benchmark_audit,General-purpose,D1_no_detected_evidence_or_insufficient_disclosure,369,100.0
+benchmark_audit,General-purpose,D3_exact_dataset_exposure,0,0.0
