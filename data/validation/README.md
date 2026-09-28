@@ -28,3 +28,12 @@ Original reviewer decisions must be preserved. After unblinding, disagreements
 may be discussed, but the initial decisions and a resolution note must remain in
 the final audit file. Without a third reviewer, unresolved cases remain
 unresolved instead of being forced into agreement.
+
+## AI-assisted verification
+
+`ai_assisted_review_v1.xlsx` is a separate, explicitly labeled AI review. OpenAI
+Codex GPT-5.6 Sol re-derived all 80 classifications from the frozen curated
+assertions, disjointness records, and lineage rules and agreed on 80/80 pairs.
+The AI had access to the repository and was not blinded. This workbook documents
+software-rule reproduction from the same evidence and must not be represented as
+independent human validation.

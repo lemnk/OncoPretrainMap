@@ -14,6 +14,7 @@
 - Three publication figures in PNG and vector PDF
 - Computational report
 - Full manuscript draft, figure legends, declarations, and AI-use statement
+- Explicitly labeled 80-pair AI-assisted verification workbook
 
 ## Required before claiming independent validation
 

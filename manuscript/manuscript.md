@@ -160,10 +160,19 @@ independent duplicate-extraction sample rather than a held-out validation set.
 Agreement and unweighted Cohen's kappa will be calculated only after a genuinely
 independent second human review.
 
+Separately, an AI-assisted verification pass re-derived classifications for all
+80 sampled pairs from the frozen assertions, disjointness records, and lineage
+graph. The AI system had access to the repository and was not blinded to the
+project's methods. We therefore summarized agreement as a software-rule
+reproduction check and did not interpret it as independent curator reliability,
+source truth, or diagnostic accuracy.
+
 OpenAI Codex (GPT-5.6 Sol; OpenAI; accessed September 27-28, 2026) assisted with
 software development and automated retrieval and processing of public metadata.
 The author checked source evidence and analytical outputs. The AI system was not
-treated as an author, reviewer, or source of scientific evidence.
+treated as an author, independent human reviewer, or source of primary
+scientific evidence. Its separately reported verification pass used the frozen
+curated evidence and is labeled as AI-assisted.
 
 ## Results
 
@@ -218,9 +227,15 @@ specific model–dataset pairs.
 
 Fourteen automated tests passed. The complete workflow regenerated the exposure
 matrix, benchmark audit, descriptive models, blinded review file, three figures
-in raster and vector formats, and a 44-file SHA-256 manifest. The command-line
+in raster and vector formats, and a SHA-256 artifact manifest. The command-line
 checker returns the exposure class, evidence strength, constrained independence
 statement, and supporting sources for a requested model–dataset pair.
+
+The AI-assisted verification reproduced all 80 development classifications
+(80/80, 100%): 11 D0, 23 D1, 23 D2, and 23 D3. There were no D4 pairs. Because
+the AI used the same curated evidence and had repository access, this complete
+concordance shows deterministic reproduction of the frozen rules only. It does
+not replace the pending independent human duplicate extraction.
 
 ## Discussion
 
@@ -256,8 +271,10 @@ be matched to benchmark evaluation slides because the latter identifiers were
 unavailable. Most importantly, the 80-pair duplicate extraction has not yet
 been completed by an independent reviewer. The current files therefore support
 a complete development analysis, not a claim of independently validated
-registry accuracy. Finally, fixed-effects associations are noncausal and may be
-underpowered for class-specific effects.
+registry accuracy. The 100% AI-assisted verification agreement cannot address
+this limitation because the AI was not blinded and used the same curated source
+layer. Finally, fixed-effects associations are noncausal and may be underpowered
+for class-specific effects.
 
 Future releases should prioritize public case/slide manifests, checkpoint-
 specific data statements, independent curation, and expansion to additional
@@ -277,8 +294,9 @@ does not support.
 
 ## Data and Code Availability
 
-All source code, curated tables, derived development results, tests, figures,
-and the blinded validation file are prepared in the OncoPretrainMap repository.
+A row-level AI-assisted verification workbook and the blank blinded human-review
+file are prepared in the OncoPretrainMap repository with the source code,
+curated tables, derived development results, tests, and figures.
 A public repository URL and permanent archive DOI will be inserted after the
 independent review and final release freeze. All underlying evidence sources are
 publicly linked at row level. The 135-MB publisher archive used to derive the

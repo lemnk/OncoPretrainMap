@@ -60,6 +60,7 @@ against a gold standard.
 | S7 | `reports/performance_exposure_fixed_effects.csv` | Fixed-effects coefficient estimates |
 | S8 | `data/derived/pancancer40m_training_slides.csv` | Exact PanCancer40M training slide identifiers |
 | S9 | `data/validation/independent_review_sample_v1.csv` | Frozen, blank duplicate-extraction sample |
+| S10 | `data/validation/ai_assisted_review_v1.xlsx` | Row-level AI-assisted verification with evidence and limitations |
 
 ## Supplementary Results
 
@@ -71,3 +72,15 @@ disjointness improves performance.
 
 No exact-overlap table is provided because no evaluated pair met D4 criteria.
 The empty D4 result is retained rather than weakening the identifier standard.
+
+## Supplementary AI-assisted verification
+
+OpenAI Codex GPT-5.6 Sol re-derived the 80 sampled classifications from the
+frozen curated assertions, disjointness table, and dataset-lineage rules. It
+agreed with 80 of 80 development classifications: 11 D0, 23 D1, 23 D2, and 23
+D3. The AI had repository access and was not blinded. This analysis checks
+reproducibility of rule application from the same evidence layer. It is not an
+independent review, a gold-standard validation, or evidence that the underlying
+public disclosures are complete or correct. Row-level decisions, evidence
+notes, URLs, reviewer identity, date, and blinding status are retained in
+`data/validation/ai_assisted_review_v1.xlsx`.

@@ -81,11 +81,19 @@ sample, not a held-out development test. A second human reviewer who did not
 create the rules must complete it before exact agreement and Cohen's kappa can
 be reported.
 
+An additional AI-assisted verification was completed across all 80 sampled
+pairs. OpenAI Codex GPT-5.6 Sol reproduced 80/80 classifications, comprising 11
+D0, 23 D1, 23 D2, and 23 D3 pairs. The AI was not blinded and used the same
+curated evidence layer and frozen decision rules. The result is therefore a
+rule-reproduction check, not independent validation or an estimate of source
+accuracy. Row-level evidence is retained in
+`data/validation/ai_assisted_review_v1.xlsx`.
+
 ## Reproducibility verification
 
 - Fourteen automated tests passed.
 - Three PNG and three vector PDF figures were generated.
-- Forty-four analytical files were SHA-256 hashed after the last complete run.
+- Analytical artifacts were SHA-256 hashed after the last complete run.
 - Raw PathBench input hashes and the publisher PanCancer40M hash are retained.
 - `run_pipeline.ps1` regenerates derived tables, analysis, validation sample,
   figures, tests, and the manifest.

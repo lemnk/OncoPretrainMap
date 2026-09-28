@@ -64,6 +64,12 @@ The secondary, noncausal performance audit found no clear association between
 documented exact-dataset exposure and AUROC or AUPRC after model and task fixed
 effects. This does not demonstrate absence of an exposure effect.
 
+An explicitly labeled AI-assisted verification reviewed the frozen 80-pair
+sample and reproduced 80 of 80 development classifications. The AI was not
+blinded and used the same curated evidence and rules. This verifies deterministic
+rule application only; it is not independent human validation or a source-
+accuracy estimate.
+
 ## Reproduce
 
 From PowerShell with Python dependencies installed:
