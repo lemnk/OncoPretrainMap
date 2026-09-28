@@ -1,4 +1,4 @@
-"""Conservative command-line interface for released exposure records."""
+"""Conservative command-line interface for exposure records."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_REGISTRY = ROOT / "release" / "model_dataset_exposure.csv"
+DEFAULT_REGISTRY = ROOT / "data" / "derived" / "model_dataset_exposure_development.csv"
 
 
 def main() -> int:
@@ -18,7 +18,7 @@ def main() -> int:
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
     args = parser.parse_args()
     if not args.registry.exists():
-        print("Registry not released yet; independence cannot be assessed.")
+        print("Registry file not found; independence cannot be assessed.")
         return 2
     with args.registry.open(encoding="utf-8", newline="") as handle:
         rows = list(csv.DictReader(handle))
@@ -32,6 +32,8 @@ def main() -> int:
         print("No detected evidence; independence cannot be assumed.")
         return 1
     for row in matches:
+        if row.get("registry_status"):
+            print(f"Registry status: {row['registry_status']}")
         print(f"Exposure scope: {row['exposure_scope']}")
         print(f"Evidence strength: {row['evidence_strength']}")
         print(f"Benchmark independence: {row['independence_statement']}")
@@ -41,4 +43,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

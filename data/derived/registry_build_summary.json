@@ -1,15 +1,17 @@
 {
-  "dataset_records": 31,
+  "dataset_records": 49,
   "lineage_edges": 6,
   "core_models": 32,
-  "evaluation_datasets": 24,
-  "model_dataset_pairs": 768,
-  "primary_source_assertions": 18,
+  "evaluation_datasets": 28,
+  "model_dataset_pairs": 896,
+  "primary_source_assertions": 52,
+  "models_with_primary_source_assertions": 32,
+  "model_source_coverage_percent": 100.0,
   "exposure_scope_counts": {
     "D0_documented_disjoint": 11,
-    "D1_no_detected_evidence_or_insufficient_disclosure": 715,
-    "D2_parent_repository_exposure": 30,
-    "D3_exact_dataset_exposure": 12
+    "D1_no_detected_evidence_or_insufficient_disclosure": 806,
+    "D2_parent_repository_exposure": 51,
+    "D3_exact_dataset_exposure": 28
   },
-  "status": "Development registry; primary-source verification is incomplete."
+  "status": "Development registry; initial primary-source extraction covers every core model, but identifier-level validation and independent duplicate extraction remain incomplete."
 }

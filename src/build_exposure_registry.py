@@ -149,8 +149,13 @@ def main() -> None:
         "evaluation_datasets": len(scope),
         "model_dataset_pairs": len(output),
         "primary_source_assertions": len(assertions),
+        "models_with_primary_source_assertions": len(assertions_by_model),
+        "model_source_coverage_percent": round(100 * len(assertions_by_model) / len(models), 1),
         "exposure_scope_counts": dict(sorted(counts.items())),
-        "status": "Development registry; primary-source verification is incomplete.",
+        "status": (
+            "Development registry; initial primary-source extraction covers every core model, "
+            "but identifier-level validation and independent duplicate extraction remain incomplete."
+        ),
     }
     DERIVED.mkdir(parents=True, exist_ok=True)
     (DERIVED / "registry_build_summary.json").write_text(

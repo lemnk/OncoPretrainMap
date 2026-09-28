@@ -9,13 +9,12 @@
     "TCGA": 608
   },
   "dataset_label_resolvable_counts": {
-    "No": 224,
-    "Yes": 1088
+    "Yes": 1312
   },
   "exposure_scope_counts": {
     "D0_documented_disjoint": 52,
-    "D1_no_detected_evidence_or_insufficient_disclosure": 1139,
-    "D3_exact_dataset_exposure": 121
+    "D1_no_detected_evidence_or_insufficient_disclosure": 1052,
+    "D3_exact_dataset_exposure": 208
   },
-  "interpretation": "Development audit only. Named public external datasets were resolved from task labels; out-of-domain hospital cohorts still require source-level mapping, and primary-source extraction is incomplete. D1 rows are not evidence of independence."
+  "interpretation": "Development audit only. Public external and out-of-domain evaluation cohorts were resolved from task labels and the peer-reviewed Methods; initial primary-source extraction covers all 32 core models. D1 rows are not evidence of independence."
 }

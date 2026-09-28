@@ -1,0 +1,81 @@
+audit_row,model_id,model_name,evaluation_dataset_id,reviewer_exposure_scope,reviewer_evidence_strength,reviewer_source_urls,reviewer_evidence_note,reviewer_label,review_date,initially_blinded
+1,mi_zero_pubmedbert,MI-Zero PubMedBERT,stanford_lung,,,,,,,Yes
+2,blip_b16_14m,BLIP-B16-14M,nct_crc_he_100k,,,,,,,Yes
+3,titan,TITAN,cptac,,,,,,,Yes
+4,phikon,Phikon,bach,,,,,,,Yes
+5,uni,UNI,panda,,,,,,,Yes
+6,hibou_b,Hibou-B,nlst,,,,,,,Yes
+7,uni,UNI,tcia,,,,,,,Yes
+8,lunit_dinosslpath,Lunit / DinoSSLPath,tcga_coad,,,,,,,Yes
+9,mi_zero_pubmedbert,MI-Zero PubMedBERT,tcga_coad,,,,,,,Yes
+10,phikon_v2,Phikon-v2,tcga_lusc,,,,,,,Yes
+11,ctranspath,cTransPath,tcga_brca,,,,,,,Yes
+12,gpfm,GPFM,sicapv2,,,,,,,Yes
+13,mi_zero_pubmedbert,MI-Zero PubMedBERT,paip,,,,,,,Yes
+14,gpfm,GPFM,tcga,,,,,,,Yes
+15,prov_gigapath,Prov-GigaPath,paip,,,,,,,Yes
+16,phikon_v2,Phikon-v2,gtex,,,,,,,Yes
+17,lunit_dinosslpath,Lunit / DinoSSLPath,tcga,,,,,,,Yes
+18,titan,TITAN,stanford_lung,,,,,,,Yes
+19,titan,TITAN,gtex,,,,,,,Yes
+20,hipt,HIPT,tcga_brca,,,,,,,Yes
+21,lunit_dinosslpath,Lunit / DinoSSLPath,tcga_lusc,,,,,,,Yes
+22,align_base,ALIGN-base,camelyon16,,,,,,,Yes
+23,h_optimus_mini_h0_mini,H-optimus-mini / H0-mini,tcga_luad,,,,,,,Yes
+24,gpfm,GPFM,cptac,,,,,,,Yes
+25,hipt,HIPT,tcga_coad,,,,,,,Yes
+26,ctranspath,cTransPath,tcga_lusc,,,,,,,Yes
+27,phikon_v2,Phikon-v2,cptac,,,,,,,Yes
+28,mi_zero_clinicalbert,MI-Zero ClinicalBERT,crc_val_he_7k,,,,,,,Yes
+29,gpfm,GPFM,lc25000,,,,,,,Yes
+30,mi_zero_pubmedbert,MI-Zero PubMedBERT,crc_val_he_7k,,,,,,,Yes
+31,phikon,Phikon,tcga_coad,,,,,,,Yes
+32,ctranspath,cTransPath,tcga_luad,,,,,,,Yes
+33,mi_zero_pubmedbert,MI-Zero PubMedBERT,tcga_lusc,,,,,,,Yes
+34,gpfm,GPFM,pcam,,,,,,,Yes
+35,uni,UNI,tcga,,,,,,,Yes
+36,hipt,HIPT,paip,,,,,,,Yes
+37,gpfm,GPFM,camelyon17,,,,,,,Yes
+38,mi_zero_clinicalbert,MI-Zero ClinicalBERT,tcga_read,,,,,,,Yes
+39,ctranspath,cTransPath,paip,,,,,,,Yes
+40,mi_zero_pubmedbert,MI-Zero PubMedBERT,tcga_brca,,,,,,,Yes
+41,gpfm,GPFM,bach,,,,,,,Yes
+42,titan,TITAN,paip,,,,,,,Yes
+43,h_optimus_mini_h0_mini,H-optimus-mini / H0-mini,tcga,,,,,,,Yes
+44,h_optimus_mini_h0_mini,H-optimus-mini / H0-mini,tcga_lusc,,,,,,,Yes
+45,uni,UNI,camelyon17,,,,,,,Yes
+46,h_optimus_mini_h0_mini,H-optimus-mini / H0-mini,tcga_coad,,,,,,,Yes
+47,uni,UNI,gtex,,,,,,,Yes
+48,phikon,Phikon,hest,,,,,,,Yes
+49,gpfm,GPFM,camelyon16,,,,,,,Yes
+50,phikon,Phikon,tcga_lusc,,,,,,,Yes
+51,blip_b16_14m,BLIP-B16-14M,sicapv2,,,,,,,Yes
+52,ctranspath,cTransPath,tcga,,,,,,,Yes
+53,uni,UNI,camelyon16,,,,,,,Yes
+54,uni,UNI,cptac,,,,,,,Yes
+55,phikon_v2,Phikon-v2,tcga,,,,,,,Yes
+56,lunit_dinosslpath,Lunit / DinoSSLPath,tcga_brca,,,,,,,Yes
+57,hibou_b,Hibou-B,lc25000,,,,,,,Yes
+58,hibou_b,Hibou-B,bracs,,,,,,,Yes
+59,hibou_b,Hibou-B,hest,,,,,,,Yes
+60,uni,UNI,paip,,,,,,,Yes
+61,dino_s16,DINO-S16,mhist,,,,,,,Yes
+62,mi_zero_clinicalbert,MI-Zero ClinicalBERT,nlst,,,,,,,Yes
+63,hipt,HIPT,tcga_lusc,,,,,,,Yes
+64,virchow2,Virchow2,cptac,,,,,,,Yes
+65,phikon,Phikon,tcga,,,,,,,Yes
+66,mi_zero_clinicalbert,MI-Zero ClinicalBERT,tcga,,,,,,,Yes
+67,hipt,HIPT,tcga,,,,,,,Yes
+68,align_base,ALIGN-base,panda,,,,,,,Yes
+69,mi_zero_clinicalbert,MI-Zero ClinicalBERT,paip,,,,,,,Yes
+70,gpfm,GPFM,tcga_luad,,,,,,,Yes
+71,mi_zero_clinicalbert,MI-Zero ClinicalBERT,tcga_brca,,,,,,,Yes
+72,titan,TITAN,tcga,,,,,,,Yes
+73,titan,TITAN,panda,,,,,,,Yes
+74,lunit_dinosslpath,Lunit / DinoSSLPath,unitopatho,,,,,,,Yes
+75,mi_zero_pubmedbert,MI-Zero PubMedBERT,tcga,,,,,,,Yes
+76,kaiko,Kaiko,gtex,,,,,,,Yes
+77,gpfm,GPFM,paip,,,,,,,Yes
+78,blip_b16_14m,BLIP-B16-14M,hest,,,,,,,Yes
+79,hipt,HIPT,tcga_luad,,,,,,,Yes
+80,plip,PLIP,cptac,,,,,,,Yes

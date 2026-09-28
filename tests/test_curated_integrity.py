@@ -42,6 +42,12 @@ def test_primary_assertions_are_versioned_and_cited():
         assert row["evidence_summary"]
 
 
+def test_every_core_model_has_primary_source_extraction():
+    assertions = read_csv(ROOT / "data" / "curated" / "model_dataset_assertions.csv")
+    models = read_csv(ROOT / "data" / "derived" / "pathbench_model_universe.csv")
+    assert {row["model_id"] for row in assertions} == {row["model_id"] for row in models}
+
+
 def test_no_unresolved_exposure_disjointness_conflicts_in_curated_inputs():
     assertions = read_csv(ROOT / "data" / "curated" / "model_dataset_assertions.csv")
     disjoint = read_csv(ROOT / "data" / "curated" / "documented_disjoint.csv")

@@ -12,11 +12,14 @@ INCLUDE = [
     "FEASIBILITY_AUDIT.md",
     "PROJECT_PLAN.md",
     "PROTOCOL_v1_20260927.md",
+    "PROTOCOL_DEVIATIONS.md",
     "requirements.txt",
     "run_pipeline.ps1",
     "config",
     "data/curated",
     "data/derived",
+    "data/validation",
+    "figures",
     "src",
     "tests",
     "reports",
@@ -50,4 +53,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

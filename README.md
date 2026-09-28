@@ -47,10 +47,33 @@ The checker never converts `D1` into a claim of independence.
 
 ## Status
 
-The project is in the protocol-frozen registry-construction phase. The PathBench
-core universe and source snapshot are reproducible. The development audit covers
-all 1,312 published model–task rows: 121 currently have documented named-dataset
-exposure, 52 are documented disjoint, and 1,139 remain unresolved. A primary
-PanCancer40M manifest contains 6,093 exact training-slide identifiers, but no D4
-claim is made without an independently sourced evaluation-slide manifest.
-Primary-source extraction and independent blinded validation remain in progress.
+The protocol-frozen development release covers all 32 PathBench model labels,
+28 evaluation datasets, 52 primary-source assertions, and 896 model–dataset
+pairs. In the 1,312-row published benchmark audit, 208 rows have documented
+named-dataset exposure, 52 are documented disjoint, and 1,052 remain unresolved.
+These are disclosure classifications, not contamination prevalence estimates.
+
+A primary PanCancer40M manifest contains 6,093 exact TCGA training-slide
+identifiers. No D4 claim is made because PathBench evaluation slide identifiers
+were not publicly recoverable. An 80-pair deterministic blinded validation file
+is frozen for a genuinely independent second reviewer; it is intentionally
+unfilled. Until that review is returned, this is a development release rather
+than an independently validated registry.
+
+The secondary, noncausal performance audit found no clear association between
+documented exact-dataset exposure and AUROC or AUPRC after model and task fixed
+effects. This does not demonstrate absence of an exposure effect.
+
+## Reproduce
+
+From PowerShell with Python dependencies installed:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run_pipeline.ps1
+```
+
+Query a model–dataset pair with:
+
+```powershell
+python src\check_pretraining_overlap.py UNI tcga
+```

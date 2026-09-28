@@ -22,6 +22,10 @@ mhist,MHIST,dataset,,v1,https://bmirds.github.io/MHIST/,primary_source_pending
 sicapv2,SICAPv2,dataset,,v2,https://data.mendeley.com/datasets/9xxm58dvs3,primary_source_pending
 unitopatho,UniToPatho,dataset,,v1,https://unitopatho.it/,primary_source_pending
 lc25000,LC25000 lung and colon histopathology image dataset,dataset,,v1,https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images,primary_source_pending
+nlst,National Lung Screening Trial pathology collection,dataset,,TCIA HMQ8-J677,https://www.cancerimagingarchive.net/collection/nlst/,primary_source_verified
+dhmc_lung,Dartmouth-Hitchcock lung adenocarcinoma dataset,dataset,,published cohort,https://bmirds.github.io/LungCancer/,primary_source_verified
+stanford_gbm,Stanford GBM pathology cohort,institutional_cohort,,PathBench 2026 version,https://www.nature.com/articles/s41467-026-76004-6,primary_source_verified_incomplete_public_access
+stanford_lung,Stanford lung pathology cohort,institutional_cohort,,PathBench 2026 version,https://www.nature.com/articles/s41467-026-76004-6,primary_source_verified_incomplete_public_access
 hest,HEST-1k,dataset,,v1,https://github.com/mahmoodlab/HEST,primary_source_pending
 tulip,Lunit internal TULIP corpus,proprietary_corpus,,unspecified,,incomplete_disclosure
 mass_100k,Mass-100K,proprietary_corpus,,paper_version,,incomplete_disclosure
@@ -30,3 +34,17 @@ msk_15m,MSK pathology corpus 1.5M slides,proprietary_corpus,,paper_version,,inco
 msk_31m,MSK pathology corpus 3.1M slides,proprietary_corpus,,paper_version,,incomplete_disclosure
 providence_171k,Providence pathology corpus 171K slides,proprietary_corpus,,paper_version,,incomplete_disclosure
 hoptimus0_proprietary_500k,H-Optimus-0 proprietary corpus 500K-plus slides,proprietary_corpus,,model_card_version,https://huggingface.co/bioptimus/H-optimus-0,partial_primary_disclosure
+hibou_private,Hibou private pathology corpus,proprietary_corpus,,paper_and_model_card_version,https://huggingface.co/histai/hibou-b,partial_primary_disclosure
+exaone_private_34795,EXAONEPath 34795-WSI corpus,proprietary_corpus,,paper_and_model_card_version,https://huggingface.co/LGAI-EXAONE/EXAONEPath,partial_primary_disclosure
+openpath,OpenPath medical social-media image-text collection,web_image_text_corpus,,paper_version,https://www.nature.com/articles/s41591-023-02504-3,primary_source_verified_incomplete_identity
+quilt1m,Quilt-1M histopathology image-text collection,web_image_text_corpus,,v1,https://arxiv.org/abs/2306.11207,primary_source_verified_incomplete_identity
+pmc15m,PMC-15M biomedical figure-caption collection,web_image_text_corpus,,paper_version,https://huggingface.co/microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224,primary_source_verified_incomplete_identity
+mi_zero_pairs,MI-Zero 33480 public histopathology image-caption pairs,web_image_text_corpus,,paper_version,https://openaccess.thecvf.com/content/CVPR2023/html/Lu_Visual_Language_Pretrained_Multiple_Instance_Zero-Shot_Transfer_for_Histopathology_Images_CVPR_2023_paper.html,primary_source_verified_incomplete_identity
+conch_117m,CONCH 1.17M human histopathology image-caption pairs,web_image_text_corpus,,paper_version,https://pmc.ncbi.nlm.nih.gov/articles/PMC11384335/,primary_source_verified_incomplete_identity
+imagenet1k,ImageNet-1K,natural_image_corpus,,ILSVRC version,https://www.image-net.org/,primary_source_verified
+imagenet22k,ImageNet-22K,natural_image_corpus,,fall 2011 release,https://www.image-net.org/,primary_source_verified
+lvd142m,LVD-142M curated image corpus,natural_image_corpus,,DINOv2 paper version,https://github.com/facebookresearch/dinov2,primary_source_verified_incomplete_identity
+openai_wit400m,OpenAI CLIP 400M web image-text corpus,web_image_text_corpus,,CLIP paper version,https://arxiv.org/abs/2103.00020,primary_source_verified_incomplete_identity
+blip14m,BLIP 14M image-text pretraining mixture,web_image_text_corpus,,released 14M checkpoint,https://github.com/salesforce/BLIP,primary_source_verified_incomplete_identity
+coyo700m,COYO-700M image-text corpus,web_image_text_corpus,,model-card version,https://github.com/kakaobrain/coyo-dataset,primary_source_verified_incomplete_identity
+beit3_multimodal,BEiT-3 multimodal pretraining mixture,mixed_multimodal_corpus,,released checkpoint version,https://github.com/microsoft/unilm/tree/master/beit3,primary_source_verified_incomplete_identity

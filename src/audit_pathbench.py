@@ -19,6 +19,13 @@ TASK_DATASET_MAP = {
     "NCT-CRC-HE": "nct_crc_he_100k",
     "SICAPv2": "sicapv2",
     "UniToPatho": "unitopatho",
+    "brain necrosis": "stanford_gbm",
+    "lung grade": "nlst",
+    "lung hist OOD1": "stanford_lung",
+    "lung hist OOD2": "dhmc_lung",
+    "lung stage OOD": "stanford_lung",
+    "lung stage": "nlst",
+    "MGMT OOD": "stanford_gbm",
 }
 
 
@@ -98,8 +105,8 @@ def main() -> None:
         "dataset_label_resolvable_counts": dict(sorted(resolvable_counts.items())),
         "exposure_scope_counts": dict(sorted(exposure_counts.items())),
         "interpretation": (
-            "Development audit only. Named public external datasets were resolved from task labels; out-of-domain "
-            "hospital cohorts still require source-level mapping, and primary-source extraction is incomplete. "
+            "Development audit only. Public external and out-of-domain evaluation cohorts were resolved from "
+            "task labels and the peer-reviewed Methods; initial primary-source extraction covers all 32 core models. "
             "D1 rows are not evidence of independence."
         ),
     }

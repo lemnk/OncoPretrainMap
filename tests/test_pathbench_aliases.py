@@ -28,10 +28,11 @@ def test_alias_targets_exist_in_core_universe():
     assert {row["model_id"] for row in aliases} == model_ids
 
 
-def test_named_external_tasks_map_without_guessing_ood_cohorts():
+def test_all_named_evaluation_tasks_map_to_canonical_datasets():
     tasks = read_csv(ROOT / "data" / "derived" / "pathbench_task_universe.csv")
     external = [row for row in tasks if row["dataset_group"] == "External_benchmarking_cohort"]
     ood = [row for row in tasks if row["dataset_group"] == "Out of Domain"]
     assert len(external) == 8
     assert all(canonical_dataset_id(row["dataset_group"], row["task_name"]) for row in external)
-    assert all(canonical_dataset_id(row["dataset_group"], row["task_name"]) == "" for row in ood)
+    assert len(ood) == 7
+    assert all(canonical_dataset_id(row["dataset_group"], row["task_name"]) for row in ood)
