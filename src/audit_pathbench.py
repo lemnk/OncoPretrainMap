@@ -10,6 +10,25 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+TASK_DATASET_MAP = {
+    "BACH": "bach",
+    "BRACS": "bracs",
+    "BreakHis": "breakhis",
+    "LC25000": "lc25000",
+    "MHIST": "mhist",
+    "NCT-CRC-HE": "nct_crc_he_100k",
+    "SICAPv2": "sicapv2",
+    "UniToPatho": "unitopatho",
+}
+
+
+def canonical_dataset_id(dataset_group: str, task_name: str) -> str:
+    if dataset_group == "TCGA":
+        return "tcga"
+    if dataset_group == "CPTAC":
+        return "cptac"
+    return TASK_DATASET_MAP.get(task_name, "")
+
 
 def read_csv(path: Path) -> list[dict[str, str]]:
     with path.open(encoding="utf-8", newline="") as handle:
@@ -18,6 +37,10 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 
 def main() -> None:
     matrix = read_csv(ROOT / "data" / "derived" / "pathbench_model_task_matrix.csv")
+    task_names = {
+        row["task_id"]: row["task_name"]
+        for row in read_csv(ROOT / "data" / "derived" / "pathbench_task_universe.csv")
+    }
     aliases = {
         row["pathbench_model_label"]: row["model_id"]
         for row in read_csv(ROOT / "data" / "curated" / "pathbench_model_aliases.csv")
@@ -26,7 +49,6 @@ def main() -> None:
         (row["model_id"], row["evaluation_dataset_id"]): row
         for row in read_csv(ROOT / "data" / "derived" / "model_dataset_exposure_development.csv")
     }
-    dataset_map = {"TCGA": "tcga", "CPTAC": "cptac"}
     unknown_labels = sorted({row["model_label"] for row in matrix} - set(aliases))
     if unknown_labels:
         raise ValueError(f"Unmapped PathBench model labels: {unknown_labels}")
@@ -34,7 +56,8 @@ def main() -> None:
     annotated: list[dict[str, object]] = []
     for row in matrix:
         model_id = aliases[row["model_label"]]
-        dataset_id = dataset_map.get(row["dataset_group"], "")
+        task_name = task_names[row["task_id"]]
+        dataset_id = canonical_dataset_id(row["dataset_group"], task_name)
         evidence = registry.get((model_id, dataset_id)) if dataset_id else None
         if evidence:
             scope = evidence["exposure_scope"]
@@ -75,8 +98,9 @@ def main() -> None:
         "dataset_label_resolvable_counts": dict(sorted(resolvable_counts.items())),
         "exposure_scope_counts": dict(sorted(exposure_counts.items())),
         "interpretation": (
-            "Development audit only. Coarse external and out-of-domain labels must be resolved to named datasets, "
-            "and primary-source extraction is incomplete. D1 rows are not evidence of independence."
+            "Development audit only. Named public external datasets were resolved from task labels; out-of-domain "
+            "hospital cohorts still require source-level mapping, and primary-source extraction is incomplete. "
+            "D1 rows are not evidence of independence."
         ),
     }
     summary_path = ROOT / "reports" / "pathbench_exposure_audit_development.json"
@@ -87,4 +111,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

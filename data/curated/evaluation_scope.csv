@@ -18,8 +18,8 @@ crc_val_he_7k,core,colorectal patch benchmark
 mhist,core,colorectal polyp benchmark
 sicapv2,core,prostate grading benchmark
 unitopatho,core,colorectal polyp benchmark
+lc25000,core,lung and colorectal histology benchmark
 hest,core,histology-spatial transcriptomics benchmark
 gtex,supplemental,normal tissue evaluation source
 tcia,supplemental,parent imaging repository
 paip,supplemental,pathology challenge repository
-

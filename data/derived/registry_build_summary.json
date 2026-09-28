@@ -1,12 +1,12 @@
 {
-  "dataset_records": 30,
+  "dataset_records": 31,
   "lineage_edges": 6,
   "core_models": 32,
-  "evaluation_datasets": 23,
-  "model_dataset_pairs": 736,
+  "evaluation_datasets": 24,
+  "model_dataset_pairs": 768,
   "primary_source_assertions": 15,
   "exposure_scope_counts": {
-    "D1_no_detected_evidence_or_insufficient_disclosure": 712,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 744,
     "D2_parent_repository_exposure": 15,
     "D3_exact_dataset_exposure": 9
   },

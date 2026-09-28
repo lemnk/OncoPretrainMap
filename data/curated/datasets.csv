@@ -21,6 +21,7 @@ crc_val_he_7k,CRC-VAL-HE-7K,derived_patch_dataset,,v0.1,https://zenodo.org/recor
 mhist,MHIST,dataset,,v1,https://bmirds.github.io/MHIST/,primary_source_pending
 sicapv2,SICAPv2,dataset,,v2,https://data.mendeley.com/datasets/9xxm58dvs3,primary_source_pending
 unitopatho,UniToPatho,dataset,,v1,https://unitopatho.it/,primary_source_pending
+lc25000,LC25000 lung and colon histopathology image dataset,dataset,,v1,https://www.kaggle.com/datasets/andrewmvd/lung-and-colon-cancer-histopathological-images,primary_source_pending
 hest,HEST-1k,dataset,,v1,https://github.com/mahmoodlab/HEST,primary_source_pending
 tulip,Lunit internal TULIP corpus,proprietary_corpus,,unspecified,,incomplete_disclosure
 mass_100k,Mass-100K,proprietary_corpus,,paper_version,,incomplete_disclosure
@@ -29,4 +30,3 @@ msk_15m,MSK pathology corpus 1.5M slides,proprietary_corpus,,paper_version,,inco
 msk_31m,MSK pathology corpus 3.1M slides,proprietary_corpus,,paper_version,,incomplete_disclosure
 providence_171k,Providence pathology corpus 171K slides,proprietary_corpus,,paper_version,,incomplete_disclosure
 hoptimus0_proprietary_500k,H-Optimus-0 proprietary corpus 500K-plus slides,proprietary_corpus,,model_card_version,https://huggingface.co/bioptimus/H-optimus-0,partial_primary_disclosure
-
