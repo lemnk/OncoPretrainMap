@@ -1,0 +1,32 @@
+dataset_id,display_name,dataset_type,parent_dataset_id,version,source_url,verification_status
+tcga,The Cancer Genome Atlas,parent_repository,,living,https://portal.gdc.cancer.gov/,primary_source_pending
+tcga_brca,TCGA Breast Invasive Carcinoma,cohort,tcga,legacy_and_gdc,https://portal.gdc.cancer.gov/projects/TCGA-BRCA,primary_source_pending
+tcga_luad,TCGA Lung Adenocarcinoma,cohort,tcga,legacy_and_gdc,https://portal.gdc.cancer.gov/projects/TCGA-LUAD,primary_source_pending
+tcga_lusc,TCGA Lung Squamous Cell Carcinoma,cohort,tcga,legacy_and_gdc,https://portal.gdc.cancer.gov/projects/TCGA-LUSC,primary_source_pending
+tcga_coad,TCGA Colon Adenocarcinoma,cohort,tcga,legacy_and_gdc,https://portal.gdc.cancer.gov/projects/TCGA-COAD,primary_source_pending
+tcga_read,TCGA Rectum Adenocarcinoma,cohort,tcga,legacy_and_gdc,https://portal.gdc.cancer.gov/projects/TCGA-READ,primary_source_pending
+cptac,Clinical Proteomic Tumor Analysis Consortium,parent_repository,,living,https://proteomic.datacommons.cancer.gov/pdc/,primary_source_pending
+gtex,Genotype-Tissue Expression Project,parent_repository,,v8,https://gtexportal.org/,primary_source_pending
+tcia,The Cancer Imaging Archive,parent_repository,,living,https://www.cancerimagingarchive.net/,primary_source_pending
+paip,PAIP pathology challenge collections,parent_repository,,living,https://paip2023.grand-challenge.org/,primary_source_pending
+camelyon16,CAMELYON16,dataset,,2016,https://camelyon16.grand-challenge.org/,primary_source_pending
+camelyon17,CAMELYON17,dataset,,2017,https://camelyon17.grand-challenge.org/,primary_source_pending
+pcam,PatchCamelyon,derived_patch_dataset,camelyon16,v1,https://github.com/basveeling/pcam,primary_source_pending
+panda,PANDA prostate grading challenge,dataset,,2020,https://panda.grand-challenge.org/,primary_source_pending
+bach,BreAst Cancer Histology challenge,dataset,,2018,https://iciar2018-challenge.grand-challenge.org/,primary_source_pending
+bracs,BReAst Carcinoma Subtyping,dataset,,v1,https://www.bracs.icar.cnr.it/,primary_source_pending
+breakhis,Breast Cancer Histopathological Database,dataset,,v1,https://web.inf.ufpr.br/vri/databases/breast-cancer-histopathological-database-breakhis/,primary_source_pending
+nct_crc_he_100k,NCT-CRC-HE-100K,derived_patch_dataset,,v0.1,https://zenodo.org/records/1214456,primary_source_pending
+crc_val_he_7k,CRC-VAL-HE-7K,derived_patch_dataset,,v0.1,https://zenodo.org/records/1214456,primary_source_pending
+mhist,MHIST,dataset,,v1,https://bmirds.github.io/MHIST/,primary_source_pending
+sicapv2,SICAPv2,dataset,,v2,https://data.mendeley.com/datasets/9xxm58dvs3,primary_source_pending
+unitopatho,UniToPatho,dataset,,v1,https://unitopatho.it/,primary_source_pending
+hest,HEST-1k,dataset,,v1,https://github.com/mahmoodlab/HEST,primary_source_pending
+tulip,Lunit internal TULIP corpus,proprietary_corpus,,unspecified,,incomplete_disclosure
+mass_100k,Mass-100K,proprietary_corpus,,paper_version,,incomplete_disclosure
+mass_340k,Mass-340K,proprietary_corpus,,paper_version,,incomplete_disclosure
+msk_15m,MSK pathology corpus 1.5M slides,proprietary_corpus,,paper_version,,incomplete_disclosure
+msk_31m,MSK pathology corpus 3.1M slides,proprietary_corpus,,paper_version,,incomplete_disclosure
+providence_171k,Providence pathology corpus 171K slides,proprietary_corpus,,paper_version,,incomplete_disclosure
+hoptimus0_proprietary_500k,H-Optimus-0 proprietary corpus 500K-plus slides,proprietary_corpus,,model_card_version,https://huggingface.co/bioptimus/H-optimus-0,partial_primary_disclosure
+

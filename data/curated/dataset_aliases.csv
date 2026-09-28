@@ -1,0 +1,38 @@
+alias,canonical_dataset_id,alias_type,verification_status
+The Cancer Genome Atlas,tcga,official_name,verified
+TCGA,tcga,acronym,verified
+GDC TCGA,tcga,repository_alias,pending
+TCGA-BRCA,tcga_brca,project_code,verified
+TCGA BRCA,tcga_brca,text_alias,verified
+TCGA-LUAD,tcga_luad,project_code,verified
+TCGA-LUSC,tcga_lusc,project_code,verified
+TCGA-COAD,tcga_coad,project_code,verified
+TCGA-READ,tcga_read,project_code,verified
+Clinical Proteomic Tumor Analysis Consortium,cptac,official_name,verified
+CPTAC,cptac,acronym,verified
+GTEx,gtex,acronym,verified
+Genotype-Tissue Expression,gtex,official_name,verified
+TCIA,tcia,acronym,verified
+The Cancer Imaging Archive,tcia,official_name,verified
+PAIP,paip,acronym,pending
+CAMELYON16,camelyon16,official_name,verified
+CAMELYON 16,camelyon16,text_alias,verified
+CAMELYON17,camelyon17,official_name,verified
+CAMELYON 17,camelyon17,text_alias,verified
+PCam,pcam,common_name,verified
+PatchCamelyon,pcam,official_name,verified
+PANDA,panda,acronym,verified
+BACH,bach,acronym,verified
+BRACS,bracs,acronym,verified
+BreakHis,breakhis,common_name,verified
+NCT-CRC-HE-100K,nct_crc_he_100k,official_name,verified
+CRC-VAL-HE-7K,crc_val_he_7k,official_name,verified
+MHIST,mhist,official_name,verified
+SICAPv2,sicapv2,official_name,verified
+UniToPatho,unitopatho,official_name,verified
+HEST,hest,common_name,verified
+HEST-1k,hest,official_name,pending
+TULIP,tulip,corpus_name,pending
+Mass-100K,mass_100k,corpus_name,pending
+Mass-340K,mass_340k,corpus_name,pending
+

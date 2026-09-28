@@ -1,0 +1,44 @@
+"""Conservative command-line interface for released exposure records."""
+
+from __future__ import annotations
+
+import argparse
+import csv
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_REGISTRY = ROOT / "release" / "model_dataset_exposure.csv"
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("model_id")
+    parser.add_argument("evaluation_dataset_id")
+    parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
+    args = parser.parse_args()
+    if not args.registry.exists():
+        print("Registry not released yet; independence cannot be assessed.")
+        return 2
+    with args.registry.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    matches = [
+        row
+        for row in rows
+        if row["model_id"].casefold() == args.model_id.casefold()
+        and row["evaluation_dataset_id"].casefold() == args.evaluation_dataset_id.casefold()
+    ]
+    if not matches:
+        print("No detected evidence; independence cannot be assumed.")
+        return 1
+    for row in matches:
+        print(f"Exposure scope: {row['exposure_scope']}")
+        print(f"Evidence strength: {row['evidence_strength']}")
+        print(f"Benchmark independence: {row['independence_statement']}")
+        print(f"Source: {row['evidence_url']}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+

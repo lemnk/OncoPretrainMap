@@ -1,0 +1,25 @@
+evaluation_dataset_id,priority,reason
+tcga,core,PathBench in-domain repository benchmark
+tcga_brca,core,common breast cancer benchmark
+tcga_luad,core,common lung cancer benchmark
+tcga_lusc,core,common lung cancer benchmark
+tcga_coad,core,common colorectal benchmark
+tcga_read,core,common colorectal benchmark
+cptac,core,PathBench non-TCGA repository benchmark
+camelyon16,core,common metastasis benchmark
+camelyon17,core,common metastasis benchmark
+pcam,core,CAMELYON-derived patch benchmark
+panda,core,common prostate grading benchmark
+bach,core,breast histology benchmark
+bracs,core,breast subtype benchmark
+breakhis,core,breast histology benchmark
+nct_crc_he_100k,core,colorectal patch benchmark
+crc_val_he_7k,core,colorectal patch benchmark
+mhist,core,colorectal polyp benchmark
+sicapv2,core,prostate grading benchmark
+unitopatho,core,colorectal polyp benchmark
+hest,core,histology-spatial transcriptomics benchmark
+gtex,supplemental,normal tissue evaluation source
+tcia,supplemental,parent imaging repository
+paip,supplemental,pathology challenge repository
+

@@ -1,0 +1,8 @@
+{
+  "source_repository_commit": "076ffcef84b7c3359a9ceaeb16e423e567fcd27a",
+  "README.md": "a125333b22e5dd86e105c8fe91e5cbfec90a156d8f33e9997caf19e6f4f891a0",
+  "data/benchmarking_updated_ncomm.csv": "1d674e642434582a2628c37acb4fc86a405953a1e1e2910573dbbdfc2eee0683",
+  "model_rows": 32,
+  "task_rows": 41,
+  "model_task_rows": 1312
+}

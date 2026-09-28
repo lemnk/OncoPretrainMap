@@ -1,0 +1,26 @@
+{
+  "protocol_version": "1.0.0",
+  "frozen_date": "2026-09-27",
+  "exposure_scope": [
+    "D0_documented_disjoint",
+    "D1_no_detected_evidence_or_insufficient_disclosure",
+    "D2_parent_repository_exposure",
+    "D3_exact_dataset_exposure",
+    "D4_exact_case_slide_or_patch_overlap"
+  ],
+  "evidence_strength": [
+    "A_identifier_manifest",
+    "B_explicit_primary_source_statement",
+    "C_lineage_inference",
+    "D_incomplete_or_ambiguous_disclosure"
+  ],
+  "development_stages": [
+    "pretraining",
+    "distillation",
+    "fine_tuning",
+    "retrieval_corpus",
+    "downstream_training"
+  ],
+  "absence_statement": "No detected evidence; independence cannot be assumed."
+}
+

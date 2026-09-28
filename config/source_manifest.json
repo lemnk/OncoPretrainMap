@@ -1,0 +1,56 @@
+{
+  "frozen_date": "2026-09-27",
+  "sources": [
+    {
+      "source_id": "pathbench_2026_repository",
+      "url": "https://github.com/gevaertlab/benchmarking-path-models",
+      "commit": "076ffcef84b7c3359a9ceaeb16e423e567fcd27a",
+      "commit_date": "2026-05-09",
+      "role": "core model universe and benchmark result discovery"
+    },
+    {
+      "source_id": "pathbench_2026_article",
+      "url": "https://www.nature.com/articles/s41467-026-76004-6",
+      "role": "peer-reviewed core benchmark"
+    },
+    {
+      "source_id": "cpathfm_review_2026",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13305026/",
+      "role": "problem framing and systematic discovery"
+    },
+    {
+      "source_id": "clinical_pfm_benchmark_2025",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12003829/",
+      "role": "overlap-risk precedent and model discovery"
+    },
+    {
+      "source_id": "wolflein_pfm_catalog",
+      "url": "https://github.com/georg-wolflein/pathology-foundation-models",
+      "role": "secondary discovery catalog; not final evidence"
+    },
+    {
+      "source_id": "ctranspath_repository",
+      "url": "https://github.com/Xiyue-Wang/TransPath",
+      "commit": "26c61940312dbb239351eff46fe08c884e9e5c3e",
+      "role": "primary CTransPath pretraining disclosure"
+    },
+    {
+      "source_id": "phikon_v2_model_card",
+      "url": "https://huggingface.co/owkin/phikon-v2",
+      "revision": "2ae989a9c40cffaa27f0a6cb29cc94d1d6f9a5fd",
+      "role": "primary Phikon-v2 pretraining disclosure"
+    },
+    {
+      "source_id": "virchow2_model_card",
+      "url": "https://huggingface.co/paige-ai/Virchow2",
+      "revision": "3158645804b69e3f3bc4439d4116edddf0840a72",
+      "role": "primary Virchow2 pretraining disclosure"
+    },
+    {
+      "source_id": "h_optimus_0_model_card",
+      "url": "https://huggingface.co/bioptimus/H-optimus-0",
+      "revision": "b145cc1e6c6b30d3251aa8b1f844e6974188a743",
+      "role": "primary H-optimus-0 pretraining disclosure"
+    }
+  ]
+}

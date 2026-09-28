@@ -1,0 +1,14 @@
+{
+  "dataset_records": 30,
+  "lineage_edges": 6,
+  "core_models": 32,
+  "evaluation_datasets": 23,
+  "model_dataset_pairs": 736,
+  "primary_source_assertions": 15,
+  "exposure_scope_counts": {
+    "D1_no_detected_evidence_or_insufficient_disclosure": 712,
+    "D2_parent_repository_exposure": 15,
+    "D3_exact_dataset_exposure": 9
+  },
+  "status": "Development registry; primary-source verification is incomplete."
+}
