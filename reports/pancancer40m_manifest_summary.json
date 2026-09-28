@@ -1,0 +1,26 @@
+{
+  "source_archive_sha256": "89b847f2c54329e2170955e73bf890b5b2682a17e492085a455766b22cb06705",
+  "slide_count": 6093,
+  "case_count": 5671,
+  "tile_count": 43374634,
+  "cohort_count": 16,
+  "slides_by_cohort": {
+    "TCGA_BLCA_4000000": 457,
+    "TCGA_BRCA": 1124,
+    "TCGA_COAD_3500000": 441,
+    "TCGA_ESCA_4000000": 158,
+    "TCGA_KICH_1300000": 121,
+    "TCGA_KIRC_1300000": 519,
+    "TCGA_KIRP_1300000": 110,
+    "TCGA_LIHC_4000000": 371,
+    "TCGA_LUAD_2000000": 530,
+    "TCGA_LUSC_2000000": 512,
+    "TCGA_OV_4000000": 107,
+    "TCGA_PAAD_4000000": 209,
+    "TCGA_PRAD_4000000": 310,
+    "TCGA_READ_500000": 158,
+    "TCGA_STAD": 400,
+    "TCGA_UCEC": 566
+  },
+  "interpretation": "Primary training-manifest extraction only. D4 overlap requires an independently sourced evaluation-slide manifest and exact identifier intersection."
+}

@@ -57,16 +57,27 @@ each, plus Phikon-v2 across seven CPTAC tasks. The disjoint rows arose from the
 explicit UNI and TITAN statements for TCGA and CPTAC. These counts describe
 disclosed exposure, not measured performance inflation.
 
+## Identifier-manifest feasibility
+
+The pinned PanCancer40M coordinate archive linked from the official H0-mini
+model card was downloaded and its published SHA-256 was reproduced. Streaming
+the compressed archive without expanding it to disk yielded 6,093 unique TCGA
+slide filenames representing 5,671 cases, 43,374,634 tile records, and 16 cancer
+cohorts. This establishes that exact slide-level training identifiers are
+recoverable for Phikon/H0-mini. It does **not** establish D4 overlap with the
+PathBench evaluation because an independently sourced PathBench evaluation-slide
+manifest has not yet been recovered.
+
 ## Software verification
 
-Twelve tests cover exact exposure, parent-repository lineage, multilevel lineage,
+Thirteen tests cover exact exposure, parent-repository lineage, multilevel lineage,
 exact-identifier precedence, conflict flags, documented disjointness, task and
 model aliases, curated foreign keys, source completeness, and the rule that
 missing evidence is not independence.
 
 ## Immediate next work
 
-1. Complete primary-source extraction for the remaining 23 PathBench models.
+1. Complete primary-source extraction for the remaining 20 PathBench models.
 2. Resolve the seven out-of-domain tasks to named cohorts and dataset versions.
 3. Add a source-freeze downloader for papers and model cards where licensing
    permits local archival.

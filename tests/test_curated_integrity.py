@@ -48,3 +48,13 @@ def test_no_unresolved_exposure_disjointness_conflicts_in_curated_inputs():
     exposed = {(row["model_id"], row["dataset_id"]) for row in assertions}
     declared_disjoint = {(row["model_id"], row["evaluation_dataset_id"]) for row in disjoint}
     assert exposed.isdisjoint(declared_disjoint)
+
+
+def test_pancancer40m_slide_manifest_is_complete_and_unique():
+    rows = read_csv(ROOT / "data" / "derived" / "pancancer40m_training_slides.csv")
+    slide_ids = [row["slide_filename"] for row in rows]
+    assert len(rows) == 6093
+    assert len(slide_ids) == len(set(slide_ids))
+    assert len({row["case_barcode"] for row in rows}) == 5671
+    assert sum(int(row["tile_count"]) for row in rows) == 43374634
+    assert len({row["cohort_id"] for row in rows}) == 16
