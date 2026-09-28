@@ -1,0 +1,20 @@
+{
+  "published_model_task_rows": 1312,
+  "models": 32,
+  "tasks": 41,
+  "dataset_group_counts": {
+    "CPTAC": 224,
+    "External_benchmarking_cohort": 256,
+    "Out of Domain": 224,
+    "TCGA": 608
+  },
+  "dataset_label_resolvable_counts": {
+    "No": 480,
+    "Yes": 832
+  },
+  "exposure_scope_counts": {
+    "D1_no_detected_evidence_or_insufficient_disclosure": 1248,
+    "D3_exact_dataset_exposure": 64
+  },
+  "interpretation": "Development audit only. Coarse external and out-of-domain labels must be resolved to named datasets, and primary-source extraction is incomplete. D1 rows are not evidence of independence."
+}

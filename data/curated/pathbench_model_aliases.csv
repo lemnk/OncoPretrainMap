@@ -1,0 +1,34 @@
+pathbench_model_label,model_id
+Align-base,align_base
+BiomedCLIP,biomedclip
+Blip-B16-14M,blip_b16_14m
+CONCH,conch
+Clip-B16,clip_b16
+Dino-B16,dino_b16
+Dino-S16,dino_s16
+Dinov2,dinov2_l
+EXAONEPath,exaonepath
+GPFM,gpfm
+H-optimus-0,h_optimus_0
+H0-mini,h_optimus_mini_h0_mini
+HIPT,hipt
+Hibou,hibou_b
+Kaiko,kaiko
+Lunit,lunit_dinosslpath
+PLIP,plip
+Phikon,phikon
+Phikon-v2,phikon_v2
+Prov-GigaPath,prov_gigapath
+QuiltNet-B-16,quiltnet_b16
+TITAN,titan
+UNI,uni
+UNI2,uni2
+Virchow,virchow
+Virchow2,virchow2
+beit3-L16,beit_3_l16
+cTranspath,ctranspath
+iBot-B16,ibot_b16
+iBot-L16,ibot_l16
+mizero bioclinicalbert,mi_zero_clinicalbert
+mizero pubmedbert,mi_zero_pubmedbert
+

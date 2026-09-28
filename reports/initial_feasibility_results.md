@@ -34,9 +34,22 @@ These counts are deliberately unfavorable: most model versions have not yet
 completed primary-source extraction. They must not be interpreted as evidence
 that 712 pairs are independent.
 
+## Published-benchmark audit pilot
+
+All 1,312 PathBench model–task rows were linked to canonical model identifiers.
+TCGA and CPTAC rows could be mapped at the repository level. The published
+`External_benchmarking_cohort` and `Out of Domain` labels remain too coarse for
+dataset-specific exposure classification and are retained as unresolved until
+their underlying cohorts are mapped from the paper and supplements. This is a
+development audit, not a final contamination estimate. Under the frozen rules,
+64 rows had documented exact-dataset exposure and 1,248 remained D1 (no detected
+evidence or insufficient disclosure). The 64 rows arose from CTransPath–TCGA
+(19 tasks), Phikon–TCGA (19), Phikon-v2–TCGA (19), and Phikon-v2–CPTAC (7).
+These counts describe disclosed exposure, not measured performance inflation.
+
 ## Software verification
 
-Six tests cover exact exposure, parent-repository lineage, multilevel lineage,
+Eight tests cover exact exposure, parent-repository lineage, multilevel lineage,
 exact-identifier precedence, conflict flags, documented disjointness, and the
 rule that missing evidence is not independence.
 
@@ -49,4 +62,3 @@ rule that missing evidence is not independence.
 4. Preselect and freeze the blinded duplicate-extraction sample before reviewing
    its records.
 5. Build the PathBench exposure audit and disclosure-completeness figures.
-
