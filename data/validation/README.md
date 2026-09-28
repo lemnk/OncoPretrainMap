@@ -39,3 +39,9 @@ inspect the linked primary records without AI, complete every blank reviewer
 field, and return the file before the separate key is opened. The reviewer must
 enter `No` in `reviewer_used_ai` to certify that requirement. No external-
 transport agreement statistic is reported while these fields remain blank.
+
+`campanella_caleb_blinded_review_form.xlsx` is the formatted Excel version of
+the same blank packet. It contains instructions, controlled class/evidence
+lists, and no development decisions. It is the correct file for a human blinded
+review; AI-generated decisions must not be transferred into it or attributed to
+a human reviewer.
