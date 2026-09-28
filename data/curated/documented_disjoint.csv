@@ -1,2 +1,12 @@
 model_id,evaluation_dataset_id,statement,evidence_url,evidence_strength,verification_status
-
+uni,tcga,Official model card states that UNI did not use TCGA for pretraining.,https://huggingface.co/MahmoodLab/UNI/blob/b55a5ec6cade1a39edfe6534189a9b8ca7a022f0/README.md,B_explicit_primary_source_statement,primary_source_verified
+uni,cptac,Official model card states that UNI did not use CPTAC for pretraining.,https://huggingface.co/MahmoodLab/UNI/blob/b55a5ec6cade1a39edfe6534189a9b8ca7a022f0/README.md,B_explicit_primary_source_statement,primary_source_verified
+uni,paip,Official model card states that UNI did not use PAIP for pretraining.,https://huggingface.co/MahmoodLab/UNI/blob/b55a5ec6cade1a39edfe6534189a9b8ca7a022f0/README.md,B_explicit_primary_source_statement,primary_source_verified
+uni,camelyon16,Official model card states that UNI did not use CAMELYON for pretraining.,https://huggingface.co/MahmoodLab/UNI/blob/b55a5ec6cade1a39edfe6534189a9b8ca7a022f0/README.md,B_explicit_primary_source_statement,primary_source_verified
+uni,camelyon17,Official model card states that UNI did not use CAMELYON for pretraining.,https://huggingface.co/MahmoodLab/UNI/blob/b55a5ec6cade1a39edfe6534189a9b8ca7a022f0/README.md,B_explicit_primary_source_statement,primary_source_verified
+uni,panda,Official model card states that UNI did not use PANDA for pretraining.,https://huggingface.co/MahmoodLab/UNI/blob/b55a5ec6cade1a39edfe6534189a9b8ca7a022f0/README.md,B_explicit_primary_source_statement,primary_source_verified
+uni,tcia,Official model card states that UNI did not use public histology collections in TCIA for pretraining.,https://huggingface.co/MahmoodLab/UNI/blob/b55a5ec6cade1a39edfe6534189a9b8ca7a022f0/README.md,B_explicit_primary_source_statement,primary_source_verified
+titan,tcga,Official repository states that TITAN did not use TCGA for pretraining.,https://github.com/mahmoodlab/TITAN/tree/9e34c66ff66445c6c590da0dbf7acc103d39a40b,B_explicit_primary_source_statement,primary_source_verified
+titan,cptac,Official repository states that TITAN did not use CPTAC for pretraining.,https://github.com/mahmoodlab/TITAN/tree/9e34c66ff66445c6c590da0dbf7acc103d39a40b,B_explicit_primary_source_statement,primary_source_verified
+titan,paip,Official repository states that TITAN did not use PAIP for pretraining.,https://github.com/mahmoodlab/TITAN/tree/9e34c66ff66445c6c590da0dbf7acc103d39a40b,B_explicit_primary_source_statement,primary_source_verified
+titan,panda,Official repository states that TITAN did not use PANDA for pretraining.,https://github.com/mahmoodlab/TITAN/tree/9e34c66ff66445c6c590da0dbf7acc103d39a40b,B_explicit_primary_source_statement,primary_source_verified

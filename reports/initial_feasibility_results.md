@@ -19,20 +19,27 @@ scope. This is a seed, not a claim of complete pathology-dataset coverage.
 
 ## Primary-source pilot
 
-Fifteen primary-source assertions were entered for nine model versions:
-CTransPath, Phikon, Phikon-v2, UNI, TITAN, Prov-GigaPath, Virchow, Virchow2, and
-H-optimus-0. The sources include version-pinned official model cards,
+Eighteen primary-source exposure assertions were entered for 12 model versions:
+CTransPath, HIPT, Lunit/DinoSSLPath, Phikon, Phikon-v2, H0-mini, UNI, TITAN,
+Prov-GigaPath, Virchow, Virchow2, and H-optimus-0. The sources include
+version-pinned official model cards,
 version-pinned repositories, and peer-reviewed papers.
+
+Eleven model–dataset pairs for UNI and TITAN have explicit primary-source
+statements that the named public repositories were not used for pretraining.
+These are retained as documented-disjoint negative controls rather than inferred
+from silence.
 
 The development matrix contains 768 model–dataset pairs:
 
-- 9 exact named-dataset exposures;
-- 15 parent-repository exposures inferred through the lineage graph; and
-- 744 pairs with no detected evidence or insufficient disclosure.
+- 11 documented-disjoint pairs;
+- 12 exact named-dataset exposures;
+- 30 parent-repository exposures inferred through the lineage graph; and
+- 715 pairs with no detected evidence or insufficient disclosure.
 
 These counts are deliberately unfavorable: most model versions have not yet
 completed primary-source extraction. They must not be interpreted as evidence
-that 744 pairs are independent.
+that 715 pairs are independent.
 
 ## Published-benchmark audit pilot
 
@@ -43,16 +50,19 @@ rows now have a canonical evaluation-dataset identifier. The 224 rows labeled
 `Out of Domain` remain unresolved until their hospital cohorts are mapped from
 the paper and supplements. This is a development audit, not a final contamination
 estimate. Under the frozen rules,
-64 rows had documented exact-dataset exposure and 1,248 remained D1 (no detected
-evidence or insufficient disclosure). The 64 rows arose from CTransPath–TCGA
-(19 tasks), Phikon–TCGA (19), Phikon-v2–TCGA (19), and Phikon-v2–CPTAC (7).
-These counts describe disclosed exposure, not measured performance inflation.
+121 rows had documented exact-dataset exposure, 52 were documented disjoint,
+and 1,139 remained D1 (no detected evidence or insufficient disclosure). The
+exposed rows arose from six TCGA-exposed model versions across 19 TCGA tasks
+each, plus Phikon-v2 across seven CPTAC tasks. The disjoint rows arose from the
+explicit UNI and TITAN statements for TCGA and CPTAC. These counts describe
+disclosed exposure, not measured performance inflation.
 
 ## Software verification
 
-Nine tests cover exact exposure, parent-repository lineage, multilevel lineage,
-exact-identifier precedence, conflict flags, documented disjointness, and the
-rule that missing evidence is not independence.
+Twelve tests cover exact exposure, parent-repository lineage, multilevel lineage,
+exact-identifier precedence, conflict flags, documented disjointness, task and
+model aliases, curated foreign keys, source completeness, and the rule that
+missing evidence is not independence.
 
 ## Immediate next work
 

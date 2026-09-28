@@ -13,8 +13,9 @@
     "Yes": 1088
   },
   "exposure_scope_counts": {
-    "D1_no_detected_evidence_or_insufficient_disclosure": 1248,
-    "D3_exact_dataset_exposure": 64
+    "D0_documented_disjoint": 52,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 1139,
+    "D3_exact_dataset_exposure": 121
   },
   "interpretation": "Development audit only. Named public external datasets were resolved from task labels; out-of-domain hospital cohorts still require source-level mapping, and primary-source extraction is incomplete. D1 rows are not evidence of independence."
 }
