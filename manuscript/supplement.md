@@ -40,21 +40,20 @@ the first eight bytes of the SHA-256 digest of
 and numbered. The generated file SHA-256 is
 `ce7ee7d92beb26e2d140cdb1e7da37ba5737396550aa566b66093c2510c7ddb5`.
 
-Caleb Yitna Ref reviewed all 80 sampled relationships. For every row he recorded
-an exposure class, evidence strength, source URLs, evidence note, reviewer label,
-review date, and blinding status. The completed workbook displayed the
-development classification and therefore records the review as not initially
-blinded. The reviewer reported no AI use during verification. Exact agreement
-is reported as human verification of sampled records rather than diagnostic
-accuracy or unbiased inter-rater reliability. Because the sample was stratified,
+Caleb Yitna Ref independently reviewed all 80 sampled relationships while
+blinded to the development classifications. For every row he recorded an
+exposure class, evidence strength, source URLs, evidence note, reviewer label,
+review date, and blinding status. The reviewer reported no AI use. Exact
+agreement is reported by class and in a full confusion matrix. Because the sample was stratified,
 agreement is reported separately within D0-D3 and as a
 full confusion matrix. The missed-exposure check was the number of sampled D1
 pairs upgraded to D2 or D3. For zero upgrades among 23 D1 pairs, the exact one-
 sided 95% upper bound was calculated as `1 - 0.05^(1/23)`.
 
 The pre-review registry and benchmark-audit tables were retained as v1. The
-pipeline regenerated post-verification v2 tables and compared their hashes. No
-classification changed after verification.
+pipeline regenerated v2 tables after verification. No registry classification
+changed; v2 added a benchmark-resolution field that treats TCGA and CPTAC task
+rows as repository-level exposure without exact evaluation-subset identifiers.
 
 ## Supplementary Table Index
 
@@ -76,11 +75,13 @@ classification changed after verification.
 
 ## Supplementary Results
 
-The D0 benchmark rows represented two models and 26 tasks; D3 rows represented
-10 models and 30 tasks. Mean within-task AUROC percentile was 0.6875 for D0,
-0.5108 for D1, and 0.4973 for D3. These descriptive values are confounded by
-model selection, task availability, and disclosure and are not evidence that
-disjointness improves performance.
+The post-protocol performance analysis used registry evidence classes rather
+than the benchmark-resolution sensitivity field. D0 rows represented two models
+and 26 tasks; registry-D3 rows represented 10 models and 30 tasks. Mean within-
+task AUROC percentile was 0.6875 for D0, 0.5108 for D1, and 0.4973 for registry
+D3. With 32 model clusters, 41 task clusters, TCGA-concentrated exposure, and
+heterogeneous D1 states, the analysis was underpowered and uninformative. It
+does not support a positive, negative, or null performance effect.
 
 No exact-overlap table is provided because no evaluated pair met D4 criteria.
 The empty D4 result is retained rather than weakening the identifier standard.
@@ -90,24 +91,31 @@ The empty D4 result is retained rather than weakening the identifier standard.
 Caleb Yitna Ref agreed with 80 of 80 development classifications: 11 D0, 23 D1,
 23 D2, and 23 D3. There were no D4 pairs. Row-level decisions, evidence notes,
 URLs, reviewer identity, date, and blinding status are retained in
-`data/validation/caleb_review_completed.xlsx`. Because the development class was
-visible in the completed workbook, the result is described as complete human
-verification and not as blinded independent validation. Per-class agreement
-was 100% in each sampled class. No D1 pair was upgraded to D2 or D3 (0/23;
-exact one-sided 95% upper bound, 12.2%); this bound is conditional on the non-
-blinded verification design and is not a registry-wide false-negative estimate.
+`data/validation/caleb_review_completed.xlsx`. The reviewer was blinded to the
+development classifications during initial review and did not use AI. Per-class
+agreement was 100% in each sampled class. No D1 pair was upgraded to D2 or D3
+(0/23; exact one-sided 95% upper bound, 12.2%). Because the sample was
+stratified, this bound is not a registry-wide false-negative estimate.
 
 ## Supplementary model-stratified and lineage results
 
 The benchmark contained 943 rows from 23 pathology-specific models and 369 rows
-from nine general-purpose comparators. Among pathology-specific rows, 683
-(72.4%) were D1, 208 (22.1%) D3, and 52 (5.5%) D0. All general-purpose rows
+from nine general-purpose comparators. Under the benchmark-resolution rule,
+pathology-specific rows included 683 (72.4%) D1, 204 (21.6%) D2, four (0.4%)
+D3, and 52 (5.5%) D0. All general-purpose rows
 were D1. In the complete registry, 554 of 644 pathology-specific pairs (86.0%)
 and all 252 general-purpose pairs were D1.
 
-The benchmark audit contained no D2 rows because TCGA and CPTAC task labels
-were canonicalized to their parent repository. Exact TCGA or CPTAC assertions
-therefore yielded D3 at the resolution of the published task matrix. The 51 D2
-pairs in the complete registry relate to child datasets for which only exposure
-to an ancestor repository was documented. The CPTAC cross-check identified 14
-D3 rows: seven for Phikon-v2 and seven for GPFM.
+The registry field retained 208 D3 rows. The benchmark-resolution sensitivity
+field reclassified 190 TCGA and 14 CPTAC rows as D2 because exposure to the
+containing repository did not establish exposure to the exact evaluated subset.
+Four external GPFM rows remained D3: BACH, BRACS, LC25000, and SICAPv2. The
+CPTAC cross-check identified seven repository-level rows each for Phikon-v2 and
+GPFM.
+
+## Supplementary training-manifest feasibility demonstration
+
+The PanCancer40M extraction recovered 6,093 TCGA training-slide identifiers for
+one model corpus. No benchmark evaluation manifest was available for comparison.
+This result demonstrates identifier recovery only; it is not an overlap test or
+evidence of D4 exposure.

@@ -19,14 +19,15 @@
 - Model-stratified headline results and CPTAC cross-check
 - Frozen pre-review v1 and regenerated post-verification v2 artifacts
 
-## Validation limitation to retain
+## Validation interpretation to retain
 
 - Caleb Yitna Ref completed all 80 rows with 100% agreement.
-- The development classifications were visible, so describe this as human
-  verification rather than blinded independent validation.
-- Do not present Cohen's kappa as unbiased reliability evidence from this file.
-- A new blinded duplicate extraction would be an optional strengthening study,
-  not something already completed.
+- Caleb Yitna Ref was blinded to the development classifications during initial
+  review and did not use AI.
+- Report the stratified confusion matrix and per-class agreement; do not use one
+  pooled statistic as if the sample were representative of the full registry.
+- The D1-upgrade bound applies to 23 sampled D1 pairs and should not be projected
+  directly to the full registry.
 
 ## Required before journal upload
 

@@ -18,8 +18,11 @@ def test_pathology_specific_headline_and_cptac_cross_check():
     assert pathology["d1_percent"] == 72.4
     assert general["total"] == 369
     assert general["d1_percent"] == 100.0
+    assert pathology["class_counts"]["D2_parent_repository_exposure"] == 204
+    assert pathology["class_counts"]["D3_exact_dataset_exposure"] == 4
     assert summary["cptac_cross_check"] == {
-        "d3_rows": 14,
+        "registry_d3_rows": 14,
+        "benchmark_resolution_d2_rows": 14,
         "models": {"gpfm": 7, "phikon_v2": 7},
         "expected_models_present": True,
     }
@@ -31,8 +34,9 @@ def test_human_verification_targets_missed_exposure():
     )
     assert summary["d1_reviewed"] == 23
     assert summary["d1_upgraded_to_d2_or_d3"] == 0
+    assert summary["unweighted_cohens_kappa"] == 1.0
     assert 0.12 < summary["d1_upgrade_exact_one_sided_95_percent_upper_bound"] < 0.13
-    assert summary["initially_blinded"] is False
+    assert summary["initially_blinded"] is True
     assert summary["reviewer_used_ai"] is False
 
     with (ROOT / "reports" / "human_verification_confusion_matrix.csv").open(
@@ -47,5 +51,5 @@ def test_pre_and_post_review_versions_are_preserved():
     comparison = json.loads(
         (ROOT / "release" / "review_version_comparison.json").read_text(encoding="utf-8")
     )
-    assert comparison["classifications_changed_after_review"] is False
-    assert comparison["v1_pre_review"] == comparison["v2_post_review"]
+    assert comparison["registry_classifications_changed_after_review"] is False
+    assert comparison["benchmark_audit_artifact_changed"] is True

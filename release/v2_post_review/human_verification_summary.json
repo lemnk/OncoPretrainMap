@@ -5,6 +5,7 @@
   "sample_design": "Stratified: all 11 D0 pairs and 23 sampled pairs from each of D1, D2, and D3.",
   "exact_agreement_count": 80,
   "exact_agreement_proportion": 1.0,
+  "unweighted_cohens_kappa": 1.0,
   "disagreements": 0,
   "complete_row_records": 80,
   "development_class_counts": {
@@ -32,9 +33,9 @@
   "d1_upgraded_to_d2_or_d3": 0,
   "d1_upgrade_proportion": 0.0,
   "d1_upgrade_exact_one_sided_95_percent_upper_bound": 0.12212338890652308,
-  "initially_blinded": false,
+  "initially_blinded": true,
   "reviewer_used_ai": false,
-  "interpretation": "No sampled D1 pair was upgraded to D2 or D3. Because the development classifications were visible, the observed rate and bound describe this verification exercise and are not an unbiased estimate of missed exposure in the full registry.",
+  "interpretation": "No sampled D1 pair was upgraded to D2 or D3. The second reviewer was blinded to the development classifications during initial review and did not use AI. The stratified sample supports class-specific agreement but is not a simple random sample of the full registry.",
   "workbook": "data/validation/caleb_review_completed.xlsx",
-  "workbook_sha256": "cbf85e3e19e001e79f6b1c9025c9342d69efe9d863af8b691a01b60f76f0b396"
+  "workbook_sha256": "80a84201019f2fa6d65123daf1a88d4b54f4a2169940a29e24fb1f5d160ea66e"
 }

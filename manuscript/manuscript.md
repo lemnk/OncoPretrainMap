@@ -17,28 +17,25 @@ and checker for evaluating pretraining–benchmark exposure claims.
 
 **Methods:** We froze the 32-model, 41-task universe of a 2026 published
 computational-pathology benchmark at a pinned repository commit. For each model
-or checkpoint, we extracted pretraining and model-
-development datasets from primary papers, supplements, official model cards,
+or checkpoint, we extracted pretraining and model-development datasets from
+primary papers, supplements, official model cards,
 and developer repositories. A dataset-lineage graph linked parent repositories
 to named cohorts and derivatives. Model–dataset pairs were classified as D0,
 documented disjoint; D1, no detected evidence or insufficient disclosure; D2,
 parent-repository exposure; D3, exact named-dataset exposure; or D4, exact
 case/slide/patch overlap. Exposure scope and evidence strength were stored
-separately. We mapped the registry to 1,312 published model–task
-results. A secondary descriptive analysis used model and task fixed effects with
-two-way clustered standard errors.
+separately. We mapped the registry to 1,312 published model–task results and
+applied a benchmark-resolution sensitivity rule: TCGA and CPTAC exposure was
+classified as repository-level unless exact evaluation-subset identifiers were
+available.
 
 **Results:** The development registry contains 49 dataset/corpus records, 52
 primary-source assertions covering all 32 models, and 896 model–dataset pairs.
 Eleven pairs were D0, 806 D1, 51 D2, and 28 D3; none met D4 criteria. All 1,312
-benchmark rows resolved to canonical identifiers: 208 were D3, 52 D0, and 1,052
-D1. Among 943 rows for 23 pathology-specific models, 208 (22.1%) were D3, 52
-(5.5%) D0, and 683 (72.4%) D1; all 369 rows for nine general-purpose comparators
-were D1. A hash-verified pretraining manifest yielded 6,093 TCGA slide identifiers,
-but corresponding benchmark slide identifiers were unavailable. Documented D3
-exposure was not associated with higher reported performance in the descriptive
-analysis (AUROC difference vs D1, -0.0046; 95% CI, -0.0230 to 0.0137; AUPRC
-difference, -0.0063; 95% CI, -0.0278 to 0.0152).
+benchmark rows resolved to canonical identifiers. Under the benchmark-resolution
+rule, 204 were D2, four D3, 52 D0, and 1,052 D1. Among 943 rows for 23 pathology-
+specific models, 204 (21.6%) were D2, four (0.4%) D3, 52 (5.5%) D0, and 683
+(72.4%) D1; all 369 rows for nine general-purpose comparators were D1.
 Caleb Yitna Ref reviewed the evidence for all 80 sampled relationships and
 agreed with every classification within each sampled class. None of 23 sampled
 D1 pairs was upgraded to D2 or D3.
@@ -46,9 +43,8 @@ D1 pairs was upgraded to D2 or D3.
 **Conclusion:** Public cancer-pathology benchmark independence often cannot be
 established from current disclosures. OncoPretrainMap converts heterogeneous
 provenance statements into conservative, executable evidence classes without
-treating missing evidence as independence. Human verification was complete, but
-because the development classifications were visible, agreement should not be
-interpreted as blinded inter-rater reliability.
+treating missing evidence as independence. A blinded second reviewer reproduced
+all 80 sampled classifications.
 
 ## Introduction
 
@@ -74,8 +70,8 @@ independence.
 
 Existing model surveys and public catalogs summarize architectures, data scale,
 and broad corpus names, but they are not designed as versioned evidence ledgers
-for a specific model–benchmark query.[1,4,6] We therefore developed OncoPretrainMap as an
-auditable registry of model-development exposure. The resource separates the
+for a specific model–benchmark query.[1,4,6] We therefore developed
+OncoPretrainMap as an auditable registry of model-development exposure. The resource separates the
 scope of possible overlap from the strength of the supporting evidence, traces
 dataset lineage, retains source versions, and produces restrained, executable
 answers to model–dataset queries. We demonstrate its use by auditing every
@@ -146,32 +142,36 @@ disclosure. Classification precedence was D4, D3, D2, D0, then D1. D4 evidence
 overrode a contradictory lower-level disjointness statement while preserving a
 conflict flag.
 
-### Exact-identifier feasibility check
+### Training-manifest feasibility demonstration
 
 We downloaded the PanCancer40M coordinate archive linked by the official
 H0-mini documentation and verified its published SHA-256 digest. To minimize
 storage, the compressed archive was streamed without expanding all tile records
 to disk. TCGA slide filenames, case identifiers, cohort codes, and tile counts
-were extracted. Exact evaluation overlap was to be called only if an independent
-evaluation identifier manifest could be obtained.
+were extracted. This demonstrated that exact training identifiers could be
+recovered for one model corpus. It was not tied to the benchmark and was not an
+overlap test. Exact evaluation overlap would require an independent evaluation
+identifier manifest.
 
-### Benchmark audit and secondary analysis
+### Benchmark audit
 
 All benchmark model labels and tasks were mapped to canonical registry
 identifiers. The primary audit summarized exposure classes; it did not estimate
-the prevalence of memorization or performance inflation. As a post-protocol,
-descriptive sensitivity analysis, we summarized published AUROC and AUPRC by
-exposure class and fitted ordinary least-squares models with model and task fixed
-effects. Standard errors were two-way clustered by model and task. D1 was the
-reference category. Because exposure was not randomized and D1 combines unknown
-states, coefficients were interpreted only as descriptive associations.
+the prevalence of memorization or performance inflation.
 
-Benchmark tasks labelled TCGA or CPTAC were mapped to the canonical parent
-repository because the published task matrix did not identify a more specific
-child dataset. Thus, an exact assertion for TCGA or CPTAC was D3 in this
-benchmark audit. D2 remained available in the broader registry for a child
-cohort whose parent repository, but not the child itself, was documented in
-model development.
+The registry evidence class and benchmark-resolution class were retained as
+separate fields. Benchmark tasks labelled TCGA or CPTAC were mapped to the
+canonical parent repository because the published task matrix did not identify
+the exact evaluation subset or slide identifiers. A model's explicit TCGA or
+CPTAC assertion remained D3 in the registry but was D2 in the benchmark-
+resolution sensitivity analysis. D3 in that analysis was reserved for an exact
+named external evaluation dataset. D4 still required shared identifiers.
+
+A post-protocol exploratory analysis of published AUROC and AUPRC used model and
+task fixed effects with two-way clustered standard errors. It is reported only
+in the supplement. With 32 model clusters, 41 task clusters, exposure concentrated
+in TCGA tasks, and D1 combining unknown states, the analysis was considered
+underpowered and uninformative for performance effects.
 
 ### Validation and reproducibility
 
@@ -181,11 +181,10 @@ rule that missing evidence is not independence. A deterministic 80-pair sample
 contained all 11 D0 pairs and 23 pairs sampled from each of D1, D2, and D3.
 Caleb Yitna Ref reviewed the cited evidence for every relationship and recorded
 a classification, evidence strength, source URLs, explanation, identity, date,
-and blinding status. The completed workbook displayed the development
-classification. The reviewer reported no use of AI during verification. We
-therefore report a class-specific confusion matrix and the
-number of D1 pairs upgraded to D2 or D3 as human verification, not as blinded
-inter-rater reliability or diagnostic accuracy. The pre-review files were
+and blinding status. Caleb Yitna Ref was blinded to the development
+classifications during the initial review and reported no use of AI. We report
+the full confusion matrix, agreement within each sampled class, and the number
+of D1 pairs upgraded to D2 or D3. The pre-review files were
 frozen as v1; all outputs were regenerated after review as v2 while retaining
 both releases.
 
@@ -206,7 +205,7 @@ D1, 51 (5.7%) were D2, and 28 (3.1%) were D3. No pair met the D4 standard. The
 large D1 fraction is a measure of unresolved provenance under conservative
 rules, not evidence that 90% of relationships were independent.
 
-Documented exposure was uneven across models and datasets (Figure 3). General
+Documented exposure was uneven across models and datasets (Figure 2). General
 vision and language–vision models typically disclosed broad natural-image or
 web corpora without pathology evaluation-dataset identifiers. Several
 pathology-specific checkpoints explicitly named TCGA, CPTAC, PAIP, PANDA,
@@ -216,46 +215,36 @@ TITAN relationships had explicit evidence supporting D0.
 ### Published benchmark exposure audit
 
 Every one of the 1,312 published model–task results resolved to a canonical
-model and evaluation dataset. Of these, 208 rows (15.9%) had D3 exposure, 52
-(4.0%) were D0, and 1,052 (80.2%) remained D1. TCGA accounted for the largest
-concentration of D3 rows. CPTAC contributed 14 D3 rows—seven each for Phikon-v2
-and GPFM—and four additional GPFM D3 rows occurred in external named datasets.
-No documented exposure was identified among the out-of-domain tasks under the
-available sources (Figure 1). The absence of a D3 label did not establish
-disjointness.
+model and evaluation dataset. The registry field classified 208 rows as D3.
+The benchmark-resolution sensitivity analysis reclassified 190 TCGA rows and
+14 CPTAC rows as D2 because the benchmark did not disclose identifiers for the
+exact evaluated subsets. The resulting audit contained 204 D2 rows (15.5%),
+four D3 rows (0.3%), 52 D0 rows (4.0%), and 1,052 D1 rows (80.2%). The four D3
+rows were GPFM evaluations on BACH, BRACS, LC25000, and SICAPv2. No documented
+exposure was identified among out-of-domain tasks under the available sources
+(Figure 1). A D1 label did not establish disjointness.
 
 The overall 80.2% D1 fraction mixed pathology-specific models with general-
 purpose comparators that did not claim pathology pretraining. Among the 943
-rows from 23 pathology-specific models, 683 (72.4%) were D1, 208 (22.1%) D3,
-and 52 (5.5%) D0. All 369 rows from nine general-purpose models were D1. These
+rows from 23 pathology-specific models, 683 (72.4%) were D1, 204 (21.6%) D2,
+four (0.4%) D3, and 52 (5.5%) D0. All 369 rows from nine general-purpose models were D1. These
 strata, rather than the pooled percentage alone, define the disclosure gap.
 
-No D2 rows appeared in the benchmark audit because TCGA and CPTAC tasks were
-canonicalized to the parent repository identifiers. The 51 D2 pairs in the
-broader registry instead involve child datasets for which only parent-repository
-exposure was documented; the distinction did not disappear from the registry.
-
-### Identifier manifest
+### Training-manifest feasibility demonstration
 
 The PanCancer40M archive digest matched the publisher-reported hash. Streaming
 the archive recovered 6,093 unique TCGA slide filenames representing 5,671 cases
-and 43,374,634 tile coordinates across 16 cancer cohorts. No complete benchmark
-evaluation-slide manifest was found in its public repository or article
-materials. Consequently, the training identifiers were released as a
-reproducibility asset, but no D4 benchmark-overlap claim was made.
+and 43,374,634 tile coordinates across 16 cancer cohorts. This one-model
+pretraining manifest was not linked to a benchmark evaluation manifest and did
+not test overlap. It is released only as a feasibility and reproducibility asset.
 
-### Descriptive performance findings
+### Exploratory performance analysis
 
-Mean AUROC was 0.8085 among 52 D0 rows, 0.7719 among 1,052 D1 rows, and 0.7687
-among 208 D3 rows. These unadjusted groups differed in model and task
-composition. After model and task fixed effects, the AUROC difference versus D1
-was 0.0086 (95% CI, -0.0080 to 0.0252; P=.30) for D0 and -0.0046 (95% CI,
--0.0230 to 0.0137; P=.61) for D3. Corresponding AUPRC differences were -0.0035
-(95% CI, -0.0347 to 0.0278; P=.82) and -0.0063 (95% CI, -0.0278 to 0.0152;
-P=.55), respectively (Figure 2). Thus, this audit did not find evidence that
-documented named-dataset exposure was associated with higher reported
-performance. The intervals do not prove equivalence or exclude effects in
-specific model–dataset pairs.
+The post-protocol fixed-effects analysis is reported in the supplement. It was
+underpowered and uninformative because exposure was concentrated in TCGA tasks,
+D1 mixed unknown exposure states, and only 32 model and 41 task clusters were
+available. No conclusion about performance inflation or absence of an exposure
+effect was drawn (Supplementary Figure S1).
 
 ### Reproducibility checks
 
@@ -271,13 +260,12 @@ Caleb Yitna Ref agreed with all 80 development classifications (80/80, 100%):
 for each of D1, D2, and D3; the full confusion matrix was diagonal. There were
 no D4 pairs. Row-level records retain
 the decision, evidence strength, source URLs, explanation, reviewer identity,
-date, and blinding status. Because the development classifications were visible,
-the result verifies the sampled records but does not estimate blinded inter-
-rater reliability. None of the 23 sampled D1 pairs was upgraded to D2 or D3
-(observed rate, 0%; exact one-sided 95% upper bound, 12.2%). Because the review
-was not blinded, this bound describes the verification exercise and is not an
-unbiased estimate of missed exposure in the full registry. The v1 and v2
-registry classifications were identical after adjudication.
+date, and blinding status. The initial review was blinded, and the reviewer did
+not use AI. None of the 23 sampled D1 pairs was upgraded to D2 or D3 (observed
+rate, 0%; exact one-sided 95% upper bound, 12.2%). Because the sample was
+stratified rather than a simple random sample, the bound should not be projected
+directly to the full registry. The registry classifications were unchanged after
+adjudication; v2 added the benchmark-resolution sensitivity field.
 
 ## Discussion
 
@@ -285,20 +273,20 @@ OncoPretrainMap demonstrates that the obstacle to evaluating pathology
 foundation-model independence is not simply a lack of model lists. It is the
 lack of a versioned connection between model-development evidence, dataset
 lineage, and the exact benchmark being interpreted. In the Bareja et al use
-case, approximately one in six published result rows involved explicit named-
-dataset exposure. Among pathology-specific models, 72.4% remained unresolved
-rather than documented as disjoint; the higher pooled value partly reflected
+case, approximately one in six published result rows involved exposure to a
+containing repository or exact named dataset. Among pathology-specific models,
+72.4% remained unresolved rather than documented as disjoint; the higher pooled value partly reflected
 general-purpose comparators. This finding supports routine provenance auditing
-while also showing
-why a binary contamination label would exceed the available evidence.
+while also showing why a binary contamination label would exceed the available
+evidence.
 
-The null descriptive performance result is important to interpret correctly.
-The registry was designed to audit provenance, not to estimate a causal penalty
-or advantage from overlap. D1 is shaped by disclosure quality and may contain
-both exposed and unexposed models. D3 establishes dataset-level exposure but
-does not show that the same slides were seen, that features were memorized, or
-that evaluation scores were inflated. Accordingly, the analysis provides no
-basis to adjust published scores or rank models by presumed contamination.
+The registry was designed to audit provenance, not to estimate a performance
+penalty or advantage from overlap. The post-protocol regression could not answer
+that question: D1 may contain both exposed and unexposed models, exposure was
+concentrated in TCGA tasks, and the cluster counts were small. We therefore
+treat it as an underpowered, uninformative supplementary analysis rather than a
+negative result. The audit provides no basis to adjust published scores or rank
+models by presumed contamination.
 
 The resource offers three practical benefits for cancer informatics. First, it
 gives benchmark designers a reproducible reason to avoid a dataset, accept it
@@ -312,11 +300,11 @@ incomplete. The 32-model universe is tied to one frozen benchmark rather than
 all pathology foundation models. Dataset lineage is necessarily curated and can
 miss undisclosed derivatives. The recovered training-slide manifest could not
 be matched to benchmark evaluation slides because the latter identifiers were
-unavailable. The 80-pair human verification achieved 100% agreement, but the
-development classifications were visible to the reviewer. It therefore does not
-provide an unbiased estimate of independent inter-rater reliability. Finally,
-fixed-effects associations are noncausal and may be underpowered for class-
-specific effects.
+unavailable. The 80-pair blinded review achieved 100% agreement, but its
+stratified design oversampled D0, D2, and D3 relative to the registry and did
+not establish diagnostic accuracy against an external gold standard. Finally,
+the fixed-effects performance analysis was post-protocol, noncausal,
+underpowered, and uninformative.
 
 Future releases should prioritize public case/slide manifests, checkpoint-
 specific data statements, independent curation, and expansion to additional
@@ -328,8 +316,9 @@ explicitly whether those identifiers were excluded from pretraining.
 
 OncoPretrainMap provides a conservative and reproducible method for auditing
 pretraining–evaluation exposure in cancer pathology foundation models. Applied
-to 1,312 benchmark results, it identified substantial named-dataset exposure
-but a still larger zone where independence could not be established. The
+to 1,312 benchmark results, it identified 204 containing-repository
+relationships and four exact named-dataset relationships, but a still larger
+zone where independence could not be established. The
 resource's central contribution is not a claim that exposure inflated
 performance; it is an auditable boundary between what public evidence does and
 does not support.
@@ -373,20 +362,22 @@ responsible for the analyses or conclusions.
 
 ## Figure Legends
 
-**Figure 1. Exposure classifications across benchmark groups.** Bars
-show the proportion of published model–task results classified as documented
-disjoint (D0), unresolved/insufficiently disclosed (D1), or exact named-dataset
-exposure (D3). D1 is not evidence of independence.
+**Figure 1. Benchmark-resolution exposure classifications across benchmark
+groups.** Bars show the proportion of published model–task results classified
+as documented disjoint (D0), unresolved/insufficiently disclosed (D1),
+repository-level exposure (D2), or exact named evaluation-dataset exposure
+(D3). D1 is not evidence of independence.
 
-**Figure 2. Descriptive associations between exposure class and reported
-performance.** Points and 95% confidence intervals are coefficients from model-
-and task-fixed-effects models with two-way clustered standard errors. The D1
-class is the reference. Estimates are not causal contamination effects.
-
-**Figure 3. Model–dataset exposure registry.** The 32 × 28 matrix displays D0-D3
+**Figure 2. Model–dataset exposure registry.** The 32 × 28 matrix displays D0-D3
 classifications for each core model/checkpoint and evaluation dataset. Gray D1
 cells indicate unresolved or insufficiently disclosed relationships, not
 documented independence.
+
+**Supplementary Figure S1. Exploratory associations between registry exposure
+class and reported performance.** Points and 95% confidence intervals are from
+a post-protocol model- and task-fixed-effects analysis with two-way clustered
+standard errors. The analysis is underpowered and uninformative; estimates are
+not causal contamination effects.
 
 ## References
 

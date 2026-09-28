@@ -105,6 +105,9 @@
     }
   ],
   "limitations": [
+    "This post-protocol regression is underpowered and uninformative for performance effects.",
+    "Only 32 model and 41 task clusters were available for two-way clustered inference.",
+    "Registry D3 exposure is concentrated in TCGA tasks.",
     "Exposure was not randomized and disclosure quality determines classification.",
     "D1 means unresolved, not independent or unexposed.",
     "Fixed effects do not remove unmeasured model-by-task interactions.",

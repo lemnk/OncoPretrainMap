@@ -46,25 +46,25 @@ documented disjointness (D0), then unresolved/insufficient disclosure (D1).
 | D4 exact identifier overlap | 0 |
 
 A hash-verified PanCancer40M archive yielded 6,093 TCGA training-slide names,
-5,671 cases, and 43,374,634 tile records across 16 cohorts. The public benchmark
-materials did not provide matching evaluation-slide identifiers, so no D4 claim
-was made.
+5,671 cases, and 43,374,634 tile records across 16 cohorts. This one-model
+training-manifest result is a feasibility demonstration. It was not tied to a
+benchmark evaluation manifest and did not test overlap.
 
 ## Benchmark and performance audit
 
-All 1,312 published results were canonically resolved: 208 were D3, 52 were D0,
-and 1,052 were D1. D1 is not an unexposed control group.
+All 1,312 published results were canonically resolved. The registry field had
+208 D3 rows. Under the benchmark-resolution rule, 204 were D2, four D3, 52 D0,
+and 1,052 D1. D1 is not an unexposed control group.
 
 The pooled D1 fraction was stratified because the benchmark mixed pathology-
 specific and general-purpose models. Among 943 rows for 23 pathology-specific
-models, 683 (72.4%) were D1, 208 (22.1%) D3, and 52 (5.5%) D0. All 369 rows for
-nine general-purpose comparators were D1. CPTAC contained 14 D3 rows, seven for
-GPFM and seven for Phikon-v2.
+models, 683 (72.4%) were D1, 204 (21.6%) D2, four (0.4%) D3, and 52 (5.5%) D0.
+All 369 rows for nine general-purpose comparators were D1. CPTAC contained 14
+repository-level D2 rows, seven for GPFM and seven for Phikon-v2.
 
-The benchmark audit had no D2 rows because TCGA and CPTAC task labels were
-canonicalized to their parent repositories. At that resolution, exact TCGA or
-CPTAC assertions are D3. The 51 D2 pairs remain in the full registry for child
-datasets linked to an exposed parent repository.
+The benchmark-resolution field treats TCGA and CPTAC assertions as repository-
+level D2 because exact evaluated subsets and slide identifiers were unavailable.
+Four external named datasets remained D3.
 
 A post-protocol descriptive analysis fitted model- and task-fixed-effects
 ordinary least-squares models with two-way clustered standard errors.
@@ -76,10 +76,10 @@ ordinary least-squares models with two-way clustered standard errors.
 | AUPRC, D0 | -0.0035 | -0.0347 to 0.0278 | .823 |
 | AUPRC, D3 | -0.0063 | -0.0278 to 0.0152 | .554 |
 
-No contrast showed evidence that documented exact-dataset exposure was
-associated with higher performance after adjustment. This does not establish
-equivalence, absence of memorization, or a causal exposure effect because
-disclosure drives classification and D1 is heterogeneous.
+This post-protocol regression used registry classes and is retained only as a
+supplementary sensitivity analysis. With 32 model clusters, 41 task clusters,
+TCGA-concentrated exposure, and heterogeneous D1 states, it was underpowered and
+uninformative. No positive, negative, or null performance conclusion is drawn.
 
 ## Validation state
 
@@ -94,15 +94,14 @@ cited evidence. His decisions agreed with all 80 development classifications:
 11 D0, 23 D1, 23 D2, and 23 D3. Each row retains the decision, evidence strength,
 source URLs, explanation, reviewer identity, date, and blinding status.
 
-The completed workbook displayed the development classifications and records
-`initially_blinded` as `No`. The observed agreement was therefore 80/80 (100%),
-but it is reported as human verification rather than a blinded inter-rater
-reliability estimate. Cohen's kappa is not presented as independent evidence.
+Caleb Yitna Ref was blinded to the development classifications during initial
+review, did not use AI, and records `initially_blinded` as `Yes`. Exact agreement
+was 80/80 (100%).
 Per-class agreement was 11/11 for D0 and 23/23 for each of D1, D2, and D3. No
 sampled D1 pair was upgraded to D2 or D3 (0/23; exact one-sided 95% upper bound,
-12.2%). This bound is conditional on nonblinded verification and is not an
-unbiased registry-wide missed-exposure estimate. The pre-review v1 and post-
-verification v2 classification files have identical hashes.
+12.2%). Because the sample was stratified, this is not a registry-wide missed-
+exposure estimate. The registry classifications were unchanged; v2 added the
+benchmark-resolution sensitivity field.
 Row-level records are retained in
 `data/validation/caleb_review_completed.xlsx` (SHA-256
 `cbf85e3e19e001e79f6b1c9025c9342d69efe9d863af8b691a01b60f76f0b396`).
@@ -118,12 +117,9 @@ Row-level records are retained in
 
 ## Remaining dependencies
 
-1. A blinded independent duplicate extraction would strengthen reliability
-   assessment but is not represented as completed.
-2. D4 testing requires public evaluation case/slide identifiers not found in the
+1. D4 testing requires public evaluation case/slide identifiers not found in the
    available benchmark materials.
-3. A permanent DOI should follow validation and release freeze.
+2. A permanent DOI should follow validation and release freeze.
 
-These limitations do not invalidate the registry or completed human
-verification, but they prevent claiming blinded independent reliability or exact
-slide-level overlap.
+These limitations do not invalidate the registry or blinded human review, but
+they prevent claiming exact slide-level overlap or performance effects.

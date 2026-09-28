@@ -31,7 +31,8 @@
       "class_counts": {
         "D0_documented_disjoint": 52,
         "D1_no_detected_evidence_or_insufficient_disclosure": 683,
-        "D3_exact_dataset_exposure": 208
+        "D2_parent_repository_exposure": 204,
+        "D3_exact_dataset_exposure": 4
       },
       "d1_percent": 72.4
     },
@@ -40,13 +41,15 @@
       "class_counts": {
         "D0_documented_disjoint": 0,
         "D1_no_detected_evidence_or_insufficient_disclosure": 369,
+        "D2_parent_repository_exposure": 0,
         "D3_exact_dataset_exposure": 0
       },
       "d1_percent": 100.0
     }
   },
   "cptac_cross_check": {
-    "d3_rows": 14,
+    "registry_d3_rows": 14,
+    "benchmark_resolution_d2_rows": 14,
     "models": {
       "gpfm": 7,
       "phikon_v2": 7

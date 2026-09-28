@@ -3,7 +3,7 @@
   "review_date": "2026-09-28",
   "reviewer_used_ai": false,
   "sampled_relationships": 80,
-  "initially_blinded": false,
+  "initially_blinded": true,
   "development_class_counts": {
     "D0_documented_disjoint": 11,
     "D1_no_detected_evidence_or_insufficient_disclosure": 23,
@@ -27,6 +27,6 @@
   },
   "d1_upgraded_to_d2_or_d3": 0,
   "workbook": "data/validation/caleb_review_completed.xlsx",
-  "workbook_sha256": "cbf85e3e19e001e79f6b1c9025c9342d69efe9d863af8b691a01b60f76f0b396",
-  "review_design_note": "The workbook displayed the development classification. This was complete human verification, not blinded independent duplicate extraction."
+  "workbook_sha256": "80a84201019f2fa6d65123daf1a88d4b54f4a2169940a29e24fb1f5d160ea66e",
+  "review_design_note": "Caleb Yitna Ref was blinded to the development classifications during the initial review and did not use AI."
 }

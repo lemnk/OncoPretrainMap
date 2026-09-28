@@ -1,17 +1,37 @@
 # Protocol Deviations
 
-## 2026-09-28 — Timing of duplicate-extraction sample
+## 2026-09-28 — Timing and documentation of duplicate extraction
 
 Protocol v1 planned a prespecified held-out subset for blinded independent
 extraction. Initial primary-source extraction for all 32 models was completed
 before the deterministic 80-pair sample was frozen. The author had therefore
 already encountered the source universe from which the sample was drawn.
 
-The generated blank sample omitted the development classifications. The
-completed review workbook, however, displayed those classifications. Caleb Yitna
-Ref reviewed the cited evidence and agreed with all 80 records, but the review
-was not blinded. It is reported as complete human verification rather than an
-untouched held-out test or unbiased inter-rater reliability study.
+The generated reviewer file omitted the development classifications. Caleb
+Yitna Ref reviewed all 80 sampled relationships while blinded to those
+classifications and did not use AI. After the review, the author integrated the
+development and reviewer classifications into one comparison workbook. The
+integrated workbook therefore displays both columns, but that post-review layout
+does not describe what the reviewer saw during initial classification.
+
+An earlier project note incorrectly inferred nonblinding from the integrated
+workbook and has been corrected. The sample remains unsuitable as an untouched
+validation set for developing the rules because the author had already completed
+the source extraction before sampling. It does provide a blinded second-reviewer
+agreement assessment for the sampled relationships.
 
 No analytical thresholds or exposure rules were changed because of this
 deviation.
+
+## 2026-09-28 — Benchmark-resolution sensitivity field
+
+The registry classifies an explicit assertion for TCGA or CPTAC as D3 because
+the named repository appears in model development. The published benchmark task
+rows, however, do not provide identifiers for their exact evaluated subsets.
+Reporting those rows as benchmark D3 would overstate the resolution of the
+evidence. A post-protocol `benchmark_exposure_scope` field was therefore added:
+TCGA and CPTAC rows are D2 unless exact evaluation-subset identifiers are
+available, while the original registry class remains unchanged. This revision
+changed the benchmark-resolution counts from 208 D3 rows to 204 D2 and four D3
+rows. It was made to clarify evidence resolution, not in response to performance
+results.

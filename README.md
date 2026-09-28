@@ -49,28 +49,27 @@ The checker never converts `D1` into a claim of independence.
 
 The protocol-frozen development release covers all 32 benchmark model labels,
 28 evaluation datasets, 52 primary-source assertions, and 896 model–dataset
-pairs. In the 1,312-row published benchmark audit, 208 rows have documented
-named-dataset exposure, 52 are documented disjoint, and 1,052 remain unresolved.
-These are disclosure classifications, not contamination prevalence estimates.
-Among the 943 rows for 23 pathology-specific models, 72.4% were D1, 22.1% D3,
-and 5.5% D0. All 369 rows for nine general-purpose comparators were D1.
+pairs. The 1,312-row benchmark-resolution audit contains 204 repository-level
+D2 rows, four exact named-dataset D3 rows, 52 documented-disjoint D0 rows, and
+1,052 unresolved D1 rows. Among 943 rows for 23 pathology-specific models,
+72.4% were D1, 21.6% D2, 0.4% D3, and 5.5% D0. All 369 rows for nine general-
+purpose comparators were D1. These are disclosure classifications, not
+contamination prevalence estimates.
 
-A primary PanCancer40M manifest contains 6,093 exact TCGA training-slide
-identifiers. No D4 claim is made because benchmark evaluation slide identifiers
-were not publicly recoverable.
+A PanCancer40M feasibility demonstration recovered 6,093 TCGA training-slide
+identifiers for one pretraining corpus. It was not tied to a benchmark
+evaluation manifest and did not test overlap.
 
-The secondary, noncausal performance audit found no clear association between
-documented exact-dataset exposure and AUROC or AUPRC after model and task fixed
-effects. This does not demonstrate absence of an exposure effect.
+The post-protocol performance regression is retained only as an underpowered,
+uninformative supplementary analysis. No performance-effect conclusion is drawn.
 
 Caleb Yitna Ref reviewed all 80 sampled relationships and agreed with all 80
 development classifications: 11 D0, 23 D1, 23 D2, and 23 D3. The review retained
 row-level decisions, evidence strengths, URLs, explanations, reviewer identity,
-date, and blinding status. Because the development classifications were visible,
-this is complete human verification rather than blinded independent extraction.
-No sampled D1 pair was upgraded to D2 or D3 (0/23); because the review was not
-blinded, this is not an unbiased estimate of missed exposure. Frozen pre-review
-v1 and regenerated post-verification v2 classifications were identical.
+date, and blinding status. Caleb was blinded to the development classifications
+during initial review and did not use AI. No sampled D1 pair was upgraded to D2
+or D3 (0/23). The registry classifications were unchanged; v2 added the
+benchmark-resolution sensitivity field.
 
 ## Reproduce
 

@@ -35,13 +35,14 @@ def main() -> None:
         "benchmark_audit": {},
     }
     for table_name, rows in (("registry", registry), ("benchmark_audit", audit)):
-        counts = Counter((stratum(row), row["exposure_scope"]) for row in rows)
+        scope_field = "benchmark_exposure_scope" if table_name == "benchmark_audit" else "exposure_scope"
+        counts = Counter((stratum(row), row[scope_field]) for row in rows)
         table_summary = {}
         for group in ("Pathology-specific", "General-purpose"):
             total = sum(value for (candidate, _), value in counts.items() if candidate == group)
             class_counts = {
                 exposure: counts[(group, exposure)]
-                for exposure in sorted({row["exposure_scope"] for row in rows})
+                for exposure in sorted({row[scope_field] for row in rows})
             }
             table_summary[group] = {
                 "total": total,
@@ -63,14 +64,19 @@ def main() -> None:
                 )
         summary[table_name] = table_summary
 
-    cptac_d3 = [
+    cptac_registry_d3 = [
         row for row in audit
         if row["dataset_group"] == "CPTAC" and row["exposure_scope"] == "D3_exact_dataset_exposure"
     ]
+    cptac_benchmark_d2 = [
+        row for row in audit
+        if row["dataset_group"] == "CPTAC" and row["benchmark_exposure_scope"] == "D2_parent_repository_exposure"
+    ]
     summary["cptac_cross_check"] = {
-        "d3_rows": len(cptac_d3),
-        "models": dict(sorted(Counter(row["model_id"] for row in cptac_d3).items())),
-        "expected_models_present": sorted({row["model_id"] for row in cptac_d3}) == ["gpfm", "phikon_v2"],
+        "registry_d3_rows": len(cptac_registry_d3),
+        "benchmark_resolution_d2_rows": len(cptac_benchmark_d2),
+        "models": dict(sorted(Counter(row["model_id"] for row in cptac_registry_d3).items())),
+        "expected_models_present": sorted({row["model_id"] for row in cptac_registry_d3}) == ["gpfm", "phikon_v2"],
     }
 
     report_csv = ROOT / "reports" / "exposure_by_model_stratum.csv"

@@ -116,7 +116,7 @@ def main() -> None:
     estimate_frame = pd.DataFrame(estimates)
     estimate_frame.to_csv(REPORTS / "performance_exposure_fixed_effects.csv", index=False)
 
-    group_table = pd.crosstab(frame["dataset_group"], frame["exposure_scope"])
+    group_table = pd.crosstab(frame["dataset_group"], frame["benchmark_exposure_scope"])
     group_table.to_csv(REPORTS / "exposure_by_benchmark_group.csv")
     result = {
         "analysis_type": "post-protocol descriptive sensitivity analysis",
@@ -126,6 +126,9 @@ def main() -> None:
         "summary_records": summaries,
         "fixed_effects_records": estimates,
         "limitations": [
+            "This post-protocol regression is underpowered and uninformative for performance effects.",
+            "Only 32 model and 41 task clusters were available for two-way clustered inference.",
+            "Registry D3 exposure is concentrated in TCGA tasks.",
             "Exposure was not randomized and disclosure quality determines classification.",
             "D1 means unresolved, not independent or unexposed.",
             "Fixed effects do not remove unmeasured model-by-task interactions.",

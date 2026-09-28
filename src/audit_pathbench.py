@@ -76,6 +76,15 @@ def main() -> None:
             strength = "D_incomplete_or_ambiguous_disclosure"
             statement = "Benchmark dataset label is too coarse or exposure evidence is incomplete; independence cannot be assumed."
             resolvable = "No"
+        benchmark_scope = scope
+        benchmark_statement = statement
+        if scope == "D3_exact_dataset_exposure" and dataset_id in {"tcga", "cptac"}:
+            benchmark_scope = "D2_parent_repository_exposure"
+            benchmark_statement = (
+                "The model reports exposure to the containing TCGA or CPTAC repository, but the "
+                "published benchmark row does not provide identifiers sufficient to establish "
+                "exposure to its exact evaluation subset."
+            )
         annotated.append(
             {
                 **row,
@@ -83,8 +92,10 @@ def main() -> None:
                 "canonical_evaluation_dataset_id": dataset_id,
                 "dataset_label_resolvable": resolvable,
                 "exposure_scope": scope,
+                "benchmark_exposure_scope": benchmark_scope,
                 "evidence_strength": strength,
                 "independence_statement": statement,
+                "benchmark_independence_statement": benchmark_statement,
             }
         )
 
@@ -96,6 +107,7 @@ def main() -> None:
 
     group_counts = Counter(row["dataset_group"] for row in annotated)
     exposure_counts = Counter(row["exposure_scope"] for row in annotated)
+    benchmark_exposure_counts = Counter(row["benchmark_exposure_scope"] for row in annotated)
     resolvable_counts = Counter(row["dataset_label_resolvable"] for row in annotated)
     summary = {
         "published_model_task_rows": len(annotated),
@@ -104,10 +116,11 @@ def main() -> None:
         "dataset_group_counts": dict(sorted(group_counts.items())),
         "dataset_label_resolvable_counts": dict(sorted(resolvable_counts.items())),
         "exposure_scope_counts": dict(sorted(exposure_counts.items())),
+        "benchmark_exposure_scope_counts": dict(sorted(benchmark_exposure_counts.items())),
         "interpretation": (
-            "Development audit only. Public external and out-of-domain evaluation cohorts were resolved from "
-            "task labels and the peer-reviewed Methods; initial primary-source extraction covers all 32 core models. "
-            "D1 rows are not evidence of independence."
+            "The registry evidence class is retained in exposure_scope. The benchmark-resolution sensitivity "
+            "in benchmark_exposure_scope treats TCGA and CPTAC assertions as repository-level exposure because "
+            "the published task rows do not provide exact evaluation-subset identifiers. D1 is not evidence of independence."
         ),
     }
     summary_path = ROOT / "reports" / "pathbench_exposure_audit_development.json"

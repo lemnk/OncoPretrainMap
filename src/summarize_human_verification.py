@@ -40,6 +40,11 @@ def main() -> None:
     reviewer_counts = source["reviewer_class_counts"]
     rows = sum(development_counts.values())
     agreement = sum(confusion.get(label, {}).get(label, 0) for label in LABELS)
+    expected_agreement = sum(
+        development_counts[label] * reviewer_counts[label] for label in LABELS
+    ) / (rows * rows)
+    observed_agreement = agreement / rows
+    kappa = (observed_agreement - expected_agreement) / (1 - expected_agreement)
     d1_n = development_counts["D1_no_detected_evidence_or_insufficient_disclosure"]
     d1_upgrades = source["d1_upgraded_to_d2_or_d3"]
     # Exact one-sided 95% upper confidence bound when zero upgrades are observed.
@@ -61,6 +66,7 @@ def main() -> None:
         "sample_design": "Stratified: all 11 D0 pairs and 23 sampled pairs from each of D1, D2, and D3.",
         "exact_agreement_count": agreement,
         "exact_agreement_proportion": agreement / rows,
+        "unweighted_cohens_kappa": kappa,
         "disagreements": rows - agreement,
         "complete_row_records": rows,
         "development_class_counts": development_counts,
@@ -78,9 +84,9 @@ def main() -> None:
         "initially_blinded": source["initially_blinded"],
         "reviewer_used_ai": source["reviewer_used_ai"],
         "interpretation": (
-            "No sampled D1 pair was upgraded to D2 or D3. Because the development classifications "
-            "were visible, the observed rate and bound describe this verification exercise and are not "
-            "an unbiased estimate of missed exposure in the full registry."
+            "No sampled D1 pair was upgraded to D2 or D3. The second reviewer was blinded to the "
+            "development classifications during initial review and did not use AI. The stratified sample "
+            "supports class-specific agreement but is not a simple random sample of the full registry."
         ),
         "workbook": source["workbook"],
         "workbook_sha256": source["workbook_sha256"],

@@ -23,7 +23,7 @@ COLORS = {
 SHORT = {
     "D0_documented_disjoint": "D0 documented disjoint",
     "D1_no_detected_evidence_or_insufficient_disclosure": "D1 unresolved",
-    "D2_parent_repository_exposure": "D2 parent repository",
+    "D2_parent_repository_exposure": "D2 repository-level",
     "D3_exact_dataset_exposure": "D3 exact dataset",
 }
 
@@ -50,7 +50,7 @@ def exposure_by_group() -> None:
     frame["dataset_group"] = frame["dataset_group"].replace(
         {"External_benchmarking_cohort": "External benchmark", "Out of Domain": "Out of domain"}
     )
-    table = pd.crosstab(frame["dataset_group"], frame["exposure_scope"])
+    table = pd.crosstab(frame["dataset_group"], frame["benchmark_exposure_scope"])
     proportions = table.div(table.sum(axis=1), axis=0)
     scopes = [scope for scope in COLORS if scope in proportions.columns]
     fig, ax = plt.subplots(figsize=(8.4, 4.6))
@@ -91,7 +91,7 @@ def coefficient_forest() -> None:
     ax.grid(axis="x", color="#E6E8EB", linewidth=0.8)
     ax.set_axisbelow(True)
     fig.tight_layout()
-    save(fig, "figure2_performance_associations")
+    save(fig, "supplementary_figure_s1_performance_associations")
 
 
 def exposure_heatmap() -> None:
@@ -111,7 +111,7 @@ def exposure_heatmap() -> None:
     handles = [plt.Line2D([0], [0], marker="s", linestyle="", color=color, label=SHORT[scope], markersize=8) for scope, color in COLORS.items()]
     ax.legend(handles=handles, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.01), ncol=4, fontsize=8)
     fig.tight_layout()
-    save(fig, "figure3_registry_heatmap")
+    save(fig, "figure2_registry_heatmap")
 
 
 def main() -> None:

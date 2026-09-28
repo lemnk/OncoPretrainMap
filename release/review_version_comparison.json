@@ -5,7 +5,9 @@
   },
   "v2_post_review": {
     "model_dataset_exposure.csv": "2e1c17ad1869f1f543361a411114d4c95795cf54e7f6ac5052187b6c11150246",
-    "benchmark_exposure_audit.csv": "731b1293402e96ee40711f78060f3bd5a4ecc5a17f1c5b6a2695ff62a7056481"
+    "benchmark_exposure_audit.csv": "65148367fadb1e4b536a341640a24091757955e20e84449e84bf466cef83ddde"
   },
-  "classifications_changed_after_review": false
+  "registry_classifications_changed_after_review": false,
+  "benchmark_audit_artifact_changed": true,
+  "benchmark_audit_change_reason": "Added a benchmark-resolution exposure field that treats TCGA and CPTAC task rows as repository-level exposure when exact evaluation-subset identifiers are unavailable."
 }

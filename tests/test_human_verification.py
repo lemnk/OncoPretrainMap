@@ -16,5 +16,5 @@ def test_human_verification_summary_matches_workbook_hash():
     assert summary["exact_agreement_proportion"] == 1.0
     assert summary["disagreements"] == 0
     assert summary["complete_row_records"] == 80
-    assert summary["initially_blinded"] is False
+    assert summary["initially_blinded"] is True
     assert sum(summary["reviewer_class_counts"].values()) == 80

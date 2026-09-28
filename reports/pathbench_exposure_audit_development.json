@@ -16,5 +16,11 @@
     "D1_no_detected_evidence_or_insufficient_disclosure": 1052,
     "D3_exact_dataset_exposure": 208
   },
-  "interpretation": "Development audit only. Public external and out-of-domain evaluation cohorts were resolved from task labels and the peer-reviewed Methods; initial primary-source extraction covers all 32 core models. D1 rows are not evidence of independence."
+  "benchmark_exposure_scope_counts": {
+    "D0_documented_disjoint": 52,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 1052,
+    "D2_parent_repository_exposure": 204,
+    "D3_exact_dataset_exposure": 4
+  },
+  "interpretation": "The registry evidence class is retained in exposure_scope. The benchmark-resolution sensitivity in benchmark_exposure_scope treats TCGA and CPTAC assertions as repository-level exposure because the published task rows do not provide exact evaluation-subset identifiers. D1 is not evidence of independence."
 }
