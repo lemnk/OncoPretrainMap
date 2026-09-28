@@ -48,6 +48,9 @@ The checker never converts `D1` into a claim of independence.
 ## Status
 
 The project is in the protocol-frozen registry-construction phase. The PathBench
-core universe and source snapshot are reproducible. Primary-source extraction,
-independent blinded validation, and the benchmark-level audit remain in progress.
-
+core universe and source snapshot are reproducible. The development audit covers
+all 1,312 published model–task rows: 121 currently have documented named-dataset
+exposure, 52 are documented disjoint, and 1,139 remain unresolved. A primary
+PanCancer40M manifest contains 6,093 exact training-slide identifiers, but no D4
+claim is made without an independently sourced evaluation-slide manifest.
+Primary-source extraction and independent blinded validation remain in progress.
