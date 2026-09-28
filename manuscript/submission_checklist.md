@@ -26,8 +26,9 @@
 - Frozen 60-row blinded external-review packet
 - Completed 60-row blinded external-transport review with row-level evidence,
   original decisions, adjudications, and dated reviewer attestation
-- External-review agreement analysis: 58/60 (96.7%), kappa 0.948, per-class
-  confusion matrix, and zero D1-to-D2-D4 upgrades
+- External-review record preserves 58/60 initial agreement and the subsequent
+  12-row D2-to-D1 source-semantics correction; final agreement is 46/60 (76.7%,
+  kappa 0.604)
 
 ## Validation interpretation to retain
 
@@ -38,8 +39,8 @@
   pooled statistic as if the sample were representative of the full registry.
 - The D1-upgrade bound applies to 23 sampled D1 pairs and should not be projected
   directly to the full registry.
-- External transport results are 44 D0, 186 D1, and 12 D2; D2 does not prove
-  shared patients or slides.
+- External transport results are 44 D0 and 198 D1. Twelve D1 rows carry an
+  explicit source warning that overlap cannot be excluded; none establish D2.
 
 ## Required before journal upload
 

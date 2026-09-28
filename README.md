@@ -69,18 +69,19 @@ purpose comparators were D1. These are disclosure classifications, not
 contamination prevalence estimates.
 
 In the prespecified external transport analysis, all 242 Campanella et al
-relationships mapped successfully. Forty-four (18.2%) were D0, 186 (76.9%) D1,
-and 12 (5.0%) D2; none were D3 or D4. The 12 D2 rows were Virchow and Virchow2
-on six MSKCC tasks and indicate exposure to a containing institutional corpus,
-not proven patient or slide overlap. No classification rule changed after the
+relationships mapped successfully. Forty-four (18.2%) were D0 and 198 (81.8%)
+were D1; none were D2-D4. Twelve Virchow/MSKCC D1 rows carry an explicit source
+warning that overlap cannot be excluded. They remain D1 because same-institution
+pretraining and evaluation do not establish that the pretraining corpus
+contains the evaluation cohort. No classification rule changed after the
 transport freeze.
 
-Caleb Yitna Ref independently reviewed the stratified 60-row transport sample
-while blinded to the development classifications. Agreement was 58/60 (96.7%;
-unweighted Cohen's kappa, 0.948): 20/20 for D0, 26/28 for D1, and 12/12 for D2.
-No sampled D1 relationship was upgraded to D2-D4. The two disagreements were
-tRes50 D0-versus-D1 decisions; applying the frozen requirement for an explicit
-version-specific exclusion retained D1 after adjudication.
+Caleb Yitna Ref independently reviewed the frozen 60-row transport sample while
+blinded to the initial classifications. Initial agreement was 58/60 (96.7%;
+kappa, 0.948). A subsequent source-semantics audit conservatively corrected 12
+initial D2 labels to D1. Agreement with the corrected final classes was 46/60
+(76.7%; kappa, 0.604). Original reviewer decisions and final adjudications are
+both retained.
 
 A PanCancer40M feasibility demonstration recovered 6,093 TCGA training-slide
 identifiers for one pretraining corpus. It was not tied to a benchmark

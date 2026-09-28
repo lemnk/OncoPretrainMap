@@ -41,8 +41,9 @@ analysis. It omits the development class and evidence grade.
 completed row-level review, the original reviewer decisions, the comparison
 with the hidden key, final adjudications, and his dated attestation. Caleb was
 blinded to the development classifications and reported no AI use. Agreement
-was 58/60 (96.7%; unweighted Cohen's kappa, 0.948): 20/20 for D0, 26/28 for D1,
-and 12/12 for D2. No sampled D1 relationship was upgraded to D2-D4. The two
-disagreements involved tRes50 rows classified by Caleb as D0; final adjudication
-retained D1 because the frozen rule required an explicit version-specific
-exclusion.
+with the initial labels was 58/60 (96.7%; unweighted Cohen's kappa, 0.948). A
+subsequent source-semantics audit determined that the 12 Virchow/MSKCC warnings
+did not establish a containing-corpus relationship and corrected those rows
+from D2 to D1. Agreement with the corrected final classes was 46/60 (76.7%;
+kappa, 0.604). The workbook preserves the original decisions and all final
+adjudications.

@@ -7,8 +7,7 @@
   "canonical_mapping_success_proportion": 1.0,
   "exposure_scope_counts": {
     "D0_documented_disjoint": 44,
-    "D1_no_detected_evidence_or_insufficient_disclosure": 186,
-    "D2_parent_repository_exposure": 12
+    "D1_no_detected_evidence_or_insufficient_disclosure": 198
   },
   "evaluation_institution_counts": {
     "MSHS": 154,
@@ -17,6 +16,7 @@
   },
   "rule_changes_after_freeze": 0,
   "conflicts": 0,
-  "second_reviewer_status": "Pending; deterministic blinded packet generated. No reliability estimate is reported.",
-  "interpretation": "The frozen framework represented all relationships without a rule change. D1 is unresolved and is not evidence of independence. D2 on MSKCC tasks is institution-level containing-corpus exposure, not proof of shared patients or slides."
+  "explicit_overlap_warning_count": 12,
+  "second_reviewer_status": "Completed; original blinded decisions and post-audit adjudications are retained in the validation workbook.",
+  "interpretation": "The frozen framework represented all relationships without a rule change. D1 is unresolved and is not evidence of independence. Twelve Virchow/MSKCC relationships carry an explicit source warning that overlap cannot be excluded, but remain D1 because containment of the evaluation cohorts was not established."
 }

@@ -24,9 +24,9 @@ def test_external_transport_frozen_class_counts():
     summary = json.loads((ROOT / "reports" / "campanella_transport_summary.json").read_text(encoding="utf-8"))
     assert summary["exposure_scope_counts"] == {
         "D0_documented_disjoint": 44,
-        "D1_no_detected_evidence_or_insufficient_disclosure": 186,
-        "D2_parent_repository_exposure": 12,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 198,
     }
+    assert summary["explicit_overlap_warning_count"] == 12
     assert summary["rule_changes_after_freeze"] == 0
     assert summary["conflicts"] == 0
 
@@ -39,3 +39,12 @@ def test_external_review_packet_is_blinded_and_complete():
     assert "development_class" not in packet[0]
     assert all(row["initially_blinded"] == "Yes" for row in packet)
     assert all(row["reviewer_used_ai"] == "" for row in packet)
+
+
+def test_mskcc_overlap_warning_does_not_overstate_containment():
+    audit = rows()
+    warned = [row for row in audit if row["explicit_overlap_warning"] == "Yes"]
+    assert len(warned) == 12
+    assert {row["model_label"] for row in warned} == {"Virchow", "Virchow2"}
+    assert {row["evaluation_institution"] for row in warned} == {"MSKCC"}
+    assert all(row["exposure_scope"] == "D1_no_detected_evidence_or_insufficient_disclosure" for row in warned)

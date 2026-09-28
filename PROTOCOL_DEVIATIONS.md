@@ -34,6 +34,17 @@ agreement assessment for the sampled relationships.
 No analytical thresholds or exposure rules were changed because of this
 deviation.
 
+## 2026-09-28 — Campanella D2 application correction
+
+An audit of the primary Campanella source found that its Virchow/MSKCC statement
+established only that overlap could not be excluded. It did not establish that
+the MSKCC pretraining corpus contained the evaluation cohorts. Under the frozen
+D2 definition, the 12 affected relationships therefore remained D1 with an
+explicit overlap-warning field. This corrected an application of the rule; it
+did not change the rule. The prior labels, blinded reviewer decisions, corrected
+classes, and adjudication notes were retained. External counts changed from 44
+D0, 186 D1, and 12 D2 to 44 D0 and 198 D1.
+
 ## 2026-09-28 — Benchmark-resolution sensitivity field
 
 The registry classifies an explicit assertion for TCGA or CPTAC as D3 because

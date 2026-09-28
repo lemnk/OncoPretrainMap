@@ -104,20 +104,18 @@ rule change was required.
 | Exposure class | Rows | Percent |
 |---|---:|---:|
 | D0 documented disjoint | 44 | 18.2% |
-| D1 unresolved/insufficient disclosure | 186 | 76.9% |
-| D2 containing institutional corpus | 12 | 5.0% |
+| D1 unresolved/insufficient disclosure | 198 | 81.8% |
+| D2 parent/containing corpus | 0 | 0% |
 | D3 exact named dataset | 0 | 0% |
 | D4 exact identifier overlap | 0 | 0% |
 
 The D0 rows were SP22M and SP85M across all 22 tasks, supported by the paper's
-explicit benchmark nonoverlap statement. The D2 rows were Virchow and Virchow2
-on six MSKCC tasks; the models used an MSKCC pretraining corpus, but exact
-evaluation identifiers were unavailable. D2 therefore does not establish shared
-patients or slides. The remaining relationships were D1, not documented
-independent. A deterministic 60-row blinded-review packet was generated.
-Caleb Yitna Ref completed the review without AI. Agreement was 58/60 (96.7%;
-unweighted Cohen's kappa, 0.948), with 20/20 D0, 26/28 D1, 12/12 D2, and no
-D1-to-D2-D4 upgrades.
+explicit benchmark nonoverlap statement. Twelve Virchow/MSKCC rows carry an
+explicit warning that overlap cannot be excluded, but remain D1 because the
+source does not establish that the pretraining corpus contains the evaluation
+cohorts. Caleb Yitna Ref completed the 60-row blinded review without AI.
+Initial agreement was 58/60 (96.7%; kappa, 0.948). After the source-semantics
+correction, final agreement was 46/60 (76.7%; kappa, 0.604).
 
 ## Validation state
 

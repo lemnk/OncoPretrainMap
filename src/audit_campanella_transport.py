@@ -46,26 +46,29 @@ def institution(task: str) -> str:
     return prefix
 
 
-def classify(model: str, site: str) -> tuple[str, str, str, str]:
+def classify(model: str, site: str) -> tuple[str, str, str, str, str]:
     if model in {"SP22M", "SP85M"}:
         return (
             "D0_documented_disjoint",
             "B_explicit_primary_source_statement",
             "The benchmark article states that the in-house model pretraining data did not overlap the clinical benchmarking data.",
             f"{ARTICLE_URL}#Par70",
+            "No",
         )
     if model in {"Virchow", "Virchow2"} and site == "MSKCC":
         return (
-            "D2_parent_repository_exposure",
+            "D1_no_detected_evidence_or_insufficient_disclosure",
             "B_explicit_primary_source_statement",
-            "The checkpoint was pretrained on an MSKCC slide corpus, and the benchmark article states that overlap with MSKCC clinical tasks cannot be excluded; exact benchmark identifiers are unavailable.",
+            "The checkpoint was pretrained on an MSKCC slide corpus, and the benchmark article states that overlap with MSKCC clinical tasks cannot be excluded. This is an explicit overlap warning, but it does not establish that the pretraining corpus contains the evaluation cohort; independence cannot be assumed.",
             f"{ARTICLE_URL}#Par69",
+            "Yes",
         )
     return (
         "D1_no_detected_evidence_or_insufficient_disclosure",
         "D_incomplete_or_ambiguous_disclosure",
         "The frozen public evidence does not document disjointness or a containing-corpus relationship for this model-task pair; independence cannot be assumed.",
         ARTICLE_URL,
+        "No",
     )
 
 
@@ -78,18 +81,23 @@ def write_csv(path: Path, rows: list[dict[str, object]]) -> None:
 
 
 def create_review_sample(rows: list[dict[str, object]]) -> None:
-    strata = {
-        "D0_documented_disjoint": 20,
-        "D1_no_detected_evidence_or_insufficient_disclosure": 28,
-        "D2_parent_repository_exposure": 12,
-    }
-    selected: list[dict[str, object]] = []
-    for exposure_scope, target in strata.items():
-        candidates = [row for row in rows if row["exposure_scope"] == exposure_scope]
-        seed = int(hashlib.sha256(f"campanella-transport|{exposure_scope}".encode()).hexdigest()[:16], 16)
-        random.Random(seed).shuffle(candidates)
-        selected.extend(candidates[: min(target, len(candidates))])
-    selected.sort(key=lambda row: str(row["transport_row_id"]))
+    packet_path = VALIDATION / "campanella_transport_blinded_review_packet.csv"
+    if packet_path.exists():
+        with packet_path.open(encoding="utf-8", newline="") as handle:
+            frozen_ids = [row["transport_row_id"] for row in csv.DictReader(handle)]
+        by_id = {str(row["transport_row_id"]): row for row in rows}
+        selected = [by_id[row_id] for row_id in frozen_ids]
+    else:
+        strata = {"D0_documented_disjoint": 20, "D1_no_detected_evidence_or_insufficient_disclosure": 40}
+        selected = []
+        for exposure_scope, target in strata.items():
+            candidates = [row for row in rows if row["exposure_scope"] == exposure_scope]
+            seed = int(hashlib.sha256(f"campanella-transport|{exposure_scope}".encode()).hexdigest()[:16], 16)
+            random.Random(seed).shuffle(candidates)
+            selected.extend(candidates[:target])
+        selected.sort(key=lambda row: str(row["transport_row_id"]))
+    if len(selected) != 60:
+        raise ValueError(f"Expected frozen 60-row review sample; observed {len(selected)}")
 
     key_rows = [
         {
@@ -142,7 +150,7 @@ def main() -> None:
         model = record["Encoder"]
         task = record["Task"]
         site = institution(task)
-        scope, strength, statement, evidence_url = classify(model, site)
+        scope, strength, statement, evidence_url, overlap_warning = classify(model, site)
         rows.append(
             {
                 "transport_row_id": f"CAMP-{index:03d}",
@@ -162,6 +170,7 @@ def main() -> None:
                 "conflict_flag": "False",
                 "independence_statement": statement,
                 "evidence_url": evidence_url,
+                "explicit_overlap_warning": overlap_warning,
                 "rule_changed_after_freeze": "No",
             }
         )
@@ -182,8 +191,9 @@ def main() -> None:
         "evaluation_institution_counts": dict(sorted(sites.items())),
         "rule_changes_after_freeze": sum(row["rule_changed_after_freeze"] != "No" for row in rows),
         "conflicts": sum(row["conflict_flag"] != "False" for row in rows),
-        "second_reviewer_status": "Pending; deterministic blinded packet generated. No reliability estimate is reported.",
-        "interpretation": "The frozen framework represented all relationships without a rule change. D1 is unresolved and is not evidence of independence. D2 on MSKCC tasks is institution-level containing-corpus exposure, not proof of shared patients or slides.",
+        "explicit_overlap_warning_count": sum(row["explicit_overlap_warning"] == "Yes" for row in rows),
+        "second_reviewer_status": "Completed; original blinded decisions and post-audit adjudications are retained in the validation workbook.",
+        "interpretation": "The frozen framework represented all relationships without a rule change. D1 is unresolved and is not evidence of independence. Twelve Virchow/MSKCC relationships carry an explicit source warning that overlap cannot be excluded, but remain D1 because containment of the evaluation cohorts was not established.",
     }
     REPORTS.mkdir(parents=True, exist_ok=True)
     (REPORTS / "campanella_transport_summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")

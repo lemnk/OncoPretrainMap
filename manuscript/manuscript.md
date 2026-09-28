@@ -27,10 +27,9 @@ mapped to canonical identifiers; 52 (4.0%) were D0, 1,052 (80.2%) D1, 204
 development classifications; no sampled D1 pair was upgraded. We then froze the
 rules and applied them unchanged to an independently published 11-model,
 22-task clinical benchmark. All 242 relationships mapped successfully: 44
-(18.2%) were D0, 186 (76.9%) D1, and 12 (5.0%) D2; none were D3 or D4. No rule
-change or conflict was required. A blinded human review of 60 stratified
-relationships achieved 58/60 agreement (96.7%; kappa, 0.948), with no D1
-relationship upgraded to D2-D4.
+(18.2%) were D0 and 198 (81.8%) D1; none were D2-D4. Twelve D1 relationships
+carried an explicit source warning that overlap could not be excluded, without
+evidence of a containing-corpus relationship. No rule change was required.
 
 **Relevance:** OncoPretrainMap separates documented exposure from uncertainty
 and prevents unresolved provenance from being reported as independent
@@ -176,10 +175,12 @@ The external universe comprised every distinct encoder-by-task combination in
 the version-of-record source tables: 11 encoders and 22 clinical tasks from
 three health systems. We resolved models, tasks, institutions, and cohorts and
 applied D0-D4 unchanged. The paper's explicit nonoverlap statement for SP22M and
-SP85M supported D0. Its inability to exclude overlap between MSKCC-trained
-Virchow models and MSKCC tasks supported D2 because exact identifiers were
-unavailable. Other relationships remained D1. Prespecified outcomes were
-mapping success, class counts, conflicts, and rule changes.[3]
+SP85M supported D0. For MSKCC-trained Virchow models evaluated on MSKCC tasks,
+the paper stated that overlap could not be excluded. We retained this as an
+explicit overlap-warning field but assigned D1 because same-institution
+provenance did not establish that the pretraining corpus contained the
+evaluation cohorts. Other relationships also remained D1. Prespecified outcomes
+were mapping success, class counts, warnings, conflicts, and rule changes.[3]
 
 A post-protocol exploratory analysis of published AUROC and AUPRC used model and
 task fixed effects with two-way clustered standard errors. It is reported only
@@ -202,13 +203,13 @@ of D1 pairs upgraded to D2 or D3. The pre-review files were
 frozen as v1; all outputs were regenerated after review as v2 while retaining
 both releases.
 
-For the external transport, a deterministic review sample included 20 D0, 28
-D1, and all 12 D2 relationships. Caleb Yitna Ref independently reviewed all 60
-relationships while blinded to the transport classifications and reported no
-AI use. We calculated exact and per-class agreement, unweighted Cohen's kappa,
-a full confusion matrix, and D1-to-D2-D4 upgrades. Disagreements were resolved
-after unblinding by applying the frozen definitions; no third adjudicator was
-used. Original decisions and final adjudications were retained.
+For the external transport, a deterministic 60-row review sample was frozen
+before unblinding. Caleb Yitna Ref independently reviewed every relationship
+while blinded to the initial transport classifications and reported no AI use.
+We calculated exact agreement, unweighted Cohen's kappa, and a confusion matrix.
+A subsequent source-semantics audit applied the unchanged class definitions to
+the Virchow/MSKCC warnings. Original decisions, pre-audit labels, corrected
+classes, and resolution notes were retained; no third adjudicator was used.
 
 OpenAI Codex (GPT-5.6 Sol; OpenAI; accessed September 27-28, 2026) assisted with
 software development and automated retrieval and processing of public metadata.
@@ -256,26 +257,24 @@ strata, rather than the pooled percentage alone, define the disclosure gap.
 
 All 242 model–task relationships in the Campanella et al benchmark resolved to
 canonical model and task identifiers (100% mapping success). The frozen rules
-classified 44 relationships (18.2%) as D0, 186 (76.9%) as D1, and 12 (5.0%) as
-D2; none met D3 or D4 criteria (Figure 3). The 44 D0 relationships were SP22M
-and SP85M across the 22 tasks, reflecting the benchmark paper's explicit
-nonoverlap statement. The 12 D2 relationships were Virchow and Virchow2 across
-the six MSKCC tasks, reflecting documented exposure to a containing
-institutional slide corpus without exact evaluation identifiers. No conflict or
-previously unrepresentable lineage situation was encountered, and no exposure
-definition, evidence grade, or precedence rule changed after the transport
-protocol was frozen.
+classified 44 relationships (18.2%) as D0 and 198 (81.8%) as D1; none met D2-D4
+criteria (Figure 3). The 44 D0 relationships were SP22M and SP85M across the 22
+tasks, reflecting the benchmark paper's explicit nonoverlap statement. Twelve
+Virchow/MSKCC D1 relationships carried an explicit source warning that overlap
+could not be excluded. They were not D2 because the evidence did not establish
+that the pretraining corpus contained the evaluation cohorts. No exposure
+definition, evidence grade, or precedence rule changed.
 
-The blinded reviewer agreed on 58/60 relationships (96.7%; unweighted Cohen's
-kappa, 0.948): 20/20 D0, 26/28 D1, and 12/12 D2. The two disagreements were
-tRes50 rows that the reviewer classified D0 from ImageNet/cross-domain
-provenance. Final adjudication retained D1 because no explicit version-specific
-exclusion was documented. No sampled D1 relationship was upgraded to D2-D4.
+The blinded reviewer initially agreed with 58/60 pre-audit labels (96.7%;
+kappa, 0.948). A subsequent source-semantics audit corrected the 12 initially
+agreed Virchow/MSKCC D2 labels to D1. Agreement with the corrected final classes
+was 46/60 (76.7%; kappa, 0.604): 20/20 D0 and 26/40 D1. The remaining two
+disagreements were tRes50 rows classified D0 by the reviewer; D1 was retained
+because no explicit version-specific exclusion was documented.
 
 The distribution differed from the development application: the external
-benchmark had more documented disjointness (18.2% vs 4.0%), less containing-
-repository exposure (5.0% vs 15.5%), and no exact named-dataset exposure. D1
-remained the largest class in both benchmarks (76.9% and 80.2%, respectively).
+benchmark had more documented disjointness (18.2% vs 4.0%) and no D2 or D3.
+D1 remained the largest class in both benchmarks (81.8% and 80.2%, respectively).
 These percentages describe the two benchmark ecosystems and are not prevalence
 estimates for pathology foundation models generally.
 
@@ -349,6 +348,10 @@ with a caveat, or request identifiers from model developers. Second, it prevents
 “not disclosed” from becoming “independent” through repetition. Third, it makes
 provenance claims updateable: a new manifest can upgrade a pair from D2 or D3 to
 D4, while an explicit exclusion can support D0 for a particular checkpoint.
+Before selecting a model for a cancer study, a researcher can query the exact
+checkpoint and proposed validation dataset and receive the exposure class,
+evidence grade, supporting source, and strongest independence statement the
+public record permits.
 
 Several limitations remain. Source disclosure is heterogeneous and may be
 incomplete. The 32-model development universe is not representative of all
@@ -356,11 +359,14 @@ pathology foundation models, although the unchanged framework was also applied
 to an independent 11-model clinical benchmark. Dataset lineage is necessarily curated and can
 miss undisclosed derivatives. The recovered training-slide manifest could not
 be matched to benchmark evaluation slides because the latter identifiers were
-unavailable. The 80-pair blinded review achieved 100% agreement, but its
+unavailable. Accordingly, the current resource audits evidence of exposure and
+does not demonstrate sample-level leakage in either benchmark. The 80-pair
+blinded review achieved 100% agreement, but its
 stratified design oversampled D0, D2, and D3 relative to the registry and did
 not establish diagnostic accuracy against an external gold standard. The
-60-row transport review likewise used a stratified sample; its 96.7% agreement
-does not estimate registry-wide diagnostic accuracy. Finally,
+60-row transport review likewise used a stratified sample. Its final 76.7%
+agreement exposed a meaningful D1/D2 boundary problem rather than estimating
+registry-wide diagnostic accuracy. Finally,
 the fixed-effects performance analysis was post-protocol, noncausal,
 underpowered, and uninformative.
 
@@ -439,6 +445,8 @@ documented independence.
 Bars compare benchmark-resolution D0-D3 proportions in the Bareja et al
 development application and Campanella et al external transport analysis. The
 framework was frozen before detailed extraction of the external benchmark.
+Hatching identifies the 12 Campanella D1 relationships with an explicit source
+warning that overlap could not be excluded; the warning did not establish D2.
 Differences describe these benchmark ecosystems and are not field-wide
 prevalence estimates.
 

@@ -124,10 +124,25 @@ def cross_benchmark_transport() -> None:
         values = frame[scope] / totals
         ax.barh(frame["benchmark"], values, left=left, color=COLORS[scope], label=SHORT[scope])
         left += values.to_numpy()
+    external_index = frame.index[frame["benchmark"].str.contains("Campanella")][0]
+    warning_count = 12
+    d0 = frame.loc[external_index, "D0_documented_disjoint"]
+    d1 = frame.loc[external_index, "D1_no_detected_evidence_or_insufficient_disclosure"]
+    warning_left = (d0 + d1 - warning_count) / totals.loc[external_index]
+    ax.barh(
+        external_index,
+        warning_count / totals.loc[external_index],
+        left=warning_left,
+        facecolor="none",
+        edgecolor="#5B6470",
+        hatch="////",
+        linewidth=0.8,
+        label="D1 explicit overlap warning",
+    )
     ax.set_xlabel("Proportion of model–task relationships")
     ax.set_xlim(0, 1)
     ax.xaxis.set_major_formatter(lambda value, _: f"{value:.0%}")
-    ax.legend(frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.02), ncol=2)
+    ax.legend(frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.02), ncol=3, fontsize=9)
     ax.spines[["top", "right", "left"]].set_visible(False)
     ax.grid(axis="x", color="#E6E8EB", linewidth=0.8)
     ax.set_axisbelow(True)

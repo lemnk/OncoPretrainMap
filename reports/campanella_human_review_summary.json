@@ -4,31 +4,34 @@
   "initially_blinded": true,
   "reviewer_used_ai": false,
   "rows_reviewed": 60,
-  "agreements": 58,
-  "agreement_proportion": 0.9666666666666667,
-  "cohens_kappa_unweighted": 0.9475524475524476,
-  "sampled_by_development_class": {
+  "initial_preaudit_agreements": 58,
+  "initial_preaudit_agreement_proportion": 0.9666666666666667,
+  "initial_preaudit_cohens_kappa_unweighted": 0.9475524475524476,
+  "corrected_final_agreements": 46,
+  "corrected_final_agreement_proportion": 0.7666666666666667,
+  "corrected_final_cohens_kappa_unweighted": 0.6037735849056605,
+  "sampled_by_corrected_final_class": {
     "D0": 20,
-    "D1": 28,
-    "D2": 12,
+    "D1": 40,
+    "D2": 0,
     "D3": 0,
     "D4": 0
   },
-  "agreement_by_development_class": {
+  "agreement_by_corrected_final_class": {
     "D0": 20,
     "D1": 26,
-    "D2": 12,
+    "D2": 0,
     "D3": 0,
     "D4": 0
   },
-  "confusion_matrix_development_by_reviewer": {
+  "confusion_matrix_corrected_final_by_reviewer": {
     "D0": {"D0": 20, "D1": 0, "D2": 0, "D3": 0, "D4": 0},
-    "D1": {"D0": 2, "D1": 26, "D2": 0, "D3": 0, "D4": 0},
-    "D2": {"D0": 0, "D1": 0, "D2": 12, "D3": 0, "D4": 0}
+    "D1": {"D0": 2, "D1": 26, "D2": 12, "D3": 0, "D4": 0}
   },
-  "d1_upgrades_to_d2_d3_d4": 0,
-  "disagreements": ["CAMP-232", "CAMP-236"],
-  "final_adjudication": "D1 retained for both tRes50 relationships because the frozen D0 definition requires an explicit version-specific exclusion.",
+  "reviewer_d1_to_d2_d3_d4_assignments": 12,
+  "preaudit_disagreements": ["CAMP-232", "CAMP-236"],
+  "postaudit_d2_to_d1_corrections": 12,
+  "final_adjudication": "D1 retained for the two tRes50 relationships and the 12 Virchow/MSKCC warning relationships under the frozen definitions.",
   "third_adjudicator_used": false,
   "completed_workbook": "data/validation/campanella_caleb_blinded_review_completed.xlsx"
 }

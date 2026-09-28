@@ -67,13 +67,14 @@ precedence, conflict handling, and missing-evidence rule were applied. Adding
 benchmark-specific model and task aliases was permitted; changing an exposure
 definition or precedence rule was not.
 
-A deterministic 60-row review packet contains 20 D0, 28 D1, and all 12 D2
-relationships. The reviewer packet omits the development class and evidence
-grade. Caleb Yitna Ref independently reviewed all 60 relationships while
-blinded to the transport classifications and reported no AI use. Exact and
-per-class agreement, unweighted Cohen's kappa, the full confusion matrix, and
-D1-to-D2-D4 upgrades were calculated from the original decisions. Disagreements
-were adjudicated after unblinding under the frozen definitions; no third
+A deterministic 60-row review packet was frozen before review. Under the
+corrected final labels it contains 20 D0 and 40 D1 relationships. The packet
+omitted the initial class and evidence grade. Caleb Yitna Ref independently
+reviewed all 60 relationships while blinded to the initial transport labels and
+reported no AI use. Exact agreement, unweighted Cohen's kappa, and confusion
+matrices were calculated from the original decisions. A later source-semantics
+audit corrected 12 Virchow/MSKCC labels from D2 to D1 under the unchanged class
+definitions. Original decisions and final adjudications were retained; no third
 adjudicator was used.
 
 ## Supplementary Table Index
@@ -148,15 +149,14 @@ evidence of D4 exposure.
 ## Supplementary external-transport results
 
 The frozen framework mapped all 242 Campanella et al relationships without a
-rule change. Forty-four (18.2%) were D0, 186 (76.9%) D1, and 12 (5.0%) D2; no
-row met D3 or D4. Compared with the Bareja et al development application, the
-external benchmark had a larger D0 fraction, a smaller D2 fraction, and no D3
-rows. These distributions describe benchmark-specific disclosure and lineage,
-not contamination prevalence.
+rule change. Forty-four (18.2%) were D0 and 198 (81.8%) D1; no row met D2-D4.
+Twelve Virchow/MSKCC D1 rows retained an explicit warning that overlap could not
+be excluded, but the evidence did not establish a containing-corpus
+relationship. These distributions describe benchmark-specific disclosure and
+lineage, not contamination prevalence.
 
-The independent blinded reviewer agreed on 58/60 sampled transport
-relationships (96.7%; unweighted Cohen's kappa, 0.948). Per-class agreement was
-20/20 for D0, 26/28 for D1, and 12/12 for D2. Both disagreements were D1
-development rows classified D0 by the reviewer for tRes50. Final adjudication
-retained D1 because the frozen D0 definition required an explicit
-version-specific exclusion. No sampled D1 relationship was upgraded to D2-D4.
+The independent blinded reviewer initially agreed on 58/60 pre-audit labels
+(96.7%; kappa, 0.948). After the 12 D2-to-D1 source-semantics corrections,
+agreement with the corrected final labels was 46/60 (76.7%; kappa, 0.604):
+20/20 D0 and 26/40 D1. The reviewer assigned D2 to the 12 Virchow/MSKCC warning
+rows and D0 to two tRes50 rows; final adjudication retained D1 in all 14 cases.
