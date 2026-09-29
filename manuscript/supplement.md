@@ -77,6 +77,10 @@ audit corrected 12 Virchow/MSKCC labels from D2 to D1 under the unchanged class
 definitions. Original decisions and final adjudications were retained; no third
 adjudicator was used.
 
+The schema value `exposure_warning=overlap_cannot_be_excluded` was defined as an
+orthogonal annotation for a primary-source warning that did not establish D2-D4.
+It did not change the D1 classification or the precedence rules.
+
 ## Supplementary Table Index
 
 | Table | File | Description |

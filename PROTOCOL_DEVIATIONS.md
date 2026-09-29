@@ -45,6 +45,12 @@ did not change the rule. The prior labels, blinded reviewer decisions, corrected
 classes, and adjudication notes were retained. External counts changed from 44
 D0, 186 D1, and 12 D2 to 44 D0 and 198 D1.
 
+The orthogonal value `exposure_warning=overlap_cannot_be_excluded` was added to
+retain the primary source's warning without weakening D2. It means that a source
+explicitly states that overlap cannot be excluded while available evidence does
+not satisfy D2-D4. The relationship remains D1. This annotation does not alter
+classification precedence.
+
 ## 2026-09-28 — Benchmark-resolution sensitivity field
 
 The registry classifies an explicit assertion for TCGA or CPTAC as D3 because

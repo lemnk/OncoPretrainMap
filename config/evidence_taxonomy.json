@@ -14,6 +14,13 @@
     "C_lineage_inference",
     "D_incomplete_or_ambiguous_disclosure"
   ],
+  "exposure_warning": {
+    "allowed_values": [
+      "",
+      "overlap_cannot_be_excluded"
+    ],
+    "definition": "Orthogonal annotation used when a source explicitly states that overlap cannot be excluded but the evidence does not satisfy D2-D4. The exposure class remains D1."
+  },
   "development_stages": [
     "pretraining",
     "distillation",
@@ -23,4 +30,3 @@
   ],
   "absence_statement": "No detected evidence; independence cannot be assumed."
 }
-

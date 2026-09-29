@@ -26,9 +26,9 @@ mapped to canonical identifiers; 52 (4.0%) were D0, 1,052 (80.2%) D1, 204
 (15.5%) D2, and four (0.3%) D3. A blinded reviewer reproduced all 80 sampled
 development classifications; no sampled D1 pair was upgraded. We then froze the
 rules and applied them unchanged to an independently published 11-model,
-22-task clinical benchmark. All 242 relationships mapped successfully: 44
+22-task clinical benchmark. All 242 relationships mapped: 44
 (18.2%) were D0 and 198 (81.8%) D1; none were D2-D4. Twelve D1 relationships
-carried an explicit source warning that overlap could not be excluded, without
+carried a warning that overlap could not be excluded, without
 evidence of a containing-corpus relationship. No rule change was required.
 
 **Relevance:** OncoPretrainMap separates documented exposure from uncertainty
@@ -181,6 +181,9 @@ explicit overlap-warning field but assigned D1 because same-institution
 provenance did not establish that the pretraining corpus contained the
 evaluation cohorts. Other relationships also remained D1. Prespecified outcomes
 were mapping success, class counts, warnings, conflicts, and rule changes.[3]
+An exposure warning denoted a source statement that overlap could not be
+excluded when the evidence did not satisfy D2-D4. It was an orthogonal
+annotation, and the relationship remained D1.
 
 A post-protocol exploratory analysis of published AUROC and AUPRC used model and
 task fixed effects with two-way clustered standard errors. It is reported only
@@ -271,6 +274,10 @@ agreed Virchow/MSKCC D2 labels to D1. Agreement with the corrected final classes
 was 46/60 (76.7%; kappa, 0.604): 20/20 D0 and 26/40 D1. The remaining two
 disagreements were tRes50 rows classified D0 by the reviewer; D1 was retained
 because no explicit version-specific exclusion was documented.
+This was erroneous application of the prespecified D2 definition, not a change
+to the framework: institutional co-provenance alone did not satisfy the frozen
+requirement that the development corpus be shown to contain the evaluation
+cohort.
 
 The distribution differed from the development application: the external
 benchmark had more documented disjointness (18.2% vs 4.0%) and no D2 or D3.

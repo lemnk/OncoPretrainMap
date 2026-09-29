@@ -53,7 +53,7 @@ def classify(model: str, site: str) -> tuple[str, str, str, str, str]:
             "B_explicit_primary_source_statement",
             "The benchmark article states that the in-house model pretraining data did not overlap the clinical benchmarking data.",
             f"{ARTICLE_URL}#Par70",
-            "No",
+            "",
         )
     if model in {"Virchow", "Virchow2"} and site == "MSKCC":
         return (
@@ -61,14 +61,14 @@ def classify(model: str, site: str) -> tuple[str, str, str, str, str]:
             "B_explicit_primary_source_statement",
             "The checkpoint was pretrained on an MSKCC slide corpus, and the benchmark article states that overlap with MSKCC clinical tasks cannot be excluded. This is an explicit overlap warning, but it does not establish that the pretraining corpus contains the evaluation cohort; independence cannot be assumed.",
             f"{ARTICLE_URL}#Par69",
-            "Yes",
+            "overlap_cannot_be_excluded",
         )
     return (
         "D1_no_detected_evidence_or_insufficient_disclosure",
         "D_incomplete_or_ambiguous_disclosure",
         "The frozen public evidence does not document disjointness or a containing-corpus relationship for this model-task pair; independence cannot be assumed.",
         ARTICLE_URL,
-        "No",
+        "",
     )
 
 
@@ -170,7 +170,7 @@ def main() -> None:
                 "conflict_flag": "False",
                 "independence_statement": statement,
                 "evidence_url": evidence_url,
-                "explicit_overlap_warning": overlap_warning,
+                "exposure_warning": overlap_warning,
                 "rule_changed_after_freeze": "No",
             }
         )
@@ -191,7 +191,7 @@ def main() -> None:
         "evaluation_institution_counts": dict(sorted(sites.items())),
         "rule_changes_after_freeze": sum(row["rule_changed_after_freeze"] != "No" for row in rows),
         "conflicts": sum(row["conflict_flag"] != "False" for row in rows),
-        "explicit_overlap_warning_count": sum(row["explicit_overlap_warning"] == "Yes" for row in rows),
+        "exposure_warning_count": sum(row["exposure_warning"] == "overlap_cannot_be_excluded" for row in rows),
         "second_reviewer_status": "Completed; original blinded decisions and post-audit adjudications are retained in the validation workbook.",
         "interpretation": "The frozen framework represented all relationships without a rule change. D1 is unresolved and is not evidence of independence. Twelve Virchow/MSKCC relationships carry an explicit source warning that overlap cannot be excluded, but remain D1 because containment of the evaluation cohorts was not established.",
     }

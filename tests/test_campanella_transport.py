@@ -1,6 +1,9 @@
 import csv
 import json
+import sys
 from pathlib import Path
+
+from src.check_pretraining_overlap import main as checker_main
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,7 +29,7 @@ def test_external_transport_frozen_class_counts():
         "D0_documented_disjoint": 44,
         "D1_no_detected_evidence_or_insufficient_disclosure": 198,
     }
-    assert summary["explicit_overlap_warning_count"] == 12
+    assert summary["exposure_warning_count"] == 12
     assert summary["rule_changes_after_freeze"] == 0
     assert summary["conflicts"] == 0
 
@@ -43,8 +46,21 @@ def test_external_review_packet_is_blinded_and_complete():
 
 def test_mskcc_overlap_warning_does_not_overstate_containment():
     audit = rows()
-    warned = [row for row in audit if row["explicit_overlap_warning"] == "Yes"]
+    warned = [row for row in audit if row["exposure_warning"] == "overlap_cannot_be_excluded"]
     assert len(warned) == 12
     assert {row["model_label"] for row in warned} == {"Virchow", "Virchow2"}
     assert {row["evaluation_institution"] for row in warned} == {"MSKCC"}
     assert all(row["exposure_scope"] == "D1_no_detected_evidence_or_insufficient_disclosure" for row in warned)
+
+
+def test_checker_reports_d1_plus_warning(monkeypatch, capsys):
+    registry = ROOT / "data" / "derived" / "campanella_transport_audit.csv"
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["check_pretraining_overlap.py", "virchow", "campanella_mskcc_luad_alk", "--registry", str(registry)],
+    )
+    assert checker_main() == 0
+    output = capsys.readouterr().out
+    assert "D1_no_detected_evidence_or_insufficient_disclosure" in output
+    assert "Exposure warning: overlap cannot be excluded; D2-D4 are not established." in output

@@ -49,6 +49,10 @@ Evidence strength:
 
 The checker never converts `D1` into a claim of independence.
 
+An orthogonal warning value, `overlap_cannot_be_excluded`, identifies a source
+that explicitly warns of possible overlap without establishing D2-D4. The pair
+remains D1, and the checker returns `D1 + warning` in plain language.
+
 ## Access and licensing
 
 The public repository is https://github.com/lemnk/OncoPretrainMap. Software is

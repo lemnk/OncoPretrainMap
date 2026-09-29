@@ -26,7 +26,11 @@ def main() -> int:
         row
         for row in rows
         if row["model_id"].casefold() == args.model_id.casefold()
-        and row["evaluation_dataset_id"].casefold() == args.evaluation_dataset_id.casefold()
+        and (
+            row.get("evaluation_dataset_id")
+            or row.get("canonical_evaluation_dataset_id", "")
+        ).casefold()
+        == args.evaluation_dataset_id.casefold()
     ]
     if not matches:
         print("No detected evidence; independence cannot be assumed.")
@@ -35,6 +39,11 @@ def main() -> int:
         if row.get("registry_status"):
             print(f"Registry status: {row['registry_status']}")
         print(f"Exposure scope: {row['exposure_scope']}")
+        warning = row.get("exposure_warning", "")
+        if warning == "overlap_cannot_be_excluded":
+            print("Exposure warning: overlap cannot be excluded; D2-D4 are not established.")
+        else:
+            print("Exposure warning: none recorded.")
         print(f"Evidence strength: {row['evidence_strength']}")
         print(f"Benchmark independence: {row['independence_statement']}")
         print(f"Source: {row['evidence_url']}")
