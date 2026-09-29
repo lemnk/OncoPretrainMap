@@ -128,6 +128,14 @@ during initial review and did not use AI. No sampled D1 pair was upgraded to D2
 or D3 (0/23). The registry classifications were unchanged; v2 added the
 benchmark-resolution sensitivity field.
 
+After the D1/D2 operational guidance was clarified, a separate blinded
+challenge used 80 relationships absent from both earlier review packets. Caleb
+Yitna Ref independently searched the public sources and agreed with all 80
+frozen classifications (kappa, 1.00): 10 D0, 37 D1, 28 D2, and five D3. No D1
+relationship was upgraded to D2-D4, and no D2 relationship was downgraded to
+D1. This stratified challenge tests rule application within existing source
+families; it is not a third benchmark, prevalence estimate, or D4 validation.
+
 ## Reproduce
 
 From PowerShell with Python dependencies installed:

@@ -80,3 +80,18 @@ available, while the original registry class remains unchanged. This revision
 changed the benchmark-resolution counts from 208 D3 rows to 204 D2 and four D3
 rows. It was made to clarify evidence resolution, not in response to performance
 results.
+
+## 2026-09-29 — Post-clarification rule-reliability challenge
+
+After the Campanella source-semantics audit clarified the operational D1/D2
+boundary, a second 80-relationship human-review challenge was added. The sample
+was SHA-256 seeded, excluded every relationship in the two earlier review
+packets, and was stratified as 10 D0, 37 D1, 28 D2, and five D3. The blank
+packet and answer-key hash were frozen before review. Caleb Yitna Ref reviewed
+the public sources while blinded to the key and reported no AI use. Agreement
+was 80/80 (kappa, 1.00), with no D1-to-D2-D4 upgrades or D2-to-D1 downgrades.
+
+This challenge was not part of protocol v1 and did not alter either benchmark
+audit. It is reported as a post-clarification assessment of rule application
+within existing source families, not as a third independent benchmark,
+registry-wide accuracy estimate, or D4 validation.

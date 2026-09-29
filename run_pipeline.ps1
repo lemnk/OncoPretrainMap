@@ -18,6 +18,7 @@ Invoke-CheckedPython src\freeze_review_versions.py
 Invoke-CheckedPython src\acquire_campanella_benchmark.py
 Invoke-CheckedPython src\audit_campanella_transport.py
 Invoke-CheckedPython src\sensitivity_campanella_blanket.py
+Invoke-CheckedPython src\finalize_challenge80_review.py
 Invoke-CheckedPython src\make_figures.py
 Invoke-CheckedPython -m pytest -q
 Invoke-CheckedPython src\make_manifest.py

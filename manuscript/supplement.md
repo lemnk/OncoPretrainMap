@@ -109,6 +109,28 @@ published sentence is explicit primary-source evidence (grade B) at aggregate
 scope; extrapolation to a particular unnamed checkpoint is an ungraded
 scenario assumption, not checkpoint-specific grade B evidence.
 
+## Supplementary Method 5: Post-clarification challenge review
+
+After the institutional co-provenance rule was clarified, a second
+SHA-256-seeded challenge packet was frozen from relationships absent from both
+earlier review packets. The sample contained 10 D0, 37 D1, 28 D2, and five D3
+relationships from the existing development and Campanella source families.
+The packet order was determined by the seed
+`OncoPretrainMap-challenge-80-2026-09-28-v1`. A SHA-256 commitment to the answer
+key was recorded before review, and the workbook omitted initial classes,
+evidence grades, and source assertions.
+
+Caleb Yitna Ref independently searched the public sources and reviewed all 80
+relationships while blinded to the frozen key. For each row he recorded
+checkpoint resolution, an exposure class, evidence grade, primary-source URLs,
+reasoning, a search log, identity, date, blinding status, and AI-use status. He
+reported no AI use. The prespecified analysis included the full D0-D4 confusion
+matrix, exact agreement, unweighted Cohen's kappa, class-specific agreement,
+D1-to-D2-D4 upgrades, and D2-to-D1 downgrades. Because the sample was
+class-stratified and reused existing benchmark sources, it was designed to test
+rule application rather than exposure prevalence or external transport. It
+contained no D4-positive relationship.
+
 ## Supplementary Table Index
 
 | Table | File | Description |
@@ -132,6 +154,11 @@ scenario assumption, not checkpoint-specific grade B evidence.
 | S17 | `data/validation/campanella_caleb_blinded_review_completed.xlsx` | Completed blinded human review, comparison, adjudication, and attestation |
 | S18 | `data/derived/campanella_blanket_statement_sensitivity.csv` | Row-level post hoc blanket-statement scenarios |
 | S19 | `reports/campanella_blanket_statement_sensitivity.json` | Scenario definitions and counts |
+| S20 | `data/validation/challenge80_blinded_review_v1.xlsx` | Frozen blank post-clarification challenge packet |
+| S21 | `data/validation/challenge80_caleb_blinded_review_corrected_v1.xlsx` | Completed 80-row blinded human challenge review |
+| S22 | `data/validation/challenge80_row_comparison_v1.csv` | Frozen-class and reviewer-class row-level comparison |
+| S23 | `reports/challenge80_confusion_matrix.csv` | D0-D4 challenge confusion matrix and per-class agreement |
+| S24 | `reports/challenge80_review_summary.json` | Challenge design, agreement, kappa, and boundary-error counts |
 
 ## Supplementary Results
 
@@ -156,6 +183,19 @@ development classifications during initial review and did not use AI. Per-class
 agreement was 100% in each sampled class. No D1 pair was upgraded to D2 or D3
 (0/23; exact one-sided 95% upper bound, 12.2%). Because the sample was
 stratified, this bound is not a registry-wide false-negative estimate.
+
+## Supplementary post-clarification challenge results
+
+The independent review agreed with all 80 challenge classifications (80/80,
+100%; unweighted Cohen's kappa, 1.00). The diagonal confusion-matrix counts were
+10 D0, 37 D1, 28 D2, and five D3; the sample contained no D4 relationship.
+Class-specific agreement was 100% for every represented class. No initial D1
+relationship was upgraded to D2-D4, and no initial D2 relationship was
+downgraded to D1. The reviewer resolved the checkpoint/version for 72
+relationships and marked eight unclear. These results show reproducible rule
+application within a stratified sample of the existing source families. They do
+not estimate registry-wide accuracy, exposure prevalence, D4 performance, or
+transport of D2-D3 to an additional benchmark.
 
 ## Supplementary model-stratified and lineage results
 

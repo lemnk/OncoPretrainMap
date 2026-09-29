@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EXCLUDED_PARTS = {"__pycache__", "node_modules", ".pytest_cache", "tmp"}
+EXCLUDED_PARTS = {"__pycache__", "node_modules", ".pytest_cache", "tmp", "private"}
 INCLUDE = [
     "README.md",
     "CLASSIFICATION_GUIDE.md",

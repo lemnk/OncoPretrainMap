@@ -26,6 +26,8 @@ development relationships. In a separate 11-model, 22-task benchmark, all 242
 relationships mapped: 44 (18.2%) were D0 and 198 (81.8%) D1. Initial blinded
 agreement was 58/60 (96.7%). Source review corrected 12 jointly assigned D2
 labels to D1; reviewer concordance with the resolved classes was 46/60 (76.7%).
+A subsequent stratified challenge of 80 previously unreviewed relationships had
+80/80 agreement (kappa, 1.00), including 28 D2 and five D3 relationships.
 Applying a broad nonoverlap statement to six additional models in a sensitivity
 scenario reduced D1 to 66/242 (27.3%). Definitions were retained; D2 guidance
 was clarified after review.
@@ -211,7 +213,16 @@ An early draft mistook the integrated development workbook for the initial
 review interface. The blank packet preceded that workbook; no fresh blinded
 review after the draft correction is documented.
 
-OpenAI Codex (GPT-5.6 Sol; OpenAI; accessed September 27-28, 2026) assisted with
+After clarifying the operational D1/D2 boundary, we froze a SHA-256-seeded,
+class-stratified challenge of 10 D0, 37 D1, 28 D2, and five D3 relationships,
+excluding every pair in the earlier review packets. The reviewer independently
+searched public sources and recorded checkpoint resolution, class, evidence
+grade, URLs, rationale, search history, date, blinding, and AI-use status while
+blinded to the key. We prespecified a confusion matrix, agreement, kappa,
+class-specific agreement, D1 upgrades, and D2 downgrades. This tested rule
+reliability, not a third benchmark, prevalence, or D4.
+
+OpenAI Codex (GPT-5.6 Sol; OpenAI; accessed September 27-29, 2026) assisted with
 software development and automated retrieval and processing of public metadata.
 The sole author checked all 52 source assertions, model-version mappings, and
 analytical outputs. The AI system was not treated as an author, human reviewer,
@@ -323,6 +334,16 @@ stratified rather than a simple random sample, the bound should not be projected
 directly to the full registry. The registry classifications were unchanged after
 adjudication; v2 added the benchmark-resolution sensitivity field.
 
+### Post-clarification rule-reliability challenge
+
+The blinded reviewer agreed with all 80 frozen challenge classifications
+(80/80, 100%; unweighted Cohen's kappa, 1.00): 10/10 D0, 37/37 D1, 28/28 D2,
+and 5/5 D3. No D1 relationship was upgraded to D2-D4, and no D2 relationship
+was downgraded to D1. Checkpoint/version resolution was recorded as resolved for
+72 relationships and unclear for eight. No adjudication changed a class. These
+results assess the clarified rules within existing source families; they do not
+establish registry completeness, third-benchmark transport, or D4 detection.
+
 ## Discussion
 
 OncoPretrainMap demonstrates that the obstacle to evaluating pathology
@@ -340,6 +361,13 @@ The transport application mapped every Campanella relationship using the frozen
 class definitions, with D2 guidance clarified after review. It exercised D0
 and D1 only, leaving external reproducibility of D2–D4 untested.
 
+The post-clarification challenge then exercised D0-D3 on 80 relationships not
+used in either earlier review sample. Complete agreement, including 28 D2 and
+five D3 relationships, shows that the clarified containing-corpus rule could be
+applied consistently in this challenge. Because the sample reused the existing
+source families and had no D4 cases, it does not replace external validation of
+positive exposure classes or identifier-level overlap.
+
 The audit does not estimate performance inflation. D1 mixes unknown states,
 exposure clustered in TCGA tasks, and the post-protocol regression was
 underpowered. Published model scores should not be adjusted from these results.
@@ -354,8 +382,9 @@ representative of all pathology models. The transport benchmark exercised only
 D0 and D1; its broad nonoverlap statement did not name every covered model.
 One author extracted the 52 development assertions. The second reviewer checked
 sampled classifications against cited sources, but no exhaustive independent
-search for omitted exposures was required. Agreement therefore does not measure
-registry completeness. Both review samples were stratified, and the 76.7%
+search for omitted exposures was required in the first two reviews. The later
+challenge required an independent source search, but agreement still does not
+measure registry completeness. All three review samples were stratified, and the 76.7%
 post-audit concordance is not an independent reliability estimate. Curated
 lineage may miss derivatives. No benchmark released identifiers needed to match
 the recovered training-slide manifest, so no D4 overlap was demonstrated. The
@@ -381,7 +410,7 @@ does not support.
 
 ## Data and Code Availability
 
-A row-level human-verification workbook is available in the OncoPretrainMap
+Row-level human-verification workbooks are available in the OncoPretrainMap
 repository (https://github.com/lemnk/OncoPretrainMap) with the source code,
 curated tables, derived results, tests, and figures. Software is licensed under
 MIT; original metadata and documentation are licensed under CC BY 4.0. A
@@ -415,7 +444,8 @@ administration.
 ## Acknowledgments
 
 The author thanks Caleb Yitna Ref for independently reviewing the 80 sampled
-registry relationships and the 60 sampled external-transport relationships.
+registry relationships, the 60 sampled external-transport relationships, and
+the 80-relationship post-clarification challenge.
 Caleb Yitna Ref did not develop the registry rules and is not responsible for
 the analyses or conclusions.
 

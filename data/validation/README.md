@@ -57,15 +57,23 @@ The workbook preserves the original decisions and final adjudications. The
 blank packet was committed before the completed workbook on September 28,
 2026; no second pass is claimed.
 
-## New challenge-80 packet (not yet reviewed)
+## Challenge-80 post-clarification review
 
 `challenge80_blinded_review_v1.xlsx` is a blank, frozen 80-relationship
 challenge packet. Its reviewer instructions and prespecified analysis are in
 `CHALLENGE80_REVIEW_INSTRUCTIONS.md` and `CHALLENGE80_ANALYSIS_PLAN.md`.
 `challenge80_freeze_v1.json` records hashes of the packet, source tables,
-classification guide, and a withheld private key. No initial class or evidence
-grade appears in the workbook. The key is kept under the gitignored
-`data/validation/private/` directory until the reviewer returns decisions.
-The packet contains only relationships absent from both earlier review
-samples. It is a reliability challenge using existing benchmark sources, not
-a new independent benchmark, and it has no completed human result yet.
+classification guide, and prereview key commitment. No initial class or
+evidence grade appears in the blank workbook. The packet contains only
+relationships absent from both earlier review samples.
+
+`challenge80_caleb_blinded_review_corrected_v1.xlsx` contains Caleb Yitna Ref's
+completed review. An inherited editor-template label incorrectly identified the
+reviewer and AI-use status; the administrative metadata were corrected based on
+the sole author's report, while every row-level classification, evidence field,
+URL, explanation, search log, date, and blinding entry was preserved. The
+released key and row-level comparison retain the prereview classifications.
+Caleb agreed on 80/80 relationships (kappa, 1.00): 10 D0, 37 D1, 28 D2, and
+five D3. There were no D1-to-D2-D4 upgrades or D2-to-D1 downgrades. This is a
+rule-reliability challenge using existing benchmark sources, not a new
+independent benchmark, prevalence estimate, or D4 validation.

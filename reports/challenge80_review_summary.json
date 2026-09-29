@@ -1,0 +1,40 @@
+{
+  "reviewer": "Caleb Yitna Ref",
+  "review_date": "2026-09-29",
+  "sampled_relationships": 80,
+  "sample_design": "SHA-256-seeded, class-stratified challenge drawn from relationships absent from the two earlier review packets; 10 D0, 37 D1, 28 D2, and 5 D3.",
+  "exact_agreement_count": 80,
+  "exact_agreement_proportion": 1.0,
+  "unweighted_cohens_kappa": 1.0,
+  "initial_class_counts": {
+    "D0": 10,
+    "D1": 37,
+    "D2": 28,
+    "D3": 5
+  },
+  "reviewer_class_counts": {
+    "D0": 10,
+    "D1": 37,
+    "D2": 28,
+    "D3": 5
+  },
+  "per_class_agreement": {
+    "D0": 1.0,
+    "D1": 1.0,
+    "D2": 1.0,
+    "D3": 1.0,
+    "D4": null
+  },
+  "d1_upgraded_to_d2_d3_d4": 0,
+  "d2_downgraded_to_d1": 0,
+  "checkpoint_version_resolved": {
+    "Unclear": 8,
+    "Yes": 72
+  },
+  "initially_blinded": true,
+  "reviewer_used_ai": false,
+  "interpretation": "This is a rule-reliability challenge using existing benchmark sources. It is not a third independent benchmark, an estimate of registry-wide accuracy, or D4 validation.",
+  "completed_workbook": "data/validation/challenge80_caleb_blinded_review_corrected_v1.xlsx",
+  "completed_workbook_sha256": "0709a3b5e3cebd40e30f3a15551aa2a51d73b6fe25696dc6d1a16bb3212a07d4",
+  "prereview_key_commitment_sha256": "45ec1557ac10ce56b49ee93a931b7473d6dc218ae99a043991fd65dd7e2bc00a"
+}

@@ -1,0 +1,802 @@
+[
+  {
+    "review_id": "CH80-001",
+    "source_id": "DEV:quiltnet_b16:tcia",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "QuiltNet-B16",
+    "evaluation_dataset_or_task": "The Cancer Imaging Archive [tcia]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-002",
+    "source_id": "CAMP:CAMP-094",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSHS Breast",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-003",
+    "source_id": "DEV:h_optimus_0:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-0",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-004",
+    "source_id": "DEV:ibot_l16:mhist",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "iBOT-L16",
+    "evaluation_dataset_or_task": "MHIST [mhist]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-005",
+    "source_id": "DEV:ctranspath:nlst",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "cTransPath",
+    "evaluation_dataset_or_task": "National Lung Screening Trial pathology collection [nlst]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-006",
+    "source_id": "DEV:plip:pcam",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "PLIP",
+    "evaluation_dataset_or_task": "PatchCamelyon [pcam]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-007",
+    "source_id": "DEV:kaiko:hest",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "HEST-1k [hest]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-008",
+    "source_id": "CAMP:CAMP-135",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "UNI",
+    "evaluation_dataset_or_task": "MSHS BCa PR",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-009",
+    "source_id": "DEV:mi_zero_clinicalbert:pcam",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "PatchCamelyon [pcam]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-010",
+    "source_id": "DEV:uni2:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "UNI2",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-011",
+    "source_id": "DEV:dino_b16:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "DINO-B16",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-012",
+    "source_id": "DEV:align_base:nct_crc_he_100k",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "ALIGN-base",
+    "evaluation_dataset_or_task": "NCT-CRC-HE-100K [nct_crc_he_100k]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-013",
+    "source_id": "DEV:hibou_b:gtex",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Hibou-B",
+    "evaluation_dataset_or_task": "Genotype-Tissue Expression Project [gtex]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-014",
+    "source_id": "DEV:blip_b16_14m:breakhis",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "BLIP-B16-14M",
+    "evaluation_dataset_or_task": "Breast Cancer Histopathological Database [breakhis]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-015",
+    "source_id": "DEV:biomedclip:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "BiomedCLIP",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-016",
+    "source_id": "DEV:phikon_v2:lc25000",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "LC25000 lung and colon histopathology image dataset [lc25000]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-017",
+    "source_id": "DEV:ibot_b16:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "iBOT-B16",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-018",
+    "source_id": "DEV:h_optimus_mini_h0_mini:nct_crc_he_100k",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-mini / H0-mini",
+    "evaluation_dataset_or_task": "NCT-CRC-HE-100K [nct_crc_he_100k]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-019",
+    "source_id": "DEV:dino_s16:breakhis",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "DINO-S16",
+    "evaluation_dataset_or_task": "Breast Cancer Histopathological Database [breakhis]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-020",
+    "source_id": "DEV:prov_gigapath:stanford_gbm",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Prov-GigaPath",
+    "evaluation_dataset_or_task": "Stanford GBM pathology cohort [stanford_gbm]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-021",
+    "source_id": "CAMP:CAMP-080",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Prov-GigaPath",
+    "evaluation_dataset_or_task": "MSHS Thyroid",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-022",
+    "source_id": "CAMP:CAMP-086",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Prov-GigaPath",
+    "evaluation_dataset_or_task": "MSKCC NSCLC IO",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-023",
+    "source_id": "DEV:clip_b16:stanford_lung",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "CLIP-B16",
+    "evaluation_dataset_or_task": "Stanford lung pathology cohort [stanford_lung]",
+    "evaluation_institution": "",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-024",
+    "source_id": "CAMP:CAMP-212",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "h-optimus-0",
+    "evaluation_dataset_or_task": "MSHS Thyroid",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-025",
+    "source_id": "CAMP:CAMP-159",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow",
+    "evaluation_dataset_or_task": "MSHS Bladder",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-026",
+    "source_id": "DEV:phikon_v2:tcga_coad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-027",
+    "source_id": "CAMP:CAMP-012",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "CTransPath",
+    "evaluation_dataset_or_task": "MSHS Oral",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-028",
+    "source_id": "CAMP:CAMP-158",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow",
+    "evaluation_dataset_or_task": "MSHS BioMe HRD",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-029",
+    "source_id": "CAMP:CAMP-229",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "tRes50",
+    "evaluation_dataset_or_task": "MSHS IBD",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-030",
+    "source_id": "CAMP:CAMP-181",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow2",
+    "evaluation_dataset_or_task": "MSHS Bladder",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-031",
+    "source_id": "CAMP:CAMP-204",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "h-optimus-0",
+    "evaluation_dataset_or_task": "MSHS Breast",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-032",
+    "source_id": "CAMP:CAMP-237",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "tRes50",
+    "evaluation_dataset_or_task": "MSKCC LUAD KRAS",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-033",
+    "source_id": "CAMP:CAMP-145",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "UNI",
+    "evaluation_dataset_or_task": "MSHS Prostate",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-034",
+    "source_id": "CAMP:CAMP-183",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow2",
+    "evaluation_dataset_or_task": "MSHS Colorectal",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-035",
+    "source_id": "CAMP:CAMP-104",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSKCC LUAD EGFR",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-036",
+    "source_id": "CAMP:CAMP-016",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "CTransPath",
+    "evaluation_dataset_or_task": "MSKCC LUAD EGFR",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-037",
+    "source_id": "DEV:phikon:tcga_luad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-038",
+    "source_id": "CAMP:CAMP-122",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSHS Oral",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-039",
+    "source_id": "CAMP:CAMP-045",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "MSHS BCa ER",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-040",
+    "source_id": "DEV:phikon:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-041",
+    "source_id": "DEV:kaiko:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-042",
+    "source_id": "CAMP:CAMP-065",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "SUH Melanoma BRAF",
+    "evaluation_institution": "SUH",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-043",
+    "source_id": "DEV:mi_zero_pubmedbert:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero PubMedBERT",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-044",
+    "source_id": "CAMP:CAMP-042",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "MSKCC NSCLC IO",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-045",
+    "source_id": "DEV:phikon_v2:tcga_brca",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-046",
+    "source_id": "CAMP:CAMP-023",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "MSHS BCa ER",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D1_no_detected_evidence_or_insufficient_disclosure",
+    "initial_evidence_grade": "D_incomplete_or_ambiguous_disclosure"
+  },
+  {
+    "review_id": "CH80-047",
+    "source_id": "CAMP:CAMP-127",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSKCC LUAD KRAS",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-048",
+    "source_id": "CAMP:CAMP-105",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSKCC LUAD KRAS",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-049",
+    "source_id": "CAMP:CAMP-129",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSKCC LUAD TP53",
+    "evaluation_institution": "MSKCC",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-050",
+    "source_id": "DEV:gpfm:tcga_brca",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-051",
+    "source_id": "DEV:h_optimus_mini_h0_mini:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-mini / H0-mini",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-052",
+    "source_id": "DEV:gpfm:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-053",
+    "source_id": "DEV:phikon_v2:tcia",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "The Cancer Imaging Archive [tcia]",
+    "evaluation_institution": "",
+    "initial_class": "D3_exact_dataset_exposure",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-054",
+    "source_id": "CAMP:CAMP-124",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSHS Thyroid",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-055",
+    "source_id": "DEV:gpfm:panda",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "PANDA prostate grading challenge [panda]",
+    "evaluation_institution": "",
+    "initial_class": "D3_exact_dataset_exposure",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-056",
+    "source_id": "CAMP:CAMP-098",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSHS Kidney",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-057",
+    "source_id": "DEV:gpfm:tcga_coad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-058",
+    "source_id": "CAMP:CAMP-099",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSHS LUAD EGFR",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-059",
+    "source_id": "CAMP:CAMP-114",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSHS BioMe HRD",
+    "evaluation_institution": "MSHS",
+    "initial_class": "D0_documented_disjoint",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-060",
+    "source_id": "DEV:kaiko:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-061",
+    "source_id": "DEV:hipt:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "HIPT",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-062",
+    "source_id": "DEV:mi_zero_clinicalbert:tcga_luad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-063",
+    "source_id": "DEV:kaiko:tcga",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "The Cancer Genome Atlas [tcga]",
+    "evaluation_institution": "",
+    "initial_class": "D3_exact_dataset_exposure",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-064",
+    "source_id": "DEV:kaiko:tcga_luad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-065",
+    "source_id": "DEV:gpfm:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-066",
+    "source_id": "DEV:gpfm:gtex",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "Genotype-Tissue Expression Project [gtex]",
+    "evaluation_institution": "",
+    "initial_class": "D3_exact_dataset_exposure",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-067",
+    "source_id": "DEV:h_optimus_mini_h0_mini:tcga_brca",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-mini / H0-mini",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-068",
+    "source_id": "DEV:lunit_dinosslpath:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Lunit / DinoSSLPath",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-069",
+    "source_id": "DEV:ctranspath:tcga_coad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "cTransPath",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-070",
+    "source_id": "DEV:ctranspath:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "cTransPath",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-071",
+    "source_id": "DEV:mi_zero_clinicalbert:tcga_lusc",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-072",
+    "source_id": "DEV:gpfm:bracs",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "BReAst Carcinoma Subtyping [bracs]",
+    "evaluation_institution": "",
+    "initial_class": "D3_exact_dataset_exposure",
+    "initial_evidence_grade": "B_explicit_primary_source_statement"
+  },
+  {
+    "review_id": "CH80-073",
+    "source_id": "DEV:phikon:tcga_brca",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-074",
+    "source_id": "DEV:phikon_v2:tcga_luad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-075",
+    "source_id": "DEV:lunit_dinosslpath:tcga_luad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Lunit / DinoSSLPath",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-076",
+    "source_id": "DEV:mi_zero_pubmedbert:tcga_luad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero PubMedBERT",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-077",
+    "source_id": "DEV:kaiko:tcga_brca",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-078",
+    "source_id": "DEV:kaiko:tcga_coad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-079",
+    "source_id": "DEV:mi_zero_clinicalbert:tcga_coad",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  },
+  {
+    "review_id": "CH80-080",
+    "source_id": "DEV:phikon_v2:tcga_read",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": "",
+    "initial_class": "D2_parent_repository_exposure",
+    "initial_evidence_grade": "C_lineage_inference"
+  }
+]
