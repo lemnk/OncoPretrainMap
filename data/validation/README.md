@@ -56,3 +56,16 @@ jointly adjudicated, so this is not a second inter-rater reliability estimate.
 The workbook preserves the original decisions and final adjudications. The
 blank packet was committed before the completed workbook on September 28,
 2026; no second pass is claimed.
+
+## New challenge-80 packet (not yet reviewed)
+
+`challenge80_blinded_review_v1.xlsx` is a blank, frozen 80-relationship
+challenge packet. Its reviewer instructions and prespecified analysis are in
+`CHALLENGE80_REVIEW_INSTRUCTIONS.md` and `CHALLENGE80_ANALYSIS_PLAN.md`.
+`challenge80_freeze_v1.json` records hashes of the packet, source tables,
+classification guide, and a withheld private key. No initial class or evidence
+grade appears in the workbook. The key is kept under the gitignored
+`data/validation/private/` directory until the reviewer returns decisions.
+The packet contains only relationships absent from both earlier review
+samples. It is a reliability challenge using existing benchmark sources, not
+a new independent benchmark, and it has no completed human result yet.

@@ -1,0 +1,562 @@
+[
+  {
+    "review_id": "CH80-001",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "QuiltNet-B16",
+    "evaluation_dataset_or_task": "The Cancer Imaging Archive [tcia]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-002",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSHS Breast",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-003",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-0",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-004",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "iBOT-L16",
+    "evaluation_dataset_or_task": "MHIST [mhist]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-005",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "cTransPath",
+    "evaluation_dataset_or_task": "National Lung Screening Trial pathology collection [nlst]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-006",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "PLIP",
+    "evaluation_dataset_or_task": "PatchCamelyon [pcam]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-007",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "HEST-1k [hest]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-008",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "UNI",
+    "evaluation_dataset_or_task": "MSHS BCa PR",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-009",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "PatchCamelyon [pcam]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-010",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "UNI2",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-011",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "DINO-B16",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-012",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "ALIGN-base",
+    "evaluation_dataset_or_task": "NCT-CRC-HE-100K [nct_crc_he_100k]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-013",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Hibou-B",
+    "evaluation_dataset_or_task": "Genotype-Tissue Expression Project [gtex]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-014",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "BLIP-B16-14M",
+    "evaluation_dataset_or_task": "Breast Cancer Histopathological Database [breakhis]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-015",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "BiomedCLIP",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-016",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "LC25000 lung and colon histopathology image dataset [lc25000]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-017",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "iBOT-B16",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-018",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-mini / H0-mini",
+    "evaluation_dataset_or_task": "NCT-CRC-HE-100K [nct_crc_he_100k]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-019",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "DINO-S16",
+    "evaluation_dataset_or_task": "Breast Cancer Histopathological Database [breakhis]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-020",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Prov-GigaPath",
+    "evaluation_dataset_or_task": "Stanford GBM pathology cohort [stanford_gbm]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-021",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Prov-GigaPath",
+    "evaluation_dataset_or_task": "MSHS Thyroid",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-022",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Prov-GigaPath",
+    "evaluation_dataset_or_task": "MSKCC NSCLC IO",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-023",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "CLIP-B16",
+    "evaluation_dataset_or_task": "Stanford lung pathology cohort [stanford_lung]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-024",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "h-optimus-0",
+    "evaluation_dataset_or_task": "MSHS Thyroid",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-025",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow",
+    "evaluation_dataset_or_task": "MSHS Bladder",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-026",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-027",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "CTransPath",
+    "evaluation_dataset_or_task": "MSHS Oral",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-028",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow",
+    "evaluation_dataset_or_task": "MSHS BioMe HRD",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-029",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "tRes50",
+    "evaluation_dataset_or_task": "MSHS IBD",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-030",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow2",
+    "evaluation_dataset_or_task": "MSHS Bladder",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-031",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "h-optimus-0",
+    "evaluation_dataset_or_task": "MSHS Breast",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-032",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "tRes50",
+    "evaluation_dataset_or_task": "MSKCC LUAD KRAS",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-033",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "UNI",
+    "evaluation_dataset_or_task": "MSHS Prostate",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-034",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Virchow2",
+    "evaluation_dataset_or_task": "MSHS Colorectal",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-035",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSKCC LUAD EGFR",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-036",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "CTransPath",
+    "evaluation_dataset_or_task": "MSKCC LUAD EGFR",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-037",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-038",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSHS Oral",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-039",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "MSHS BCa ER",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-040",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-041",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-042",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "SUH Melanoma BRAF",
+    "evaluation_institution": "SUH"
+  },
+  {
+    "review_id": "CH80-043",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero PubMedBERT",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-044",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "MSKCC NSCLC IO",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-045",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-046",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "MSHS BCa ER",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-047",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSKCC LUAD KRAS",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-048",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSKCC LUAD KRAS",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-049",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSKCC LUAD TP53",
+    "evaluation_institution": "MSKCC"
+  },
+  {
+    "review_id": "CH80-050",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-051",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-mini / H0-mini",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-052",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-053",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "The Cancer Imaging Archive [tcia]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-054",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSHS Thyroid",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-055",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "PANDA prostate grading challenge [panda]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-056",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSHS Kidney",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-057",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-058",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP22M",
+    "evaluation_dataset_or_task": "MSHS LUAD EGFR",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-059",
+    "benchmark_context": "Campanella clinical benchmark",
+    "model_checkpoint": "SP85M",
+    "evaluation_dataset_or_task": "MSHS BioMe HRD",
+    "evaluation_institution": "MSHS"
+  },
+  {
+    "review_id": "CH80-060",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-061",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "HIPT",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-062",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-063",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "The Cancer Genome Atlas [tcga]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-064",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-065",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-066",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "Genotype-Tissue Expression Project [gtex]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-067",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "H-optimus-mini / H0-mini",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-068",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Lunit / DinoSSLPath",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-069",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "cTransPath",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-070",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "cTransPath",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-071",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "TCGA Lung Squamous Cell Carcinoma [tcga_lusc]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-072",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "GPFM",
+    "evaluation_dataset_or_task": "BReAst Carcinoma Subtyping [bracs]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-073",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-074",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-075",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Lunit / DinoSSLPath",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-076",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero PubMedBERT",
+    "evaluation_dataset_or_task": "TCGA Lung Adenocarcinoma [tcga_luad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-077",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Breast Invasive Carcinoma [tcga_brca]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-078",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Kaiko",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-079",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "MI-Zero ClinicalBERT",
+    "evaluation_dataset_or_task": "TCGA Colon Adenocarcinoma [tcga_coad]",
+    "evaluation_institution": ""
+  },
+  {
+    "review_id": "CH80-080",
+    "benchmark_context": "Development registry (Bareja benchmark model universe)",
+    "model_checkpoint": "Phikon-v2",
+    "evaluation_dataset_or_task": "TCGA Rectum Adenocarcinoma [tcga_read]",
+    "evaluation_institution": ""
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "frozen_on_local_date": "2026-09-28",
+  "source_git_commit": "ff1599c3e0464341496ac821b1115d61475da994",
+  "selection_seed": "OncoPretrainMap-challenge-80-2026-09-28-v1",
+  "packet_row_count": 80,
+  "packet_json_sha256": "8211069eb2d410643d6937e3cb2ef821f067e32257848b43f29557f90bbfc15d",
+  "blank_workbook_sha256": "c43a8adb2bba58894c6c011451bcfeb90937a6a041b27e96becb4f5d22fb3750",
+  "private_key_sha256": "45ec1557ac10ce56b49ee93a931b7473d6dc218ae99a043991fd65dd7e2bc00a",
+  "development_registry_sha256": "2e1c17ad1869f1f543361a411114d4c95795cf54e7f6ac5052187b6c11150246",
+  "campanella_audit_sha256": "e24c5548e26e695065f9cafd300a22b96d45b16966e994aad46c6184492ae8c2",
+  "classification_guide_sha256": "692d307c4b3a9281e8563d9b5107806ff0408d5b5ccbf804c3570648d3ed3c21",
+  "review_status": "blank_packet_not_returned",
+  "private_key_gitignored": true
+}
