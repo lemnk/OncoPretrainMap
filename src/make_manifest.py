@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EXCLUDED_PARTS = {"__pycache__", "node_modules", ".pytest_cache", "tmp"}
 INCLUDE = [
     "README.md",
+    "CLASSIFICATION_GUIDE.md",
     "FEASIBILITY_AUDIT.md",
     "PROJECT_PLAN.md",
     "PROTOCOL_v1_20260927.md",

@@ -21,6 +21,15 @@
     ],
     "definition": "Orthogonal annotation used when a source explicitly states that overlap cannot be excluded but the evidence does not satisfy D2-D4. The exposure class remains D1."
   },
+  "decision_rules": {
+    "institutional_coprovenance_without_containment": {
+      "condition": "The model-development corpus and evaluation cohort are associated with the same institution, but no source states or demonstrates that the development corpus contains the evaluation cohort.",
+      "classification": "D1_no_detected_evidence_or_insufficient_disclosure",
+      "not_classification": "D2_parent_repository_exposure",
+      "worked_example": "Virchow pretraining and the Campanella MSKCC evaluation cohorts share MSKCC provenance, and the benchmark warns that overlap cannot be excluded. Because public evidence does not establish that the pretraining corpus contains the evaluation cohorts, these relationships are D1 with exposure_warning=overlap_cannot_be_excluded, not D2.",
+      "rationale": "Added after both initial extractors independently treated institutional co-provenance as D2; source-semantics audit showed that possible overlap is not evidence of corpus containment."
+    }
+  },
   "development_stages": [
     "pretraining",
     "distillation",

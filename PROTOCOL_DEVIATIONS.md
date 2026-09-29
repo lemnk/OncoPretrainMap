@@ -51,6 +51,13 @@ explicitly states that overlap cannot be excluded while available evidence does
 not satisfy D2-D4. The relationship remains D1. This annotation does not alter
 classification precedence.
 
+The classification guide now makes the existing boundary operational: shared
+institutional provenance without a stated or demonstrated corpus-containment
+relationship is D1, not D2. The Virchow/MSKCC case is retained as a worked
+example because both initial extractors independently overcalled it. This is a
+documented clarification of the unchanged D2 requirement, not a new exposure
+class or a relaxation of the frozen rule.
+
 ## 2026-09-28 — Benchmark-resolution sensitivity field
 
 The registry classifies an explicit assertion for TCGA or CPTAC as D3 because

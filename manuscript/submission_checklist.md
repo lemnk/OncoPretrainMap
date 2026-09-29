@@ -26,9 +26,10 @@
 - Frozen 60-row blinded external-review packet
 - Completed 60-row blinded external-transport review with row-level evidence,
   original decisions, adjudications, and dated reviewer attestation
-- External-review record preserves 58/60 initial agreement and the subsequent
-  12-row D2-to-D1 source-semantics correction; final agreement is 46/60 (76.7%,
-  kappa 0.604)
+- External-review record preserves 58/60 initial blinded inter-rater agreement
+  and the subsequent 12-row D2-to-D1 source-semantics correction; concordance
+  with the post-audit resolved classification is 46/60 (76.7%; descriptive
+  kappa, 0.604) and is not presented as inter-rater reliability
 
 ## Validation interpretation to retain
 

@@ -184,6 +184,9 @@ were mapping success, class counts, warnings, conflicts, and rule changes.[3]
 An exposure warning denoted a source statement that overlap could not be
 excluded when the evidence did not satisfy D2-D4. It was an orthogonal
 annotation, and the relationship remained D1.
+Under the unchanged D2 definition, shared institutional provenance without
+stated or demonstrated corpus containment is D1, not D2; same-institution
+training and evaluation do not establish containment.
 
 A post-protocol exploratory analysis of published AUROC and AUPRC used model and
 task fixed effects with two-way clustered standard errors. It is reported only
@@ -268,11 +271,12 @@ could not be excluded. They were not D2 because the evidence did not establish
 that the pretraining corpus contained the evaluation cohorts. No exposure
 definition, evidence grade, or precedence rule changed.
 
-The blinded reviewer initially agreed with 58/60 pre-audit labels (96.7%;
-kappa, 0.948). A subsequent source-semantics audit corrected the 12 initially
-agreed Virchow/MSKCC D2 labels to D1. Agreement with the corrected final classes
-was 46/60 (76.7%; kappa, 0.604): 20/20 D0 and 26/40 D1. The remaining two
-disagreements were tRes50 rows classified D0 by the reviewer; D1 was retained
+Initial blinded inter-rater agreement was 58/60 (96.7%; kappa, 0.948). An audit
+corrected 12 jointly agreed Virchow/MSKCC D2 labels to D1. Concordance with the
+post-audit resolved classification was 46/60 (76.7%; descriptive kappa, 0.604):
+20/20 D0 and 26/40 D1. This was not a clean reliability estimate because the
+resolved classification was jointly adjudicated and incorporated reviewer
+decisions. The other two disagreements were tRes50 rows classified D0 by the reviewer; D1 was retained
 because no explicit version-specific exclusion was documented.
 This was erroneous application of the prespecified D2 definition, not a change
 to the framework: institutional co-provenance alone did not satisfy the frozen
@@ -371,8 +375,9 @@ does not demonstrate sample-level leakage in either benchmark. The 80-pair
 blinded review achieved 100% agreement, but its
 stratified design oversampled D0, D2, and D3 relative to the registry and did
 not establish diagnostic accuracy against an external gold standard. The
-60-row transport review likewise used a stratified sample. Its final 76.7%
-agreement exposed a meaningful D1/D2 boundary problem rather than estimating
+60-row transport review likewise used a stratified sample. Its 76.7%
+concordance with the post-audit resolved classification exposed a meaningful
+D1/D2 boundary problem rather than estimating
 registry-wide diagnostic accuracy. Finally,
 the fixed-effects performance analysis was post-protocol, noncausal,
 underpowered, and uninformative.

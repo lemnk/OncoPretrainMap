@@ -64,3 +64,14 @@ def test_checker_reports_d1_plus_warning(monkeypatch, capsys):
     output = capsys.readouterr().out
     assert "D1_no_detected_evidence_or_insufficient_disclosure" in output
     assert "Exposure warning: overlap cannot be excluded; D2-D4 are not established." in output
+
+
+def test_institutional_coprovenance_without_containment_is_d1():
+    taxonomy = json.loads((ROOT / "config" / "evidence_taxonomy.json").read_text(encoding="utf-8"))
+    rule = taxonomy["decision_rules"]["institutional_coprovenance_without_containment"]
+    assert rule["classification"] == "D1_no_detected_evidence_or_insufficient_disclosure"
+    assert rule["not_classification"] == "D2_parent_repository_exposure"
+    assert "Virchow" in rule["worked_example"]
+    guide = (ROOT / "CLASSIFICATION_GUIDE.md").read_text(encoding="utf-8")
+    assert "Same institution as the evaluation cohort" in guide
+    assert "is D1—not D2" in guide

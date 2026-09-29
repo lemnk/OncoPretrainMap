@@ -53,6 +53,9 @@ An orthogonal warning value, `overlap_cannot_be_excluded`, identifies a source
 that explicitly warns of possible overlap without establishing D2-D4. The pair
 remains D1, and the checker returns `D1 + warning` in plain language.
 
+See [`CLASSIFICATION_GUIDE.md`](CLASSIFICATION_GUIDE.md) for the full decision
+rules and worked examples.
+
 ## Access and licensing
 
 The public repository is https://github.com/lemnk/OncoPretrainMap. Software is
@@ -80,11 +83,25 @@ pretraining and evaluation do not establish that the pretraining corpus
 contains the evaluation cohort. No classification rule changed after the
 transport freeze.
 
+### Institutional co-provenance rule
+
+**Same institution as the evaluation cohort, with no stated or demonstrated
+corpus-containment relationship, is D1—not D2.** For example, Virchow
+pretraining and the Campanella MSKCC evaluation cohorts share institutional
+provenance, and the benchmark warns that overlap cannot be excluded. Public
+evidence does not show that the pretraining corpus contains those evaluation
+cohorts, so the rows remain D1 and carry
+`exposure_warning=overlap_cannot_be_excluded`. This rule was made explicit
+after both initial extractors independently overcalled that situation as D2.
+
 Caleb Yitna Ref independently reviewed the frozen 60-row transport sample while
-blinded to the initial classifications. Initial agreement was 58/60 (96.7%;
-kappa, 0.948). A subsequent source-semantics audit conservatively corrected 12
-initial D2 labels to D1. Agreement with the corrected final classes was 46/60
-(76.7%; kappa, 0.604). Original reviewer decisions and final adjudications are
+blinded to the initial classifications. Initial blinded inter-rater agreement
+was 58/60 (96.7%; kappa, 0.948). A subsequent source-semantics audit
+conservatively corrected 12 initial D2 labels to D1. Concordance with the
+post-audit resolved classification was 46/60 (76.7%; descriptive kappa, 0.604).
+This second comparison is not a clean inter-rater reliability estimate because
+the resolved classification was jointly adjudicated and incorporated the
+reviewer's initial decisions. Original reviewer decisions and final adjudications are
 both retained.
 
 A PanCancer40M feasibility demonstration recovered 6,093 TCGA training-slide

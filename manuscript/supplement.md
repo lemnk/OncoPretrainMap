@@ -68,7 +68,7 @@ benchmark-specific model and task aliases was permitted; changing an exposure
 definition or precedence rule was not.
 
 A deterministic 60-row review packet was frozen before review. Under the
-corrected final labels it contains 20 D0 and 40 D1 relationships. The packet
+post-audit resolved classification it contains 20 D0 and 40 D1 relationships. The packet
 omitted the initial class and evidence grade. Caleb Yitna Ref independently
 reviewed all 60 relationships while blinded to the initial transport labels and
 reported no AI use. Exact agreement, unweighted Cohen's kappa, and confusion
@@ -159,8 +159,21 @@ be excluded, but the evidence did not establish a containing-corpus
 relationship. These distributions describe benchmark-specific disclosure and
 lineage, not contamination prevalence.
 
-The independent blinded reviewer initially agreed on 58/60 pre-audit labels
-(96.7%; kappa, 0.948). After the 12 D2-to-D1 source-semantics corrections,
-agreement with the corrected final labels was 46/60 (76.7%; kappa, 0.604):
+Initial blinded inter-rater agreement was 58/60 (96.7%; kappa, 0.948). After
+the 12 D2-to-D1 source-semantics corrections, concordance with the post-audit
+resolved classification was 46/60 (76.7%; descriptive kappa, 0.604):
 20/20 D0 and 26/40 D1. The reviewer assigned D2 to the 12 Virchow/MSKCC warning
 rows and D0 to two tRes50 rows; final adjudication retained D1 in all 14 cases.
+The 46/60 comparison is not a clean inter-rater reliability statistic because
+the resolved classification was jointly adjudicated and incorporated the
+reviewer's initial decisions.
+
+### Worked classification example: institutional co-provenance
+
+Same-institution provenance alone does not establish a containing corpus.
+Virchow pretraining and the Campanella MSKCC evaluation cohorts were associated
+with MSKCC, and the primary source stated that overlap could not be excluded.
+Because no public source established that the pretraining corpus contained the
+evaluation cohorts, the frozen rule assigns D1 with an exposure warning—not D2.
+This explicit rule was added to the classification guide after both initial
+extractors independently overcalled these relationships as D2.

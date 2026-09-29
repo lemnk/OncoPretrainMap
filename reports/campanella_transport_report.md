@@ -45,8 +45,11 @@ a different benchmark ecosystem without a methodological rule change.
 A deterministic 60-row packet contained 20 D0 and 40 relationships ultimately
 classified D1. Caleb Yitna Ref independently reviewed every row while blinded
 to the initial transport classifications and reported no AI use. Initial
-agreement was 58/60 (96.7%; kappa, 0.948). A subsequent source-semantics audit
+blinded inter-rater agreement was 58/60 (96.7%; kappa, 0.948). A subsequent source-semantics audit
 corrected 12 Virchow/MSKCC rows from D2 to D1 because the evidence warned that
 overlap could not be excluded but did not establish a containing-corpus
-relationship. Agreement with the corrected final classes was 46/60 (76.7%;
-kappa, 0.604). Original decisions and final adjudications are retained.
+relationship. Concordance with the post-audit resolved classification was 46/60
+(76.7%; descriptive kappa, 0.604). This is not a clean inter-rater reliability
+statistic because the resolved classification was jointly adjudicated and
+incorporated the reviewer's initial decisions. Original decisions and final
+adjudications are retained.
