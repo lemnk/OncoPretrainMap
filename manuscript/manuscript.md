@@ -377,18 +377,17 @@ checkpoint and proposed validation dataset and receive the exposure class,
 evidence grade, supporting source, and strongest independence statement the
 public record permits. New identifiers can update that classification.
 
-Source disclosure can be incomplete, and the development model universe is not
-representative of all pathology models. The transport benchmark exercised only
-D0 and D1; its broad nonoverlap statement did not name every covered model.
-One author extracted the 52 development assertions. The second reviewer checked
-sampled classifications against cited sources, but no exhaustive independent
-search for omitted exposures was required in the first two reviews. The later
-challenge required an independent source search, but agreement still does not
-measure registry completeness. All three review samples were stratified, and the 76.7%
-post-audit concordance is not an independent reliability estimate. Curated
-lineage may miss derivatives. No benchmark released identifiers needed to match
-the recovered training-slide manifest, so no D4 overlap was demonstrated. The
-post-protocol performance analysis was underpowered and uninformative.
+Several limitations define the resource's intended use. The registry reflects
+two published benchmark model sets and the public evidence available at the
+freeze date; classifications can change when new disclosures or identifiers
+appear. The Campanella transport exercised D0 and D1, whereas the later
+challenge tested reproducibility across D0-D3 within existing source families.
+The human reviews therefore evaluate application of the evidence rules rather
+than exhaustive registry completeness. D4 remains untested because paired
+training and evaluation identifiers were unavailable. The exploratory
+performance analysis was not used to infer performance inflation. Accordingly,
+OncoPretrainMap supports evidence-qualified provenance screening and benchmark
+selection, not certification of nonoverlap or estimation of performance effects.
 
 Future releases should prioritize public case/slide manifests, checkpoint-
 specific data statements, independent curation, and expansion to additional
