@@ -61,3 +61,7 @@ does not presume that any of them has the same evidence state.
 5. Is a containing repository or cohort relationship established? If yes, D2.
 6. Otherwise assign D1, preserving any explicit overlap warning separately.
 
+A source statement such as “most models were disjoint” establishes its claim at
+aggregate scope. Without an enumerated checkpoint list, do not convert every
+unnamed model to D0 in the primary registry. Document a row-level sensitivity
+scenario if a broader reading could change the reported distribution.

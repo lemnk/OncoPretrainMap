@@ -18,5 +18,5 @@
   "conflicts": 0,
   "exposure_warning_count": 12,
   "second_reviewer_status": "Completed; original blinded decisions and post-audit adjudications are retained in the validation workbook.",
-  "interpretation": "The frozen framework represented all relationships without a rule change. D1 is unresolved and is not evidence of independence. Twelve Virchow/MSKCC relationships carry an explicit source warning that overlap cannot be excluded, but remain D1 because containment of the evaluation cohorts was not established."
+  "interpretation": "Frozen class definitions represented all relationships; operational D2 guidance was clarified after review. The external benchmark exercised D0 and D1 only, so D2-D4 behavior was not tested. D1 is unresolved, not evidence of independence. Twelve Virchow/MSKCC relationships carry an explicit overlap warning but remain D1 because containment of the evaluation cohorts was not established."
 }

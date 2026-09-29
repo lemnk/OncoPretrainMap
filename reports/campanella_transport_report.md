@@ -28,6 +28,15 @@ rule changed, no new class was introduced, and no conflict was recorded.
 | D3 | 0 | 0% | No exact named evaluation-dataset exposure supported |
 | D4 | 0 | 0% | No shared identifiers available |
 
+The broad statement that “most foundation models” had no cohort overlap does
+not enumerate covered checkpoints. A post hoc sensitivity assigning it to six
+other pathology foundation models yielded 176 D0 (72.7%) and 66 D1 (27.3%).
+Extending the assumption to the ImageNet tRes50 baseline yielded 198 D0 (81.8%)
+and 44 D1 (18.2%). These are interpretation scenarios, not individually
+verified disjointness. The source-specific primary audit remains 44 D0 and 198
+D1. See `reports/campanella_blanket_statement_sensitivity.json` and the
+row-level scenario file for reproducibility.
+
 The 12 warning rows record the narrower public fact that the checkpoint used an
 MSKCC pretraining corpus and the benchmark authors could not exclude overlap for
 MSKCC tasks. They do not establish a containing corpus, shared patient, or
@@ -37,8 +46,9 @@ shared slide and therefore remain D1.
 
 The Campanella distribution differed from the Bareja development application:
 D0 was 18.2% versus 4.0%, D1 was 81.8% versus 80.2%, D2 was 0% versus 15.5%,
-and D3 was 0% versus 0.3%. The important result is successful representation of
-a different benchmark ecosystem without a methodological rule change.
+and D3 was 0% versus 0.3%. External application exercised only D0 and D1.
+The definitions were unchanged; guidance on corpus containment was clarified
+after review. External behavior of D2-D4 remains untested.
 
 ## Independent blinded review
 

@@ -58,6 +58,16 @@ example because both initial extractors independently overcalled it. This is a
 documented clarification of the unchanged D2 requirement, not a new exposure
 class or a relaxation of the frozen rule.
 
+## 2026-09-28 — Broad nonoverlap statement sensitivity
+
+After the primary transport audit and human review, the version-of-record
+Campanella discussion sentence that “most foundation models” lacked cohort
+overlap was examined as a post hoc interpretation sensitivity. The primary
+audit remains unchanged. Two scenarios assign the broad statement to six
+other pathology foundation models, then additionally to the ImageNet tRes50
+baseline. The article does not identify all checkpoints covered by “most,” so
+these counts are explicitly hypothetical and are not new D0 evidence.
+
 ## 2026-09-28 — Benchmark-resolution sensitivity field
 
 The registry classifies an explicit assertion for TCGA or CPTAC as D3 because

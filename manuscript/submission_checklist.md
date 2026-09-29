@@ -14,8 +14,10 @@
 - Four publication figures in PNG and vector PDF
 - Computational report
 - Full manuscript draft, figure legends, declarations, and AI-use statement
-- JCO CCI Resource Report abstract headings; 235 words (275-word limit)
-- Main text: 2,933 words (3,000-word limit)
+- JCO CCI Resource Report abstract headings; 272 words by repository tokenizer
+  (275-word limit)
+- Main body (Introduction through Conclusion): 2,890 words by repository
+  tokenizer (3,000-word limit; verify with journal submission counter)
 - Completed 80-pair human-verification workbook with row-level evidence
 - Class-specific confusion matrix and D1-upgrade analysis
 - Model-stratified headline results and CPTAC cross-check
@@ -30,6 +32,10 @@
   and the subsequent 12-row D2-to-D1 source-semantics correction; concordance
   with the post-audit resolved classification is 46/60 (76.7%; descriptive
   kappa, 0.604) and is not presented as inter-rater reliability
+- Post hoc blanket-statement sensitivity: primary 44 D0/198 D1; six-model
+  scenario 176 D0/66 D1; including tRes50 198 D0/44 D1
+- Review provenance note explains the early draft's blinding-description error
+  without claiming a fresh review pass
 
 ## Validation interpretation to retain
 

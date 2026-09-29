@@ -83,6 +83,15 @@ pretraining and evaluation do not establish that the pretraining corpus
 contains the evaluation cohort. No classification rule changed after the
 transport freeze.
 
+The primary external D0/D1 distribution depends on the scope of Campanella et
+al's broad “most foundation models” nonoverlap statement. A post hoc sensitivity
+assigning that statement to six other pathology foundation models changed the
+counts from 44/198 to 176/66; including the ImageNet tRes50 baseline changed
+them to 198/44. These are hypothetical assignments because the statement does
+not identify every covered checkpoint. The frozen definitions were retained,
+while the operational D2 boundary was clarified after review. The external
+benchmark exercised D0 and D1, not D2-D4.
+
 ### Institutional co-provenance rule
 
 **Same institution as the evaluation cohort, with no stated or demonstrated

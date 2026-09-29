@@ -77,9 +77,37 @@ audit corrected 12 Virchow/MSKCC labels from D2 to D1 under the unchanged class
 definitions. Original decisions and final adjudications were retained; no third
 adjudicator was used.
 
+The development blank packet was committed on September 28, 2026 before the
+completed workbook. A draft written after the workbook was merged described
+the development classifications as visible to the reviewer. The reviewer
+reported initial blinding, and the blank packet has no development-class
+column; the draft had confused the later comparison display with the initial
+review interface. That wording was corrected later the same day. The record
+does not document a fresh second pass, so none is claimed. The external blank
+packet likewise preceded its completed workbook. These records and the dated
+attestation document the review workflow, but cannot reconstruct what appeared
+on the reviewer's screen. Neither review required an open-ended independent
+search for missing source assertions.
+
 The schema value `exposure_warning=overlap_cannot_be_excluded` was defined as an
 orthogonal annotation for a primary-source warning that did not establish D2-D4.
 It did not change the D1 classification or the precedence rules.
+
+### Post hoc interpretation of the broad nonoverlap statement
+
+Campanella et al state that most foundation models had no overlap with their
+cohorts, but do not identify every checkpoint covered by that sentence.[3] We
+retained source-specific classifications as primary. A post hoc sensitivity
+scenario assigned the broad statement to the six other pathology foundation
+model labels (CTransPath, Phikon, Phikon-v2, Prov-GigaPath, UNI, and h-optimus-0)
+on all 22 tasks. A second scenario also assigned it to the ImageNet tRes50
+baseline, which the paper distinguishes from the foundation models. Both are
+maximal interpretive assumptions, not new version-specific evidence. Virchow
+and Virchow2 stayed D1, and all 12 MSKCC warning rows remained D1. We retained
+the original 242-row audit and stored scenario assignments separately. The
+published sentence is explicit primary-source evidence (grade B) at aggregate
+scope; extrapolation to a particular unnamed checkpoint is an ungraded
+scenario assumption, not checkpoint-specific grade B evidence.
 
 ## Supplementary Table Index
 
@@ -102,6 +130,8 @@ It did not change the D1 classification or the precedence rules.
 | S15 | `reports/cross_benchmark_exposure_comparison.csv` | Cross-benchmark D0-D4 comparison |
 | S16 | `data/validation/campanella_transport_blinded_review_packet.csv` | Frozen blank 60-row blinded-review packet |
 | S17 | `data/validation/campanella_caleb_blinded_review_completed.xlsx` | Completed blinded human review, comparison, adjudication, and attestation |
+| S18 | `data/derived/campanella_blanket_statement_sensitivity.csv` | Row-level post hoc blanket-statement scenarios |
+| S19 | `reports/campanella_blanket_statement_sensitivity.json` | Scenario definitions and counts |
 
 ## Supplementary Results
 
@@ -177,3 +207,17 @@ Because no public source established that the pretraining corpus contained the
 evaluation cohorts, the frozen rule assigns D1 with an exposure warning—not D2.
 This explicit rule was added to the classification guide after both initial
 extractors independently overcalled these relationships as D2.
+
+### Broad-statement sensitivity
+
+| Interpretation | D0 | D1 | D2–D4 |
+|---|---:|---:|---:|
+| Source-specific primary audit | 44/242 (18.2%) | 198/242 (81.8%) | 0 |
+| Blanket statement assigned to six other foundation models | 176/242 (72.7%) | 66/242 (27.3%) | 0 |
+| Same assumption, plus tRes50 baseline | 198/242 (81.8%) | 44/242 (18.2%) | 0 |
+
+The primary paper says “most” without naming all models. These alternative
+counts show the effect of assigning that broad claim to specific checkpoints;
+they do not show that those checkpoints were individually verified as disjoint.
+The tRes50 extension is especially uncertain because the article describes it
+as an ImageNet baseline separately from the pathology foundation models.[3]

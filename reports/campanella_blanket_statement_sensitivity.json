@@ -1,0 +1,63 @@
+{
+  "analysis_status": "Post hoc sensitivity; primary transport classifications are unchanged.",
+  "source_url": "https://www.nature.com/articles/s41467-025-58796-1",
+  "source_scope_limit": "The article says most foundation models had no cohort overlap but does not identify every checkpoint covered by that statement.",
+  "evidence_grade_interpretation": "The published nonoverlap sentence is an explicit primary-source statement (grade B) at aggregate scope. Assigning it to an unnamed checkpoint is a hypothetical scenario and is not independently grade B evidence for that checkpoint.",
+  "scenario_interpretation": "Hypothetical assignment of the broad statement to specified model labels; not new checkpoint-specific D0 evidence.",
+  "scenarios": {
+    "source_specific_primary": {
+      "rows": 242,
+      "models_assumed_covered": [],
+      "reassigned_d1_to_d0": 0,
+      "class_counts": {
+        "D0_documented_disjoint": 44,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 198
+      },
+      "class_percentages": {
+        "D0_documented_disjoint": 18.2,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 81.8
+      }
+    },
+    "blanket_six_foundation_models": {
+      "rows": 242,
+      "models_assumed_covered": [
+        "CTransPath",
+        "Phikon",
+        "Phikon-v2",
+        "Prov-GigaPath",
+        "UNI",
+        "h-optimus-0"
+      ],
+      "reassigned_d1_to_d0": 132,
+      "class_counts": {
+        "D0_documented_disjoint": 176,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 66
+      },
+      "class_percentages": {
+        "D0_documented_disjoint": 72.7,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 27.3
+      }
+    },
+    "blanket_six_plus_tres50": {
+      "rows": 242,
+      "models_assumed_covered": [
+        "CTransPath",
+        "Phikon",
+        "Phikon-v2",
+        "Prov-GigaPath",
+        "UNI",
+        "h-optimus-0",
+        "tRes50"
+      ],
+      "reassigned_d1_to_d0": 154,
+      "class_counts": {
+        "D0_documented_disjoint": 198,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 44
+      },
+      "class_percentages": {
+        "D0_documented_disjoint": 81.8,
+        "D1_no_detected_evidence_or_insufficient_disclosure": 18.2
+      }
+    }
+  }
+}

@@ -120,6 +120,14 @@ classification was 46/60 (76.7%; descriptive kappa, 0.604). The latter is not a
 clean inter-rater reliability statistic because the resolved classification was
 jointly adjudicated and incorporated the reviewer's initial decisions.
 
+The primary external audit is sensitive to the article's broad statement that
+“most foundation models” had no cohort overlap. Assigning it post hoc to six
+other pathology foundation models yields 176 D0 and 66 D1; extending the
+assumption to the tRes50 baseline yields 198 D0 and 44 D1. The statement does
+not identify all covered checkpoints, so neither scenario establishes
+checkpoint-specific D0. The primary 44 D0/198 D1 audit is retained. External
+transport exercised D0 and D1 only; D2-D4 portability remains untested.
+
 ## Validation state
 
 The deterministic 80-pair reviewer file used SHA-256 seed text
@@ -147,7 +155,8 @@ Row-level records are retained in
 
 ## Reproducibility verification
 
-- Twenty-two automated tests passed.
+- Twenty-seven automated tests passed after the blanket-statement sensitivity
+  analysis was added.
 - Four PNG and four vector PDF figures were generated.
 - Analytical artifacts were SHA-256 hashed after the last complete run.
 - Raw benchmark input hashes and the publisher PanCancer40M hash are retained.
