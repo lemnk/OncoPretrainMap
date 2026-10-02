@@ -39,8 +39,9 @@ An audit of the primary Campanella source found that its Virchow/MSKCC statement
 established only that overlap could not be excluded. It did not establish that
 the MSKCC pretraining corpus contained the evaluation cohorts. Under the frozen
 D2 definition, the 12 affected relationships therefore remained D1 with an
-explicit overlap-warning field. This corrected an application of the rule; it
-did not change the rule. The prior labels, blinded reviewer decisions, corrected
+explicit overlap-warning field. This corrected an application of the frozen
+rule; it did not change the definition, evidence hierarchy, or precedence rule.
+The prior labels, blinded reviewer decisions, corrected
 classes, and adjudication notes were retained. External counts changed from 44
 D0, 186 D1, and 12 D2 to 44 D0 and 198 D1.
 
@@ -50,12 +51,12 @@ explicitly states that overlap cannot be excluded while available evidence does
 not satisfy D2-D4. The relationship remains D1. This annotation does not alter
 classification precedence.
 
-The classification guide now makes the existing boundary operational: shared
+The classification guide includes the existing boundary as a worked example: shared
 institutional provenance without a stated or demonstrated corpus-containment
 relationship is D1, not D2. The Virchow/MSKCC case is retained as a worked
-example because both initial extractors independently overcalled it. This is a
-documented clarification of the unchanged D2 requirement, not a new exposure
-class or a relaxation of the frozen rule.
+example because both initial classifications overcalled it. This documents the
+unchanged D2 requirement; it is not a new exposure class, rule revision, or
+relaxation of the frozen rule.
 
 ## 2026-09-28 — Broad nonoverlap statement sensitivity
 
@@ -80,10 +81,10 @@ changed the benchmark-resolution counts from 208 D3 rows to 204 D2 and four D3
 rows. It was made to clarify evidence resolution, not in response to performance
 results.
 
-## 2026-09-29 — Post-clarification rule-reliability challenge
+## 2026-09-29 — Post-correction rule-application challenge
 
-After the Campanella source-semantics audit clarified the operational D1/D2
-boundary, a second 80-relationship human-review challenge was added. The sample
+After the Campanella source-semantics audit corrected the 12 D2 application
+errors under the unchanged frozen definition, a second 80-relationship human-review challenge was added. The sample
 was SHA-256 seeded, excluded every relationship in the two earlier review
 packets, and was stratified as 10 D0, 37 D1, 28 D2, and five D3. The blank
 packet and answer-key hash were frozen before review. Caleb Yitna Ref reviewed
@@ -91,6 +92,6 @@ the public sources while blinded to the key and reported no AI use. Agreement
 was 80/80 (kappa, 1.00), with no D1-to-D2-D4 upgrades or D2-to-D1 downgrades.
 
 This challenge was not part of protocol v1 and did not alter either benchmark
-audit. It is reported as a post-clarification assessment of rule application
+audit. It is reported as a post-correction assessment of rule application
 within existing source families, not as a third independent benchmark,
 registry-wide accuracy estimate, or D4 validation.

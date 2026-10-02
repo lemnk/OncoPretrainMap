@@ -47,8 +47,9 @@ shared slide and therefore remain D1.
 The Campanella distribution differed from the Bareja development application:
 D0 was 18.2% versus 4.0%, D1 was 81.8% versus 80.2%, D2 was 0% versus 15.5%,
 and D3 was 0% versus 0.3%. External application exercised only D0 and D1.
-The definitions were unchanged; guidance on corpus containment was clarified
-after review. External behavior of D2-D4 remains untested.
+The definitions were unchanged; a source audit corrected 12 applications of the
+frozen corpus-containment requirement. External behavior of D2-D4 remains
+untested.
 
 ## Independent blinded review
 

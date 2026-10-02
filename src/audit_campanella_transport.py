@@ -193,7 +193,7 @@ def main() -> None:
         "conflicts": sum(row["conflict_flag"] != "False" for row in rows),
         "exposure_warning_count": sum(row["exposure_warning"] == "overlap_cannot_be_excluded" for row in rows),
         "second_reviewer_status": "Completed; original blinded decisions and post-audit adjudications are retained in the validation workbook.",
-        "interpretation": "Frozen class definitions represented all relationships; operational D2 guidance was clarified after review. The external benchmark exercised D0 and D1 only, so D2-D4 behavior was not tested. D1 is unresolved, not evidence of independence. Twelve Virchow/MSKCC relationships carry an explicit overlap warning but remain D1 because containment of the evaluation cohorts was not established.",
+        "interpretation": "Frozen class definitions represented all relationships; a source audit corrected 12 applications of the unchanged D2 corpus-containment requirement. The external benchmark exercised D0 and D1 only, so D2-D4 behavior was not tested. D1 is unresolved, not evidence of independence. Twelve Virchow/MSKCC relationships carry an explicit overlap warning but remain D1 because containment of the evaluation cohorts was not established.",
     }
     REPORTS.mkdir(parents=True, exist_ok=True)
     (REPORTS / "campanella_transport_summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")

@@ -55,7 +55,7 @@ The workbook preserves the original decisions and final adjudications. The
 blank packet was committed before the completed workbook on September 28,
 2026; no second pass is claimed.
 
-## Challenge-80 post-clarification review
+## Challenge-80 post-correction review
 
 `challenge80_blinded_review_v1.xlsx` is a blank, frozen 80-relationship
 challenge packet. Its reviewer instructions and prespecified analysis are in

@@ -153,18 +153,18 @@ Row-level records are retained in
 `data/validation/caleb_review_completed.xlsx` (SHA-256
 `80a84201019f2fa6d65123daf1a88d4b54f4a2169940a29e24fb1f5d160ea66e`).
 
-After the operational D1/D2 boundary was clarified, a second stratified
+After correcting the D2 application errors without changing the frozen rule, a second stratified
 challenge excluded every relationship in the two earlier review packets. Caleb
 Yitna Ref independently searched the public sources for all 80 rows while
 blinded to the committed key and without AI. Agreement was 80/80 (kappa, 1.00):
 10 D0, 37 D1, 28 D2, and five D3. No D1 relationship was upgraded to D2-D4,
 and no D2 relationship was downgraded to D1. This challenge tests application
-of the clarified rules within existing source families; it is not a third
+of the frozen rules within existing source families; it is not a third
 external benchmark or D4 validation.
 
 ## Reproducibility verification
 
-- Twenty-eight automated tests passed after the post-clarification challenge
+- Twenty-eight automated tests passed after the post-correction challenge
   analysis was added.
 - Four PNG and four vector PDF figures were generated.
 - Analytical artifacts were SHA-256 hashed after the last complete run.

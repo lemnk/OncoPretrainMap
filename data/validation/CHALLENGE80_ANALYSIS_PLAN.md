@@ -1,7 +1,8 @@
 # Challenge-80 analysis plan, frozen before reviewer decisions
 
-This packet probes whether independent source search and the clarified
-containing-corpus rule reduce the earlier D1/D2 failure. The source universe is
+This packet probes whether independent source search applies the frozen
+containing-corpus rule consistently after correction of the earlier D1/D2
+application errors. The source universe is
 the development registry and the Campanella transport audit at commit
 `ff1599c3e0464341496ac821b1115d61475da994`. No relationship in either
 prior human-review packet is reused. Selection is SHA-256 seeded and
@@ -48,4 +49,3 @@ The packet contains no known D4-positive validation set. Agreement here would
 not establish D4 detection, clinical model validity, or performance effects.
 A separate benchmark with public positive exposure evidence, and separately a
 matched training/evaluation manifest, remain needed for those claims.
-

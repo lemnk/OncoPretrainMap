@@ -29,8 +29,9 @@ labels to D1; reviewer concordance with the resolved classes was 46/60 (76.7%).
 A subsequent stratified challenge of 80 previously unreviewed relationships had
 80/80 agreement (kappa, 1.00), including 28 D2 and five D3 relationships.
 Applying a broad nonoverlap statement to six additional models in a sensitivity
-scenario reduced D1 to 66/242 (27.3%). Definitions were retained; D2 guidance
-was clarified after review.
+scenario reduced D1 to 66/242 (27.3%). The D2 corpus-containment requirement
+remained frozen; the 12 labels were corrected as application errors after source
+audit, without changing a definition or precedence rule.
 
 **Relevance:** The checker identifies what public sources support for a proposed
 model and evaluation cohort. External transport exercised D0 and D1 only;
@@ -214,7 +215,8 @@ classifications. The author created the integrated comparison sheets only after
 the independent decisions had been recorded; those sheets were not the review
 interface.
 
-After clarifying the operational D1/D2 boundary, we froze a SHA-256-seeded,
+After correcting the 12 D2 application errors under the unchanged frozen
+definition, we froze a SHA-256-seeded,
 class-stratified challenge of 10 D0, 37 D1, 28 D2, and five D3 relationships,
 excluding every pair in the earlier review packets. The reviewer independently
 searched public sources and recorded checkpoint resolution, class, evidence
@@ -335,14 +337,15 @@ stratified rather than a simple random sample, the bound should not be projected
 directly to the full registry. The registry classifications were unchanged after
 adjudication; v2 added the benchmark-resolution sensitivity field.
 
-### Post-clarification rule-reliability challenge
+### Post-correction rule-application challenge
 
 The blinded reviewer agreed with all 80 frozen challenge classifications
 (80/80, 100%; unweighted Cohen's kappa, 1.00): 10/10 D0, 37/37 D1, 28/28 D2,
 and 5/5 D3. No D1 relationship was upgraded to D2-D4, and no D2 relationship
 was downgraded to D1. Checkpoint/version resolution was recorded as resolved for
 72 relationships and unclear for eight. No adjudication changed a class. These
-results assess the clarified rules within existing source families; they do not
+results assess application of the frozen rules within existing source families;
+they do not
 establish registry completeness, third-benchmark transport, or D4 detection.
 
 ## Discussion
@@ -359,12 +362,14 @@ while also showing why a binary contamination label would exceed the available
 evidence.
 
 The transport application mapped every Campanella relationship using the frozen
-class definitions, with D2 guidance clarified after review. It exercised D0
-and D1 only, leaving external reproducibility of D2–D4 untested.
+class definitions. A post-review source audit identified and corrected a 12-row
+application error without changing the D2 definition, evidence hierarchy, or
+precedence rules. The final transport set exercised D0 and D1 only, leaving
+external reproducibility of D2–D4 untested.
 
-The post-clarification challenge then exercised D0-D3 on 80 relationships not
+The post-correction challenge then exercised D0-D3 on 80 relationships not
 used in either earlier review sample. Complete agreement, including 28 D2 and
-five D3 relationships, shows that the clarified containing-corpus rule could be
+five D3 relationships, shows that the frozen containing-corpus rule could be
 applied consistently in this challenge. Because the sample reused the existing
 source families and had no D4 cases, it does not replace external validation of
 positive exposure classes or identifier-level overlap.
@@ -445,7 +450,7 @@ administration.
 
 The author thanks Caleb Yitna Ref for independently reviewing the 80 sampled
 registry relationships, the 60 sampled external-transport relationships, and
-the 80-relationship post-clarification challenge.
+the 80-relationship post-correction challenge.
 Caleb Yitna Ref did not develop the registry rules and is not responsible for
 the analyses or conclusions.
 
@@ -466,7 +471,8 @@ documented independence.
 Bars compare benchmark-resolution D0-D3 proportions in the Bareja et al
 development application and Campanella et al external transport analysis. The
 definitions were frozen before detailed extraction of the external benchmark;
-operational D2 guidance was clarified after review. Campanella relationships
+the later source audit corrected 12 applications without changing the D2
+definition. Campanella relationships
 exercised D0 and D1 only.
 Hatching identifies the 12 Campanella D1 relationships with an explicit source
 warning that overlap could not be excluded; the warning did not establish D2.

@@ -46,7 +46,7 @@ Not supported: D2 containing-repository exposure
 
 This example was added after both initial extractors independently assigned D2.
 A source-semantics audit showed that the assignment did not meet the frozen D2
-definition. The clarification documents how to apply the unchanged rule to
+definition. The worked example documents how to apply the unchanged rule to
 Virchow2G, PLUTO, Atlas, H-optimus, and other institution-associated models; it
 does not presume that any of them has the same evidence state.
 

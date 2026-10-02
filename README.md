@@ -88,9 +88,10 @@ al's broad “most foundation models” nonoverlap statement. A post hoc sensiti
 assigning that statement to six other pathology foundation models changed the
 counts from 44/198 to 176/66; including the ImageNet tRes50 baseline changed
 them to 198/44. These are hypothetical assignments because the statement does
-not identify every covered checkpoint. The frozen definitions were retained,
-while the operational D2 boundary was clarified after review. The external
-benchmark exercised D0 and D1, not D2-D4.
+not identify every covered checkpoint. The frozen D2 definition was retained;
+the source audit corrected 12 applications of that definition without changing
+the taxonomy or precedence rules. The external benchmark exercised D0 and D1,
+not D2-D4.
 
 ### Institutional co-provenance rule
 
@@ -100,8 +101,9 @@ pretraining and the Campanella MSKCC evaluation cohorts share institutional
 provenance, and the benchmark warns that overlap cannot be excluded. Public
 evidence does not show that the pretraining corpus contains those evaluation
 cohorts, so the rows remain D1 and carry
-`exposure_warning=overlap_cannot_be_excluded`. This rule was made explicit
-after both initial extractors independently overcalled that situation as D2.
+`exposure_warning=overlap_cannot_be_excluded`. The already-frozen D2 requirement
+was documented with this worked example after the two initial classifications
+had incorrectly applied it.
 
 Caleb Yitna Ref independently reviewed the frozen 60-row transport sample while
 blinded to the initial classifications. Initial blinded inter-rater agreement
@@ -128,7 +130,7 @@ during initial review and did not use AI. No sampled D1 pair was upgraded to D2
 or D3 (0/23). The registry classifications were unchanged; v2 added the
 benchmark-resolution sensitivity field.
 
-After the D1/D2 operational guidance was clarified, a separate blinded
+After those application errors were corrected under the unchanged D2 rule, a separate blinded
 challenge used 80 relationships absent from both earlier review packets. Caleb
 Yitna Ref independently searched the public sources and agreed with all 80
 frozen classifications (kappa, 1.00): 10 D0, 37 D1, 28 D2, and five D3. No D1

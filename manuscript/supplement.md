@@ -109,9 +109,9 @@ published sentence is explicit primary-source evidence (grade B) at aggregate
 scope; extrapolation to a particular unnamed checkpoint is an ungraded
 scenario assumption, not checkpoint-specific grade B evidence.
 
-## Supplementary Method 5: Post-clarification challenge review
+## Supplementary Method 5: Post-correction challenge review
 
-After the institutional co-provenance rule was clarified, a second
+After the D2 application errors were corrected under the unchanged frozen rule, a second
 SHA-256-seeded challenge packet was frozen from relationships absent from both
 earlier review packets. The sample contained 10 D0, 37 D1, 28 D2, and five D3
 relationships from the existing development and Campanella source families.
@@ -154,7 +154,7 @@ contained no D4-positive relationship.
 | S17 | `data/validation/campanella_caleb_blinded_review_completed.xlsx` | Completed blinded human review, comparison, adjudication, and attestation |
 | S18 | `data/derived/campanella_blanket_statement_sensitivity.csv` | Row-level post hoc blanket-statement scenarios |
 | S19 | `reports/campanella_blanket_statement_sensitivity.json` | Scenario definitions and counts |
-| S20 | `data/validation/challenge80_blinded_review_v1.xlsx` | Frozen blank post-clarification challenge packet |
+| S20 | `data/validation/challenge80_blinded_review_v1.xlsx` | Frozen blank post-correction challenge packet |
 | S21 | `data/validation/challenge80_caleb_blinded_review_corrected_v1.xlsx` | Completed 80-row blinded human challenge review |
 | S22 | `data/validation/challenge80_row_comparison_v1.csv` | Frozen-class and reviewer-class row-level comparison |
 | S23 | `reports/challenge80_confusion_matrix.csv` | D0-D4 challenge confusion matrix and per-class agreement |
@@ -184,7 +184,7 @@ agreement was 100% in each sampled class. No D1 pair was upgraded to D2 or D3
 (0/23; exact one-sided 95% upper bound, 12.2%). Because the sample was
 stratified, this bound is not a registry-wide false-negative estimate.
 
-## Supplementary post-clarification challenge results
+## Supplementary post-correction challenge results
 
 The independent review agreed with all 80 challenge classifications (80/80,
 100%; unweighted Cohen's kappa, 1.00). The diagonal confusion-matrix counts were
