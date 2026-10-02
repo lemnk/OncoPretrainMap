@@ -209,9 +209,10 @@ the Virchow/MSKCC warnings. Original decisions, pre-audit labels, corrected
 classes, and resolution notes were retained; no third adjudicator was used.
 The blank review packets and completed workbooks document the review sequence;
 the integrated comparison sheets display both classifications after review.
-An early draft mistook the integrated development workbook for the initial
-review interface. The blank packet preceded that workbook; no fresh blinded
-review after the draft correction is documented.
+The reviewer completed the blank packet while blinded to the initial
+classifications. The author created the integrated comparison sheets only after
+the independent decisions had been recorded; those sheets were not the review
+interface.
 
 After clarifying the operational D1/D2 boundary, we froze a SHA-256-seeded,
 class-stratified challenge of 10 D0, 37 D1, 28 D2, and five D3 relationships,

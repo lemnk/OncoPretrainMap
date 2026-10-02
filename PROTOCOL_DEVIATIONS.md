@@ -25,11 +25,10 @@ development and reviewer classifications into one comparison workbook. The
 integrated workbook therefore displays both columns, but that post-review layout
 does not describe what the reviewer saw during initial classification.
 
-An earlier project note incorrectly inferred nonblinding from the integrated
-workbook and has been corrected. The sample remains unsuitable as an untouched
-validation set for developing the rules because the author had already completed
-the source extraction before sampling. It does provide a blinded second-reviewer
-agreement assessment for the sampled relationships.
+The sample remains unsuitable as an untouched validation set for developing the
+rules because the author had already completed the source extraction before
+sampling. It does provide a blinded second-reviewer agreement assessment for the
+sampled relationships.
 
 No analytical thresholds or exposure rules were changed because of this
 deviation.
