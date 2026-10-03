@@ -44,8 +44,8 @@ sensitive to source wording.
 
 **How to Access/Use:** Source code, row-level evidence, frozen protocols, tests,
 and the command-line checker are available at
-https://github.com/lemnk/OncoPretrainMap. The frozen version 1.0.0 release is
-available at https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.0; its
+https://github.com/lemnk/OncoPretrainMap. The frozen version 1.0.2 release is
+available at https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.2; its
 permanent Zenodo DOI will be inserted before journal submission.
 
 ## Introduction
@@ -465,8 +465,8 @@ Row-level human-verification workbooks are available in the OncoPretrainMap
 repository (https://github.com/lemnk/OncoPretrainMap) with the source code,
 curated tables, derived results, tests, and figures. Software is licensed under
 MIT; original metadata and documentation are licensed under CC BY 4.0. The
-frozen version 1.0.0 release is available at
-https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.0; its permanent
+frozen version 1.0.2 release is available at
+https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.2; its permanent
 Zenodo DOI will be inserted before journal submission. All underlying evidence
 sources are publicly linked at row level. The 135-MB
 publisher archive used to derive the

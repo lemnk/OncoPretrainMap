@@ -192,8 +192,8 @@ external benchmark or D4 validation.
 
 1. D4 testing requires public evaluation case/slide identifiers not found in the
    available benchmark materials.
-2. Version 1.0.0 is frozen at
-   https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.0. A permanent
+2. Version 1.0.2 is frozen at
+   https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.2. A permanent
    Zenodo DOI still requires an authenticated Zenodo deposit or an enabled
    GitHub–Zenodo repository connection.
 3. The 60-row external-transport review is complete. The two tRes50

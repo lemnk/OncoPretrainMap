@@ -51,7 +51,7 @@
 
 ## Required before journal upload
 
-- Version 1.0.0 has been frozen and published as a GitHub release. Mint its
+- Version 1.0.2 has been frozen and published as a GitHub release. Mint its
   Zenodo DOI through an authenticated deposit or the GitHub–Zenodo connection,
   then replace the two DOI placeholders in the manuscript.
 - Confirm Jackson State University is the author's correct affiliation for this
