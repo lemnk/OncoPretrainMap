@@ -44,8 +44,9 @@ sensitive to source wording.
 
 **How to Access/Use:** Source code, row-level evidence, frozen protocols, tests,
 and the command-line checker are available at
-https://github.com/lemnk/OncoPretrainMap; a versioned archive DOI will accompany
-the final release.
+https://github.com/lemnk/OncoPretrainMap. The frozen version 1.0.0 release is
+available at https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.0; its
+permanent Zenodo DOI will be inserted before journal submission.
 
 ## Introduction
 
@@ -303,9 +304,11 @@ resolved classification was jointly adjudicated and incorporated reviewer
 decisions. The 12-row Virchow correction reflected erroneous application of the
 prespecified D2 definition: institutional co-provenance alone did not satisfy
 the frozen requirement that the development corpus be shown to contain the
-evaluation cohort. The other two disagreements were tRes50 rows classified D0
-by the reviewer; D1 was retained
-because no explicit version-specific exclusion was documented.
+evaluation cohort.
+
+The two initial reviewer disagreements were tRes50 rows classified D0 by the
+reviewer; D1 was retained because no explicit version-specific exclusion was
+documented.
 
 The distribution differed from the development application: the external
 benchmark had more documented disjointness (18.2% vs 4.0%) and no D2 or D3.
@@ -461,9 +464,11 @@ does not support.
 Row-level human-verification workbooks are available in the OncoPretrainMap
 repository (https://github.com/lemnk/OncoPretrainMap) with the source code,
 curated tables, derived results, tests, and figures. Software is licensed under
-MIT; original metadata and documentation are licensed under CC BY 4.0. A
-permanent archive DOI will be inserted after the final release freeze. All
-underlying evidence sources are publicly linked at row level. The 135-MB
+MIT; original metadata and documentation are licensed under CC BY 4.0. The
+frozen version 1.0.0 release is available at
+https://github.com/lemnk/OncoPretrainMap/releases/tag/v1.0.0; its permanent
+Zenodo DOI will be inserted before journal submission. All underlying evidence
+sources are publicly linked at row level. The 135-MB
 publisher archive used to derive the
 PanCancer40M identifier manifest is excluded from version control; its URL and
 hash are retained for reproducible acquisition.
