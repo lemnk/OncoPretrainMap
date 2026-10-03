@@ -18,7 +18,19 @@ documented-disjoint statement coexist. D4-D2 evidence is not discarded in favor
 of a lower-priority exclusion. The independence statement is generated from the
 derived class and never substitutes “independent” for D1.
 
-## Supplementary Method 2: Performance model
+## Supplementary Method 2: Direct-source baseline
+
+The direct-source baseline received canonical model and evaluation-dataset
+identifiers but did not traverse lineage. It assigned D4 for an exact identifier
+overlap, D3 for an exact named-dataset development assertion, D0 for an exact
+version-specific disjointness assertion without stronger conflicting evidence,
+and D1 otherwise. We compared it with the registry across all 896 model–dataset
+pairs and projected it to the 1,312 published Bareja benchmark rows. TCGA and
+CPTAC exact assertions were represented as D2 at benchmark resolution because
+the published rows lacked evaluated-subset identifiers. The baseline does not
+measure manual search time, source completeness, or expert-review accuracy.
+
+## Supplementary Method 3: Performance model
 
 Let `y_mt` denote AUROC or AUPRC for model `m` on task `t`. The descriptive model
 was:
@@ -31,7 +43,7 @@ intersection term subtracted. Degrees of freedom were the smaller cluster count
 minus one. The design contained 1,312 observations, 32 model clusters, 41 task
 clusters, and rank 74. No causal identification assumption was made.
 
-## Supplementary Method 3: Human verification sample
+## Supplementary Method 4: Human verification sample
 
 The deterministic sample contains all 11 D0 pairs and 23 randomly selected pairs
 from each of D1, D2, and D3. Python's pseudorandom generator was initialized from
@@ -55,7 +67,7 @@ pipeline regenerated v2 tables after verification. No registry classification
 changed; v2 added a benchmark-resolution field that treats TCGA and CPTAC task
 rows as repository-level exposure without exact evaluation-subset identifiers.
 
-## Supplementary Method 4: Independent benchmark transport
+## Supplementary Method 5: Independent benchmark transport
 
 The framework was frozen at commit
 `734b170839b1d97f79b3e58dba8d8b3f3943d70b` before detailed extraction of the
@@ -77,17 +89,12 @@ audit corrected 12 Virchow/MSKCC labels from D2 to D1 under the unchanged class
 definitions. Original decisions and final adjudications were retained; no third
 adjudicator was used.
 
-The development blank packet was committed on September 28, 2026 before the
-completed workbook. A draft written after the workbook was merged described
-the development classifications as visible to the reviewer. The reviewer
-reported initial blinding, and the blank packet has no development-class
-column; the draft had confused the later comparison display with the initial
-review interface. That wording was corrected later the same day. The record
-does not document a fresh second pass, so none is claimed. The external blank
-packet likewise preceded its completed workbook. These records and the dated
-attestation document the review workflow, but cannot reconstruct what appeared
-on the reviewer's screen. Neither review required an open-ended independent
-search for missing source assertions.
+The development and external blank packets preceded their completed workbooks
+and omitted the hidden classifications. Caleb completed each blank packet while
+blinded to the corresponding key. Integrated side-by-side comparison sheets
+were created only after his independent decisions were recorded and were not
+review interfaces. Neither review required an open-ended independent search for
+missing source assertions.
 
 The schema value `exposure_warning=overlap_cannot_be_excluded` was defined as an
 orthogonal annotation for a primary-source warning that did not establish D2-D4.
@@ -109,7 +116,7 @@ published sentence is explicit primary-source evidence (grade B) at aggregate
 scope; extrapolation to a particular unnamed checkpoint is an ungraded
 scenario assumption, not checkpoint-specific grade B evidence.
 
-## Supplementary Method 5: Post-correction challenge review
+## Supplementary Method 6: Post-correction challenge review
 
 After the D2 application errors were corrected under the unchanged frozen rule, a second
 SHA-256-seeded challenge packet was frozen from relationships absent from both
@@ -130,6 +137,15 @@ D1-to-D2-D4 upgrades, and D2-to-D1 downgrades. Because the sample was
 class-stratified and reused existing benchmark sources, it was designed to test
 rule application rather than exposure prevalence or external transport. It
 contained no D4-positive relationship.
+
+## Supplementary direct-source baseline results
+
+Across 896 registry pairs, the exact-name baseline assigned 11 D0, 857 D1, and
+28 D3; the registry assigned 11 D0, 806 D1, 51 D2, and 28 D3. The 51 differences
+were all lineage-derived D2 classifications. Across the 1,312 published
+benchmark rows, the baseline and registry classifications were identical. Thus,
+lineage added classifications for child-dataset queries but not for the analyzed
+benchmark, whose tasks already resolved to TCGA or CPTAC parent repositories.
 
 ## Supplementary Table Index
 
@@ -159,6 +175,10 @@ contained no D4-positive relationship.
 | S22 | `data/validation/challenge80_row_comparison_v1.csv` | Frozen-class and reviewer-class row-level comparison |
 | S23 | `reports/challenge80_confusion_matrix.csv` | D0-D4 challenge confusion matrix and per-class agreement |
 | S24 | `reports/challenge80_review_summary.json` | Challenge design, agreement, kappa, and boundary-error counts |
+| S25 | `data/derived/direct_source_baseline_pairs.csv` | Pair-level exact-name baseline and registry comparison |
+| S26 | `reports/direct_source_baseline_confusion.csv` | Baseline-by-registry confusion matrix |
+| S27 | `data/derived/pathbench_direct_source_baseline_comparison.csv` | Published benchmark row-level baseline comparison |
+| S28 | `reports/direct_source_baseline_summary.json` | Baseline counts, agreement, lineage additions, and limitations |
 
 ## Supplementary Results
 

@@ -1,0 +1,96 @@
+{
+  "protocol": "DIRECT_SOURCE_BASELINE_PLAN.md",
+  "registry_pair_universe": 896,
+  "direct_source_baseline_counts": {
+    "D0_documented_disjoint": 11,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 857,
+    "D3_exact_dataset_exposure": 28
+  },
+  "registry_counts": {
+    "D0_documented_disjoint": 11,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 806,
+    "D2_parent_repository_exposure": 51,
+    "D3_exact_dataset_exposure": 28
+  },
+  "pair_level_exact_agreement": 845,
+  "pair_level_exact_agreement_proportion": 0.9430803571428571,
+  "lineage_added_exposure_pairs": 51,
+  "lineage_added_exposure_examples": [
+    {
+      "model_id": "ctranspath",
+      "evaluation_dataset_id": "tcga_brca",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0001"
+    },
+    {
+      "model_id": "ctranspath",
+      "evaluation_dataset_id": "tcga_luad",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0001"
+    },
+    {
+      "model_id": "ctranspath",
+      "evaluation_dataset_id": "tcga_lusc",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0001"
+    },
+    {
+      "model_id": "ctranspath",
+      "evaluation_dataset_id": "tcga_coad",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0001"
+    },
+    {
+      "model_id": "ctranspath",
+      "evaluation_dataset_id": "tcga_read",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0001"
+    },
+    {
+      "model_id": "kaiko",
+      "evaluation_dataset_id": "tcga_brca",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0019"
+    },
+    {
+      "model_id": "kaiko",
+      "evaluation_dataset_id": "tcga_luad",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0019"
+    },
+    {
+      "model_id": "kaiko",
+      "evaluation_dataset_id": "tcga_lusc",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0019"
+    },
+    {
+      "model_id": "kaiko",
+      "evaluation_dataset_id": "tcga_coad",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0019"
+    },
+    {
+      "model_id": "kaiko",
+      "evaluation_dataset_id": "tcga_read",
+      "registry_class": "D2_parent_repository_exposure",
+      "assertion_ids": "A0019"
+    }
+  ],
+  "published_benchmark_rows": 1312,
+  "published_benchmark_direct_source_counts": {
+    "D0_documented_disjoint": 52,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 1052,
+    "D2_parent_repository_exposure": 204,
+    "D3_exact_dataset_exposure": 4
+  },
+  "published_benchmark_registry_counts": {
+    "D0_documented_disjoint": 52,
+    "D1_no_detected_evidence_or_insufficient_disclosure": 1052,
+    "D2_parent_repository_exposure": 204,
+    "D3_exact_dataset_exposure": 4
+  },
+  "published_benchmark_changed_rows": 0,
+  "published_benchmark_exact_agreement": 1312,
+  "interpretation": "The exact-name baseline isolates lineage traversal after canonical identifiers are supplied. It does not measure manual search time, source completeness, or expert review accuracy. Identical benchmark classifications indicate workflow/provenance value rather than incremental class discovery."
+}

@@ -75,6 +75,15 @@ D2 rows, four exact named-dataset D3 rows, 52 documented-disjoint D0 rows, and
 purpose comparators were D1. These are disclosure classifications, not
 contamination prevalence estimates.
 
+A frozen direct-source baseline used exact model–dataset statements without
+lineage traversal. Across the 896-pair registry it agreed on 845 pairs (94.3%);
+the registry added 51 D2 relationships by propagating parent-repository
+assertions to documented child cohorts. Across the published 1,312 benchmark
+rows, the baseline and registry agreed on every class because those tasks already
+resolved to TCGA or CPTAC repository level. In that benchmark, the resource adds
+standardized mapping, provenance, and batch checking rather than a new exposure
+classification.
+
 In the prespecified external transport analysis, all 242 Campanella et al
 relationships mapped successfully. Forty-four (18.2%) were D0 and 198 (81.8%)
 were D1; none were D2-D4. Twelve Virchow/MSKCC D1 rows carry an explicit source

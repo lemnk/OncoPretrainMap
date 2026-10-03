@@ -153,6 +153,22 @@ Row-level records are retained in
 `data/validation/caleb_review_completed.xlsx` (SHA-256
 `80a84201019f2fa6d65123daf1a88d4b54f4a2169940a29e24fb1f5d160ea66e`).
 
+## Direct-source baseline comparison
+
+The post-protocol baseline was frozen before calculation. It used the same
+canonical identifiers but only exact named-dataset development statements,
+exact version-specific disjointness statements, and exact identifier-overlap
+records; it did not traverse lineage.
+
+Across 896 model–dataset pairs, the baseline assigned 11 D0, 857 D1, and 28 D3,
+whereas the registry assigned 11 D0, 806 D1, 51 D2, and 28 D3. Agreement was
+845/896 (94.3%). All 51 differences were D1-to-D2 lineage additions. Across the
+1,312 published Bareja benchmark rows, the baseline and registry agreed on all
+rows: 52 D0, 1,052 D1, 204 D2, and four D3. This shows incremental classification
+value for child-dataset queries, but only workflow and provenance consolidation
+for the analyzed benchmark. It does not measure expert manual-review accuracy or
+time saved.
+
 After correcting the D2 application errors without changing the frozen rule, a second stratified
 challenge excluded every relationship in the two earlier review packets. Caleb
 Yitna Ref independently searched the public sources for all 80 rows while
@@ -164,8 +180,8 @@ external benchmark or D4 validation.
 
 ## Reproducibility verification
 
-- Twenty-eight automated tests passed after the post-correction challenge
-  analysis was added.
+- Thirty-one automated tests passed after the direct-source baseline analysis
+  was added.
 - Four PNG and four vector PDF figures were generated.
 - Analytical artifacts were SHA-256 hashed after the last complete run.
 - Raw benchmark input hashes and the publisher PanCancer40M hash are retained.

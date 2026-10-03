@@ -21,8 +21,12 @@ strength is stored separately, and missing evidence never implies independence.
 
 **Evaluation:** In a 32-model, 41-task development benchmark, all 1,312 results
 mapped to canonical identifiers; 52 (4.0%) were D0, 1,052 (80.2%) D1, 204
-(15.5%) D2, and four (0.3%) D3. A blinded reviewer agreed on 80/80 sampled
-development relationships. In a separate 11-model, 22-task benchmark, all 242
+(15.5%) D2, and four (0.3%) D3. A blinded reviewer applying the prespecified
+rules agreed on 80/80 sampled development relationships; this assessed rule
+application, not independent source-extraction completeness. Compared with an
+exact-name direct-source baseline, lineage traversal added 51 D2 classifications
+across 896 registry pairs but changed none of the 1,312 published benchmark
+rows. In a separate 11-model, 22-task benchmark, all 242
 relationships mapped: 44 (18.2%) were D0 and 198 (81.8%) D1. Initial blinded
 agreement was 58/60 (96.7%). Source review corrected 12 jointly assigned D2
 labels to D1; reviewer concordance with the resolved classes was 46/60 (76.7%).
@@ -186,6 +190,18 @@ in the supplement. With 32 model clusters, 41 task clusters, exposure concentrat
 in TCGA tasks, and D1 combining unknown states, the analysis was considered
 underpowered and uninformative for performance effects.
 
+### Direct-source baseline comparison
+
+We prespecified a direct-source baseline to quantify what lineage traversal adds
+beyond exact model-card and paper statements. The baseline received the same
+canonical model and evaluation-dataset identifiers as the registry but did not
+traverse dataset lineage. It assigned D3 only when a development assertion named
+the exact evaluation dataset, D0 only for an exact version-specific disjointness
+statement, D4 only for an exact identifier-overlap record, and D1 otherwise.
+We compared this baseline with the registry across all 896 model–dataset pairs
+and after projection to the 1,312 published benchmark rows. This comparison does
+not measure human search time, source completeness, or expert-review accuracy.
+
 ### Validation and reproducibility
 
 The software included automated tests of alias resolution, lineage traversal,
@@ -284,12 +300,12 @@ corrected 12 jointly agreed Virchow/MSKCC D2 labels to D1. Concordance with the
 post-audit resolved classification was 46/60 (76.7%; descriptive kappa, 0.604):
 20/20 D0 and 26/40 D1. This was not a clean reliability estimate because the
 resolved classification was jointly adjudicated and incorporated reviewer
-decisions. The other two disagreements were tRes50 rows classified D0 by the reviewer; D1 was retained
+decisions. The 12-row Virchow correction reflected erroneous application of the
+prespecified D2 definition: institutional co-provenance alone did not satisfy
+the frozen requirement that the development corpus be shown to contain the
+evaluation cohort. The other two disagreements were tRes50 rows classified D0
+by the reviewer; D1 was retained
 because no explicit version-specific exclusion was documented.
-This was erroneous application of the prespecified D2 definition, not a change
-to the framework: institutional co-provenance alone did not satisfy the frozen
-requirement that the development corpus be shown to contain the evaluation
-cohort.
 
 The distribution differed from the development application: the external
 benchmark had more documented disjointness (18.2% vs 4.0%) and no D2 or D3.
@@ -307,6 +323,24 @@ the archive recovered 6,093 unique TCGA slide filenames representing 5,671 cases
 and 43,374,634 tile coordinates across 16 cancer cohorts. This one-model
 pretraining manifest was not linked to a benchmark evaluation manifest and did
 not test overlap. It is released only as a feasibility and reproducibility asset.
+
+### Direct-source baseline results
+
+Across the complete 32-model by 28-dataset registry (896 pairs), exact-name
+source reading produced 11 D0, 857 D1, and 28 D3 classifications. The registry
+produced 11 D0, 806 D1, 51 D2, and 28 D3. Agreement was 845/896 (94.3%); all 51
+differences were D1-to-D2 additions from traversing a documented parent–child
+dataset lineage. For example, a model-card assertion naming TCGA was propagated
+to TCGA-BRCA, TCGA-LUAD, TCGA-LUSC, TCGA-COAD, and TCGA-READ as D2 rather than
+being left unresolved by literal exact-name matching.
+
+At the resolution of the published 1,312 Bareja benchmark rows, however, the
+baseline and registry agreed on every row: 52 D0, 1,052 D1, 204 D2, and four D3.
+The published tasks already named TCGA or CPTAC at repository level, so lineage
+traversal added no new class assignment in that benchmark. The demonstrated
+incremental classification value therefore applies to proposed child-dataset
+queries; for the published benchmark, the resource adds standardized mappings,
+provenance, and batch checking rather than a different exposure conclusion.
 
 ### Exploratory performance analysis
 
@@ -374,6 +408,14 @@ applied consistently in this challenge. Because the sample reused the existing
 source families and had no D4 cases, it does not replace external validation of
 positive exposure classes or identifier-level overlap.
 
+The direct-source baseline gives a bounded estimate of incremental utility.
+Lineage traversal resolved 51 additional containing-repository relationships in
+the 896-pair query universe, but it changed none of the 1,312 published benchmark
+classifications. The registry therefore adds classification information when a
+researcher queries a child cohort whose parent repository is named in model
+development; in the analyzed benchmark it primarily consolidates source
+evidence and reproducible mappings.
+
 The audit does not estimate performance inflation. D1 mixes unknown states,
 exposure clustered in TCGA tasks, and the post-protocol regression was
 underpowered. Published model scores should not be adjusted from these results.
@@ -386,11 +428,12 @@ public record permits. New identifiers can update that classification.
 Several limitations define the resource's intended use. The registry reflects
 two published benchmark model sets and the public evidence available at the
 freeze date; classifications can change when new disclosures or identifiers
-appear. The Campanella transport exercised D0 and D1, whereas the later
+appear. The Campanella transport exercised only D0 and D1, whereas the later
 challenge tested reproducibility across D0-D3 within existing source families.
-The human reviews therefore evaluate application of the evidence rules rather
-than exhaustive registry completeness. D4 remains untested because paired
-training and evaluation identifiers were unavailable. The exploratory
+D2-D4 therefore have not been tested in an independent external benchmark. The
+human reviews evaluate application of the evidence rules rather than exhaustive
+registry completeness. D4 has not been observed in a benchmark relationship
+because paired training and evaluation identifiers were unavailable. The exploratory
 performance analysis was not used to infer performance inflation. Accordingly,
 OncoPretrainMap supports evidence-qualified provenance screening and benchmark
 selection, not certification of nonoverlap or estimation of performance effects.
